@@ -1,7 +1,10 @@
-﻿using School_Management_Transparency.SchoolManagementTransparencyApp.Winfroms;
+﻿using School_Management_Transparency.SchoolManagementTransparencyApp.Dao;
+using School_Management_Transparency.SchoolManagementTransparencyApp.Model;
+using School_Management_Transparency.SchoolManagementTransparencyApp.Winfroms;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -17,7 +20,8 @@ namespace School_Management_Transparency
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Login_Form());
+            //Application.Run(new Login_Form());
+
         }
     }
 }

@@ -8,7 +8,7 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.Model
 {
     internal class Teacher
     {
-        public string TeacherId { get; set; }
+        public int TeacherId { get; set; }
         public string FirstName { get; set; }
         public string MiddleName { get; set; }
         public string LastName { get; set; }
@@ -24,11 +24,25 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.Model
         }
 
         // 2. Parameterized Constructor
-        public Teacher(string teacherId, string firstName, string middleName, string lastName,
+        public Teacher(int teacherId, string firstName, string middleName, string lastName,
                        int age, string gender, string address, DateTime dateOfBirth,
                        string contactNumber)
         {
             TeacherId = teacherId;
+            FirstName = firstName;
+            MiddleName = middleName;
+            LastName = lastName;
+            Age = age;
+            Gender = gender;
+            Address = address;
+            DateOfBirth = dateOfBirth;
+            ContactNumber = contactNumber;
+        }
+
+        public Teacher(string firstName, string middleName, string lastName,
+                       int age, string gender, string address, DateTime dateOfBirth,
+                       string contactNumber)
+        {
             FirstName = firstName;
             MiddleName = middleName;
             LastName = lastName;

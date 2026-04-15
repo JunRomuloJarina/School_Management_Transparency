@@ -11,7 +11,7 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.Model
 
         public int ViolationTypeId { get; set; }
         public string ViolationName { get; set; }
-        public double Fee { get; set; }
+        public decimal Fee { get; set; }
         public string Category { get; set; }
         public string Description { get; set; }
 
@@ -21,7 +21,7 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.Model
         }
 
         // 2. Parameterized Constructor
-        public Violation_Type(int violationTypeId, string violationName, double fee, string category, string description)
+        public Violation_Type(int violationTypeId, string violationName, decimal fee, string category, string description)
         {
             ViolationTypeId = violationTypeId;
             ViolationName = violationName;

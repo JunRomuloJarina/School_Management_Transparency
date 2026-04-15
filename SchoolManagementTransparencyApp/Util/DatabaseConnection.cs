@@ -11,7 +11,7 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.Util
     {
 
 
-        MySqlConnection connection = new MySqlConnection("datasource=127.0.0.1;port=3306;username=root;password=R0mul0J@rin@;database=LMS");
+        MySqlConnection connection = new MySqlConnection("datasource=localhost;port=3306;username=root;password=R0mul0J@rin@;database=school_db");
 
         public MySqlConnection getconnection
         {

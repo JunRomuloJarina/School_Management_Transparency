@@ -12,8 +12,8 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.Model
         public int ExpenseTransactionId { get; set; }
         public int FundId { get; set; }
         public int TransactionTypeId { get; set; }
-        public int StudeId { get; set; } // Kept as is to match your DB column
-        public double Amount { get; set; }
+        public int StudentId { get; set; } // Kept as is to match your DB column
+        public decimal Amount { get; set; }
         public DateTime TransactionDate { get; set; }
         public string Remarks { get; set; }
 
@@ -25,11 +25,11 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.Model
         }
 
         // 2. Parameterized Constructor (Useful for manual entry or DB mapping)
-        public Expense_Transaction(int fundId, int transTypeId, int studeId, double amount, string remarks)
+        public Expense_Transaction(int fundId, int transTypeId, int studentId, decimal amount, string remarks)
         {
             FundId = fundId;
             TransactionTypeId = transTypeId;
-            StudeId = studeId;
+            StudentId = studentId;
             Amount = amount;
             Remarks = remarks;
             TransactionDate = DateTime.Now;

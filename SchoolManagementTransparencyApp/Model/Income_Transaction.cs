@@ -13,9 +13,9 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.Model
         public int IncomeTransactionId { get; set; }
         public int FundId { get; set; }
         public int TransactionTypeId { get; set; }
-        public int StudeId { get; set; }
+        public int StudentId { get; set; }
         public int StudentViolationId { get; set; }
-        public double Amount { get; set; }
+        public decimal Amount { get; set; }
         public DateTime TransactionDate { get; set; }
         public string Remarks { get; set; }
 
@@ -25,12 +25,12 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.Model
         }
 
         // 2. Parameterized Constructor
-        public Income_Transaction(int incomeTransactionId, int fundId, int transactionTypeId, int studeId, int studentViolationId, double amount, DateTime transactionDate, string remarks)
+        public Income_Transaction(int incomeTransactionId, int fundId, int transactionTypeId, int studentId, int studentViolationId, decimal amount, DateTime transactionDate, string remarks)
         {
             IncomeTransactionId = incomeTransactionId;
             FundId = fundId;
             TransactionTypeId = transactionTypeId;
-            StudeId = studeId;
+            StudentId = studentId;
             StudentViolationId = studentViolationId;
             Amount = amount;
             TransactionDate = transactionDate;

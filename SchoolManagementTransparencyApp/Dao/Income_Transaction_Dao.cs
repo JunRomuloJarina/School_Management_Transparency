@@ -1,0 +1,107 @@
+﻿using MySql.Data.MySqlClient;
+using School_Management_Transparency.SchoolManagementTransparencyApp.Model;
+using School_Management_Transparency.SchoolManagementTransparencyApp.Util;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace School_Management_Transparency.SchoolManagementTransparencyApp.Dao
+{
+    internal class Income_Transaction_Dao
+    {
+
+        DatabaseConnection dbConn = new DatabaseConnection();
+
+        public bool AddIncomeTransaction(Income_Transaction income_Transaction)
+        {
+            try
+            {
+                MySqlCommand command = new MySqlCommand("INSERT INTO income_transaction(fund_id, transaction_type_id, student_id, student_violation_id, amount, transaction_date, remarks) VALUES(@FundId, @)",dbConn.getconnection);
+                command.Parameters.AddWithValue("@FundId", income_Transaction.FundId);
+                command.Parameters.AddWithValue("@TransactionTypeId", income_Transaction.TransactionTypeId);
+                command.Parameters.AddWithValue("@StudentId", income_Transaction.StudentId);
+                command.Parameters.AddWithValue("@StudentViolationId", income_Transaction.StudentViolationId);
+                command.Parameters.AddWithValue("@Amount", income_Transaction.Amount);
+                command.Parameters.AddWithValue("@TransactionDate", income_Transaction.TransactionDate);
+                command.Parameters.AddWithValue("@Remarks", income_Transaction.Remarks);
+
+                dbConn.openConnect();
+
+                if (command.ExecuteNonQuery() == 1)
+                {
+                    dbConn.closeConnect();
+                    MessageBox.Show("Income transaction added successfully.");
+                    return true;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            return false;
+        }
+
+        public bool DeleteIncomeTransaction(Income_Transaction income_Transaction)
+        {
+            try
+            {
+                MySqlCommand command = new MySqlCommand("DELETE FROM income_transaction WHERE income_transaction_id = @IncomeTransactionId", dbConn.getconnection);
+                command.Parameters.AddWithValue("@IncomeTransactionId", income_Transaction.IncomeTransactionId);
+                dbConn.openConnect();
+
+                if (command.ExecuteNonQuery() == 1)
+                {
+                    dbConn.closeConnect();
+                    MessageBox.Show("Income transaction deleted successfully.");
+                    return true;
+                }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            return false;
+        }
+
+        public List<Income_Transaction> GetAllIncomeTransactions()
+        {
+            List<Income_Transaction> incomeTransactions = new List<Income_Transaction>();
+            try
+            {
+                MySqlCommand command = new MySqlCommand("SELECT * FROM income_transaction", dbConn.getconnection);
+                dbConn.openConnect();
+                MySqlDataReader reader = command.ExecuteReader();
+                while (reader.Read())
+                {
+                    Income_Transaction incomeTransaction = new Income_Transaction
+                    {
+                        IncomeTransactionId = reader.GetInt32("income_transaction_id"),
+                        FundId = reader.GetInt32("fund_id"),
+                        TransactionTypeId = reader.GetInt32("transaction_type_id"),
+                        StudentId = reader.GetInt32("student_id"),
+                        StudentViolationId = reader.GetInt32("student_violation_id"),
+                        Amount = reader.GetDecimal("amount"),
+                        TransactionDate = reader.GetDateTime("transaction_date"),
+                        Remarks = reader.GetString("remarks")
+                    };
+                    incomeTransactions.Add(incomeTransaction);
+                }
+                dbConn.closeConnect();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            return incomeTransactions;
+        }
+
+
+
+
+
+
+    }
+}
