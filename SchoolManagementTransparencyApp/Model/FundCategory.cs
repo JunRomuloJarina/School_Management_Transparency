@@ -6,19 +6,19 @@ using System.Threading.Tasks;
 
 namespace School_Management_Transparency.SchoolManagementTransparencyApp.Model
 {
-    internal class Fund_Category
+    internal class FundCategory
     {
 
         public int FundId { get; set; }
         public string FundName { get; set; }
 
         // 1. Default Constructor
-        public Fund_Category()
+        public FundCategory()
         {
         }
 
         // 2. Parameterized Constructor (for attributes)
-        public Fund_Category(int fundId, string fundName)
+        public FundCategory(int fundId, string fundName)
         {
             FundId = fundId;
             FundName = fundName;

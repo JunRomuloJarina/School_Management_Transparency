@@ -10,12 +10,12 @@ using System.Windows.Forms;
 
 namespace School_Management_Transparency.SchoolManagementTransparencyApp.Dao
 {
-    internal class Transaction_Type_Dao
+    internal class TransactionTypeDao
     {
 
         DatabaseConnection dbConn = new DatabaseConnection();
 
-        public bool AddTransactionType(Transaction_Type type)
+        public bool AddTransactionType(TransactionType type)
         {
             try
             {
@@ -43,7 +43,7 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.Dao
             return false;
         }
 
-        public bool UpdateTransactionType(Transaction_Type type)
+        public bool UpdateTransactionType(TransactionType type)
         {
             try
             {
@@ -100,9 +100,9 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.Dao
             return false;
         }
 
-        public List<Transaction_Type> GetAllTransactionTypes()
+        public List<TransactionType> GetAllTransactionTypes()
         {
-            List<Transaction_Type> typeList = new List<Transaction_Type>();
+            List<TransactionType> typeList = new List<TransactionType>();
             try
             {
                 MySqlCommand command = new MySqlCommand("SELECT * FROM transaction_type", dbConn.getconnection);
@@ -112,7 +112,7 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.Dao
                 {
                     while (reader.Read())
                     {
-                        Transaction_Type type = new Transaction_Type
+                        TransactionType type = new TransactionType
                         {
                             TransactionTypeId = Convert.ToInt32(reader["transaction_type_id"]),
                             TypeName = reader["type_name"].ToString()
@@ -132,7 +132,7 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.Dao
             return typeList;
         }
 
-        public Transaction_Type GetTransactionTypeById(int transaction_type_id)
+        public TransactionType GetTransactionTypeById(int transaction_type_id)
         {
             try
             {
@@ -147,7 +147,7 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.Dao
                 {
                     if (reader.Read())
                     {
-                        Transaction_Type type = new Transaction_Type
+                        TransactionType type = new TransactionType
                         {
                             TransactionTypeId = Convert.ToInt32(reader["transaction_type_id"]),
                             TypeName = reader["type_name"].ToString()

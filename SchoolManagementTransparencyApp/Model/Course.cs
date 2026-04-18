@@ -11,17 +11,17 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.Model
         // Properties
         public int CourseId { get; set; }
         public string CourseName { get; set; } // Renamed to PascalCase for C# consistency
-        public string TeacherId { get; set; }  // Renamed to PascalCase
+        public int TeacherId { get; set; }  // Renamed to PascalCase
 
         // Default Constructor
         public Course()
         {
             CourseName = string.Empty;
-            TeacherId = string.Empty;
+            TeacherId = 0;
         }
 
         // Parameterized Constructor (Useful for quickly creating objects from DB results)
-        public Course(int id, string name, string teacherId)
+        public Course(int id, string name, int teacherId)
         {
             CourseId = id;
             CourseName = name;

@@ -6,18 +6,18 @@ using System.Threading.Tasks;
 
 namespace School_Management_Transparency.SchoolManagementTransparencyApp.Model
 {
-    internal class Transaction_Type
+    internal class TransactionType
     {
         public int TransactionTypeId { get; set; }
         public string TypeName { get; set; }
 
         // 1. Default Constructor
-        public Transaction_Type()
+        public TransactionType()
         {
         }
 
         // 2. Parameterized Constructor
-        public Transaction_Type(int transactionTypeId, string typeName)
+        public TransactionType(int transactionTypeId, string typeName)
         {
             TransactionTypeId = transactionTypeId;
             TypeName = typeName;

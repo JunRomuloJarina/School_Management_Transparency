@@ -10,12 +10,12 @@ using System.Windows.Forms;
 
 namespace School_Management_Transparency.SchoolManagementTransparencyApp.Dao
 {
-    internal class Income_Transaction_Dao
+    internal class IncomeTransactionDao
     {
 
         DatabaseConnection dbConn = new DatabaseConnection();
 
-        public bool AddIncomeTransaction(Income_Transaction income_Transaction)
+        public bool AddIncomeTransaction(IncomeTransaction income_Transaction)
         {
             try
             {
@@ -44,7 +44,7 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.Dao
             return false;
         }
 
-        public bool DeleteIncomeTransaction(Income_Transaction income_Transaction)
+        public bool DeleteIncomeTransaction(IncomeTransaction income_Transaction)
         {
             try
             {
@@ -66,9 +66,9 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.Dao
             return false;
         }
 
-        public List<Income_Transaction> GetAllIncomeTransactions()
+        public List<IncomeTransaction> GetAllIncomeTransactions()
         {
-            List<Income_Transaction> incomeTransactions = new List<Income_Transaction>();
+            List<IncomeTransaction> incomeTransactions = new List<IncomeTransaction>();
             try
             {
                 MySqlCommand command = new MySqlCommand("SELECT * FROM income_transaction", dbConn.getconnection);
@@ -76,7 +76,7 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.Dao
                 MySqlDataReader reader = command.ExecuteReader();
                 while (reader.Read())
                 {
-                    Income_Transaction incomeTransaction = new Income_Transaction
+                    IncomeTransaction incomeTransaction = new IncomeTransaction
                     {
                         IncomeTransactionId = reader.GetInt32("income_transaction_id"),
                         FundId = reader.GetInt32("fund_id"),
@@ -99,7 +99,22 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.Dao
         }
 
 
-
+        public decimal GetTotalIncomeByFund(int fundId)
+        {
+            decimal total = 0;
+            try
+            {
+                string sql = "SELECT SUM(amount) FROM income_transaction WHERE fund_id = @FundId";
+                MySqlCommand command = new MySqlCommand(sql, dbConn.getconnection);
+                command.Parameters.AddWithValue("@FundId", fundId);
+                dbConn.openConnect();
+                object result = command.ExecuteScalar();
+                if (result != null && result != DBNull.Value) total = Convert.ToDecimal(result);
+            }
+            catch (Exception ex) { MessageBox.Show(ex.Message); }
+            finally { dbConn.closeConnect(); }
+            return total;
+        }
 
 
 

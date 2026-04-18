@@ -11,68 +11,40 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.Service
 {
     internal class CourseService
     {
-        private CourseDao courseDao = new CourseDao();
+        private readonly CourseDao _courseDao = new CourseDao();
+
+        private string GetValidationError(Course course)
+        {
+            if (course == null) return "Course object is missing.";
+
+            if (string.IsNullOrWhiteSpace(course.CourseName)) return "Course name is required.";
+
+            if (course.CourseName.Length < 4 || course.CourseName.Length > 50)
+                return "Course name must be between 4 and 50 characters.";
+
+            if (course.TeacherId <= 0) return "Please select a valid teacher.";
+
+            return string.Empty;
+        }
 
         public string ValidateAddCourse(Course course)
         {
-            if (course == null) { return "Course cannot be null"; }
-            else if (course.CourseName == null || course.CourseName.Equals("") || course.CourseName.Equals(String.Empty)) { return "Course name cannot be null or empty."; }
-            else if (course.CourseName.Length <= 4) { return "Course name length's cannot below to 4 - 0"; }
-            else if (course.CourseName.Length >= 50) { return "Course name length's cannot above to 50 - 0"; }
-            else if (course.TeacherId == null || course.TeacherId.Equals("") || course.TeacherId.Equals(String.Empty)) { return "Teacher ID cannot be null or empty."; }
-            else
-            {
-                if (courseDao.AddCourse(course))
-                {
-                    return "Added Successfully";
-                }
-            }
-            return "Failed to add course.";
-        }
+            string error = GetValidationError(course);
+            if (!string.IsNullOrEmpty(error)) return error;
 
-
-        public string ValidateRemoveCourse(Course course)
-        {
-            if (course == null) { return "Course cannot be null"; }
-            else if (course.CourseId <= 0) { return "Course ID must be greater than 0."; }
-            else
-            {
-                if (courseDao.DeleteCourse(course))
-                {
-                    return "Removed Successfully";
-                }
-            }
-            return "Failed to remove course.";
-        }
-
-        public List<Course> GetAllCourses()
-        {
-            return courseDao.GetAllCourses();
-        }
-
-        public Course GetCoursesByTeacherId(int teacherId)
-        {
-            return courseDao.GetCourseById(teacherId);
+            return _courseDao.AddCourse(course) ? "Added Successfully" : "Database error: Could not add course.";
         }
 
         public string ValidateUpdateCourse(Course course)
         {
-            if (course == null) { return "Course cannot be null"; }
-            else if (course.CourseName == null || course.CourseName.Equals("") || course.CourseName.Equals(String.Empty)) { return "Course name cannot be null or empty."; }
-            else if (course.CourseName.Length <= 4) { return "Course name length's cannot below to 4 - 0"; }
-            else if (course.CourseName.Length >= 50) { return "Course name length's cannot above to 50 - 0"; }
-            else if (course.TeacherId == null || course.TeacherId.Equals("") || course.TeacherId.Equals(String.Empty)) { return "Teacher ID cannot be null or empty."; }
-            else
-            {
-                if (courseDao.UpdateCourse(course))
-                {
-                    return "Updated Successfully";
-                }
-            }
-            return "Failed to update course.";
+            if (course.CourseId <= 0) return "Invalid Course ID.";
 
+            string error = GetValidationError(course);
+            if (!string.IsNullOrEmpty(error)) return error;
+
+            return _courseDao.UpdateCourse(course) ? "Updated Successfully" : "Database error: Could not update course.";
         }
 
-
+        public List<Course> GetAllCourses() => _courseDao.GetAllCourses();
     }
 }

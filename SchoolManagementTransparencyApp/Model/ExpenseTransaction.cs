@@ -6,26 +6,26 @@ using System.Threading.Tasks;
 
 namespace School_Management_Transparency.SchoolManagementTransparencyApp.Model
 {
-    internal class Expense_Transaction
+    internal class ExpenseTransaction
     {
         // Properties
         public int ExpenseTransactionId { get; set; }
         public int FundId { get; set; }
         public int TransactionTypeId { get; set; }
-        public int StudentId { get; set; } // Kept as is to match your DB column
+        public int StudentId { get; set; } 
         public decimal Amount { get; set; }
         public DateTime TransactionDate { get; set; }
         public string Remarks { get; set; }
 
         // 1. Default Constructor
-        public Expense_Transaction()
+        public ExpenseTransaction()
         {
             TransactionDate = DateTime.Now;
             Remarks = string.Empty;
         }
 
         // 2. Parameterized Constructor (Useful for manual entry or DB mapping)
-        public Expense_Transaction(int fundId, int transTypeId, int studentId, decimal amount, string remarks)
+        public ExpenseTransaction(int fundId, int transTypeId, int studentId, decimal amount, string remarks)
         {
             FundId = fundId;
             TransactionTypeId = transTypeId;

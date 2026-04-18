@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace School_Management_Transparency.SchoolManagementTransparencyApp.Dao
 {
-    internal class Teacher_Dao
+    internal class TeacherDao
     {
         DatabaseConnection dbConn = new DatabaseConnection();
         public bool AddTeacher(Teacher teacher)

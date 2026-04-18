@@ -10,12 +10,12 @@ using System.Windows.Forms;
 
 namespace School_Management_Transparency.SchoolManagementTransparencyApp.Dao
 {
-    internal class Fund_Category_Dao
+    internal class FundCategoryDao
     {
 
         DatabaseConnection dbConn = new DatabaseConnection();
 
-        public bool AddFundCategory(Fund_Category fund_Category)
+        public bool AddFundCategory(FundCategory fund_Category)
         {
             try
             {
@@ -36,7 +36,7 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.Dao
             return false;
         }
 
-        public bool DeleteFundCategory(Fund_Category fund_Category)
+        public bool DeleteFundCategory(FundCategory fund_Category)
         {
             try
             {
@@ -57,7 +57,7 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.Dao
             return false;
         }
 
-        public bool UpdateFundCategory(Fund_Category fund_Category)
+        public bool UpdateFundCategory(FundCategory fund_Category)
         {
             try
             {
@@ -80,9 +80,9 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.Dao
 
         }
 
-        public List<Fund_Category> GetAllFundCategories()
+        public List<FundCategory> GetAllFundCategories()
         {
-            List<Fund_Category> fundCategories = new List<Fund_Category>();
+            List<FundCategory> fundCategories = new List<FundCategory>();
             try
             {
                 MySqlCommand command = new MySqlCommand("SELECT * FROM fund_category", dbConn.getconnection);
@@ -90,7 +90,7 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.Dao
                 MySqlDataReader reader = command.ExecuteReader();
                 while (reader.Read())
                 {
-                    Fund_Category fund_Category = new Fund_Category
+                    FundCategory fund_Category = new FundCategory
                     {
                         FundId = reader.GetInt32("id"),
                         FundName = reader.GetString("name")

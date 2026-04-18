@@ -10,11 +10,11 @@ using System.Windows.Forms;
 
 namespace School_Management_Transparency.SchoolManagementTransparencyApp.Dao
 {
-    internal class Student_Violation_Dao
+    internal class StudentViolationDao
     {
         DatabaseConnection dbConn = new DatabaseConnection();
 
-        public bool AddStudentViolation(Student_Violation student_Violation)
+        public bool AddStudentViolation(StudentViolation student_Violation)
         {
             try
             {
@@ -74,7 +74,7 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.Dao
         }
 
 
-        public bool UpdateStudentViolation(Student_Violation student_Violation)
+        public bool UpdateStudentViolation(StudentViolation student_Violation)
         {
             try
             {
@@ -109,9 +109,9 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.Dao
             return false;
         }
 
-        public List<Student_Violation> GetAllStudentViolations()
+        public List<StudentViolation> GetAllStudentViolations()
         {
-            List<Student_Violation> violations = new List<Student_Violation>();
+            List<StudentViolation> violations = new List<StudentViolation>();
             try
             {
                 MySqlCommand command = new MySqlCommand("SELECT * FROM student_violation", dbConn.getconnection);
@@ -121,7 +121,7 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.Dao
                 {
                     while (reader.Read())
                     {
-                        Student_Violation violation = new Student_Violation
+                        StudentViolation violation = new StudentViolation
                         {
                             StudentViolationId = Convert.ToInt32(reader["id"]),
                             StudentId = Convert.ToInt32(reader["student_id"]),

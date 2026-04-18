@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace School_Management_Transparency.SchoolManagementTransparencyApp.Dao
 {
-    internal class Student_Dao
+    internal class StudentDao
     {
 
         DatabaseConnection dbConn = new DatabaseConnection();

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace School_Management_Transparency.SchoolManagementTransparencyApp.Model
 {
-    internal class User_Account
+    internal class UserAccount
     {
         public int UserId { get; set; }
         public string Username { get; set; }
@@ -14,12 +14,12 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.Model
         public string Role { get; set; }
 
         // 1. Default Constructor
-        public User_Account()
+        public UserAccount()
         {
         }
 
         // 2. Parameterized Constructor
-        public User_Account(int userId, string username, string password, string role)
+        public UserAccount(int userId, string username, string password, string role)
         {
             UserId = userId;
             Username = username;

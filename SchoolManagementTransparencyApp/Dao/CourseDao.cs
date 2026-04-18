@@ -83,7 +83,7 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.Dao
                     {
                         CourseId = reader.GetInt32("course_id"),
                         CourseName = reader.GetString("course_name"),
-                        TeacherId = reader.GetString("teacher_id")
+                        TeacherId = reader.GetInt32("teacher_id")
                     };
                     courses.Add(course);
                 }
@@ -143,7 +143,7 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.Dao
                     {
                         CourseId = reader.GetInt32("course_id"),
                         CourseName = reader.GetString("course_name"),
-                        TeacherId = reader.GetString("teacher_id")
+                        TeacherId = reader.GetInt32("teacher_id")
                     };
                 }
                 reader.Close();

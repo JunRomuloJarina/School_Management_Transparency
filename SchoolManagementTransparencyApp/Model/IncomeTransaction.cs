@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace School_Management_Transparency.SchoolManagementTransparencyApp.Model
 {
-    internal class Income_Transaction
+    internal class IncomeTransaction
     {
 
         public int IncomeTransactionId { get; set; }
@@ -20,12 +20,12 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.Model
         public string Remarks { get; set; }
 
         // 1. Default Constructor
-        public Income_Transaction()
+        public IncomeTransaction()
         {
         }
 
         // 2. Parameterized Constructor
-        public Income_Transaction(int incomeTransactionId, int fundId, int transactionTypeId, int studentId, int studentViolationId, decimal amount, DateTime transactionDate, string remarks)
+        public IncomeTransaction(int incomeTransactionId, int fundId, int transactionTypeId, int studentId, int studentViolationId, decimal amount, DateTime transactionDate, string remarks)
         {
             IncomeTransactionId = incomeTransactionId;
             FundId = fundId;

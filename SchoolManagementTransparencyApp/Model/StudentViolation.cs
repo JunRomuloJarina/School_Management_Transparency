@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace School_Management_Transparency.SchoolManagementTransparencyApp.Model
 {
-    internal class Student_Violation
+    internal class StudentViolation
     {
         public int StudentViolationId { get; set; }
         public int StudentId { get; set; }
@@ -15,12 +15,12 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.Model
         public string Status { get; set; }
 
         // 1. Default Constructor
-        public Student_Violation()
+        public StudentViolation()
         {
         }
 
         // 2. Parameterized Constructor
-        public Student_Violation(int studentViolationId, int studentId, int violationTypeId, DateTime dateIssued, string status)
+        public StudentViolation(int studentViolationId, int studentId, int violationTypeId, DateTime dateIssued, string status)
         {
             StudentViolationId = studentViolationId;
             StudentId = studentId;

@@ -10,12 +10,12 @@ using System.Windows.Forms;
 
 namespace School_Management_Transparency.SchoolManagementTransparencyApp.Dao
 {
-    internal class User_Account_Dao
+    internal class UserAccountDao
     {
         DatabaseConnection dbConn = new DatabaseConnection();
 
         // 1. Add User Account
-        public bool AddUserAccount(User_Account user)
+        public bool AddUserAccount(UserAccount user)
         {
             try
             {
@@ -47,7 +47,7 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.Dao
         }
 
         // 2. Update User Account
-        public bool UpdateUserAccount(User_Account user)
+        public bool UpdateUserAccount(UserAccount user)
         {
             try
             {
@@ -107,9 +107,9 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.Dao
         }
 
         // 4. Get All User Accounts
-        public List<User_Account> GetAllUserAccounts()
+        public List<UserAccount> GetAllUserAccounts()
         {
-            List<User_Account> users = new List<User_Account>();
+            List<UserAccount> users = new List<UserAccount>();
             try
             {
                 MySqlCommand command = new MySqlCommand("SELECT * FROM User_Account", dbConn.getconnection);
@@ -119,7 +119,7 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.Dao
                 {
                     while (reader.Read())
                     {
-                        User_Account user = new User_Account
+                        UserAccount user = new UserAccount
                         {
                             UserId = Convert.ToInt32(reader["user_id"]),
                             Username = reader["username"].ToString(),
@@ -142,7 +142,7 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.Dao
         }
 
         // 5. Get User By ID (Search)
-        public User_Account GetUserById(int userId)
+        public UserAccount GetUserById(int userId)
         {
             try
             {
@@ -154,7 +154,7 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.Dao
                 {
                     if (reader.Read())
                     {
-                        return new User_Account
+                        return new UserAccount
                         {
                             UserId = Convert.ToInt32(reader["user_id"]),
                             Username = reader["username"].ToString(),

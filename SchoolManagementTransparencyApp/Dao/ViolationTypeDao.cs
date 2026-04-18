@@ -10,12 +10,12 @@ using System.Windows.Forms;
 
 namespace School_Management_Transparency.SchoolManagementTransparencyApp.Dao
 {
-    internal class Violation_Type_Dao
+    internal class ViolationTypeDao
     {
         DatabaseConnection dbConn = new DatabaseConnection();
 
         // 1. Add Violation Type
-        public bool AddViolationType(Violation_Type violation)
+        public bool AddViolationType(ViolationType violation)
         {
             try
             {
@@ -49,7 +49,7 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.Dao
         }
 
         // 2. Update Violation Type
-        public bool UpdateViolationType(Violation_Type violation)
+        public bool UpdateViolationType(ViolationType violation)
         {
             try
             {
@@ -114,9 +114,9 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.Dao
         }
 
         // 4. Get All Violation Types
-        public List<Violation_Type> GetAllViolationTypes()
+        public List<ViolationType> GetAllViolationTypes()
         {
-            List<Violation_Type> violations = new List<Violation_Type>();
+            List<ViolationType> violations = new List<ViolationType>();
             try
             {
                 MySqlCommand command = new MySqlCommand("SELECT * FROM Violation_Type", dbConn.getconnection);
@@ -126,7 +126,7 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.Dao
                 {
                     while (reader.Read())
                     {
-                        Violation_Type violation = new Violation_Type
+                        ViolationType violation = new ViolationType
                         {
                             ViolationTypeId = Convert.ToInt32(reader["id"]),
                             ViolationName = reader["violation_name"].ToString(),
@@ -150,7 +150,7 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.Dao
         }
 
         // 5. Get Violation Type By ID
-        public Violation_Type GetViolationTypeById(int violationTypeId)
+        public ViolationType GetViolationTypeById(int violationTypeId)
         {
             try
             {
@@ -162,7 +162,7 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.Dao
                 {
                     if (reader.Read())
                     {
-                        return new Violation_Type
+                        return new ViolationType
                         {
                             ViolationTypeId = Convert.ToInt32(reader["violation_type_id"]),
                             ViolationName = reader["violation_name"].ToString(),

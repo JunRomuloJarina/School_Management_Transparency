@@ -10,12 +10,12 @@ using System.Windows.Forms;
 
 namespace School_Management_Transparency.SchoolManagementTransparencyApp.Dao
 {
-    internal class Expense_Transaction_Dao
+    internal class ExpenseTransactionDao
     {
 
         DatabaseConnection dbConn = new DatabaseConnection();
 
-        public bool AddExpenseTransaction(Expense_Transaction expense_Transaction)
+        public bool AddExpenseTransaction(ExpenseTransaction expense_Transaction)
         {
             try
             {
@@ -48,7 +48,7 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.Dao
             return false;
         }
 
-        public bool UpdateExpenseTransaction(Expense_Transaction expense_Transaction)
+        public bool UpdateExpenseTransaction(ExpenseTransaction expense_Transaction)
         {
             try
             {
@@ -106,7 +106,7 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.Dao
             return false;
         }
 
-        public Expense_Transaction GetExpenseTransactionById(int expenseTransactionId)
+        public ExpenseTransaction GetExpenseTransactionById(int expenseTransactionId)
         {
             try
             {
@@ -119,7 +119,7 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.Dao
 
                 while (reader.Read())
                 {
-                    Expense_Transaction expense_Transaction = new Expense_Transaction
+                    ExpenseTransaction expense_Transaction = new ExpenseTransaction
                     {
                         ExpenseTransactionId = reader.GetInt32("expense_transaction_id"),
                         FundId = reader.GetInt32("fund_id"),
@@ -147,9 +147,9 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.Dao
         }
 
 
-        public List<Expense_Transaction> GetAllExpenseTransactions()
+        public List<ExpenseTransaction> GetAllExpenseTransactions()
         {
-            List<Expense_Transaction> expenseTransactions = new List<Expense_Transaction>();
+            List<ExpenseTransaction> expenseTransactions = new List<ExpenseTransaction>();
             try
             {
                 MySqlCommand command = new MySqlCommand("SELECT * FROM expense_transaction", dbConn.getconnection);
@@ -157,7 +157,7 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.Dao
                 MySqlDataReader reader = command.ExecuteReader();
                 while (reader.Read())
                 {
-                    Expense_Transaction expense_Transaction = new Expense_Transaction
+                    ExpenseTransaction expense_Transaction = new ExpenseTransaction
                     {
                         ExpenseTransactionId = reader.GetInt32("id"),
                         FundId = reader.GetInt32("fund_id"),
@@ -185,7 +185,28 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.Dao
 
 
 
+        public decimal GetTotalExpensesByFund(int fundId)
+        {
+            decimal total = 0;
+            try
+            {
+                // SQL: Sum all amounts for this specific fund
+                string sql = "SELECT SUM(amount) FROM expense_transaction WHERE fund_id = @FundId";
+                MySqlCommand command = new MySqlCommand(sql, dbConn.getconnection);
+                command.Parameters.AddWithValue("@FundId", fundId);
 
+                dbConn.openConnect();
+                object result = command.ExecuteScalar(); // ExecuteScalar is faster for single values
+
+                if (result != null && result != DBNull.Value)
+                {
+                    total = Convert.ToDecimal(result);
+                }
+            }
+            catch (Exception ex) { MessageBox.Show("Error calculating expenses: " + ex.Message); }
+            finally { dbConn.closeConnect(); }
+            return total;
+        }
 
 
     }
