@@ -34,7 +34,7 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.Service
         public string RemoveStudent(Student student)
         {
             if (student == null) return "No student selected.";
-            return _studentDao.DeleteStudent(student) ? "Student deleted." : "Delete failed.";
+            return _studentDao.DeleteStudent(student.StudentId) ? "Student deleted." : "Delete failed.";
         }
 
         public List<Student> GetStudents()

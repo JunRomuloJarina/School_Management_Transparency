@@ -10,19 +10,6 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.Service
 {
     internal class TransactionTypeService
     {
-        Here is the TransactionTypeService implementation.This service provides the business logic for managing the classification of money(Income vs. Expense), which is the foundation of your system's "Transparency" logic.
-
-1. TransactionTypeService Implementation
-C#
-using School_Management_Transparency.SchoolManagementTransparencyApp.Dao;
-using School_Management_Transparency.SchoolManagementTransparencyApp.Model;
-using System;
-using System.Collections.Generic;
-
-namespace School_Management_Transparency.SchoolManagementTransparencyApp.Service
-    {
-        internal class TransactionTypeService
-        {
             private readonly TransactionTypeDao _typeDao = new TransactionTypeDao();
 
             public List<TransactionType> GetAllTypes()

@@ -12,5 +12,11 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.Model
         public decimal TotalIncome { get; set; }
         public decimal TotalExpenses { get; set; }
         public decimal CurrentBalance { get; set; }
+
+        // Overriding ToString for easy debugging and UI display
+        public override string ToString()
+        {
+            return $"{FundName} | Balance: {CurrentBalance:N2}";
+        }
     }
 }

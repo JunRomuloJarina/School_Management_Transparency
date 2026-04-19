@@ -19,8 +19,7 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.Dao
         {
             try
             {
-                MySqlCommand command = new MySqlCommand("INSERT INTO income_transaction(fund_id, transaction_type_id, student_id, student_violation_id, amount, transaction_date, remarks) VALUES(@FundId, @)",dbConn.getconnection);
-                command.Parameters.AddWithValue("@FundId", income_Transaction.FundId);
+                MySqlCommand command = new MySqlCommand("INSERT INTO income_transaction(fund_id, transaction_type_id, student_id, student_violation_id, amount, transaction_date, remarks) VALUES(@FundId, @TransactionTypeId, @StudentId, @StudentViolationId, @Amount, @TransactionDate, @Remarks)", dbConn.getconnection); command.Parameters.AddWithValue("@FundId", income_Transaction.FundId);
                 command.Parameters.AddWithValue("@TransactionTypeId", income_Transaction.TransactionTypeId);
                 command.Parameters.AddWithValue("@StudentId", income_Transaction.StudentId);
                 command.Parameters.AddWithValue("@StudentViolationId", income_Transaction.StudentViolationId);

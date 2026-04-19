@@ -97,6 +97,18 @@
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SchoolManagementTransparencyApp\Controller\CourseController.cs" />
+    <Compile Include="SchoolManagementTransparencyApp\Controller\EnrollmentController.cs" />
+    <Compile Include="SchoolManagementTransparencyApp\Controller\ExpenseTransactionController.cs" />
+    <Compile Include="SchoolManagementTransparencyApp\Controller\FinancialContoller.cs" />
+    <Compile Include="SchoolManagementTransparencyApp\Controller\FundCategoryController.cs" />
+    <Compile Include="SchoolManagementTransparencyApp\Controller\IncomeTransactionController.cs" />
+    <Compile Include="SchoolManagementTransparencyApp\Controller\StudentController.cs" />
+    <Compile Include="SchoolManagementTransparencyApp\Controller\StudentViolationContoller.cs" />
+    <Compile Include="SchoolManagementTransparencyApp\Controller\TeacherController.cs" />
+    <Compile Include="SchoolManagementTransparencyApp\Controller\TransactionTypeController.cs" />
+    <Compile Include="SchoolManagementTransparencyApp\Controller\UserAccountController.cs" />
+    <Compile Include="SchoolManagementTransparencyApp\Controller\ViolationTypeController.cs" />
     <Compile Include="SchoolManagementTransparencyApp\Dao\CourseDao.cs" />
     <Compile Include="SchoolManagementTransparencyApp\Dao\EnrollmentDao.cs" />
     <Compile Include="SchoolManagementTransparencyApp\Dao\ExpenseTransactionDao.cs" />
@@ -182,8 +194,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="SchoolManagementTransparencyApp\Controller\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
