@@ -181,7 +181,7 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.Dao
                             Age = Convert.ToInt32(reader["age"]),
                             Gender = reader["gender"].ToString(),
                             Address = reader["address"].ToString(),
-                            DateOfBirth = Convert.ToDateTime(reader["dob"]),
+                            DateOfBirth = Convert.ToDateTime(reader["date_of_birth"]),
                             ContactNumber = reader["contact_number"].ToString()
                         };
 

@@ -19,8 +19,7 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.Dao
         {
             try
             {
-                MySqlCommand command = new MySqlCommand("INSERT INTO students (user_id, first_name, middle_name, last_name, gender, address, date_of_birth, contact_number) VALUES (@UserId, @FirstName, @MiddleName, @LastName, @Gender, @Address, @DateOfBirth)", dbConn.getconnection);
-                command.Parameters.AddWithValue("@UserId", student.UserId);
+                MySqlCommand command = new MySqlCommand("INSERT INTO student (user_id, first_name, middle_name, last_name, gender, address, date_of_birth, contact_number) VALUES (@UserId, @FirstName, @MiddleName, @LastName, @Gender, @Address, @DateOfBirth, @ContactNumber)", dbConn.getconnection); command.Parameters.AddWithValue("@UserId", student.UserId);
                 command.Parameters.AddWithValue("@FirstName", student.FirstName);
                 command.Parameters.AddWithValue("@MiddleName", student.MiddleName);
                 command.Parameters.AddWithValue("@LastName", student.LastName);
@@ -83,12 +82,12 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.Dao
         }
 
 
-        public bool DeleteStudent(Student student)
+        public bool DeleteStudent(int student_id)
         {
             try
             {
-                MySqlCommand command = new MySqlCommand("DELETE FROM students WHERE user_id = @UserId", dbConn.getconnection);
-                command.Parameters.AddWithValue("@UserId", student.UserId);
+                MySqlCommand command = new MySqlCommand("DELETE FROM students WHERE student_id = @student_id", dbConn.getconnection);
+                command.Parameters.AddWithValue("@student_id", student_id);
                 dbConn.openConnect();
 
                 if (command.ExecuteNonQuery() == 1)
@@ -113,7 +112,7 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.Dao
         {
             try
             {
-                MySqlCommand command = new MySqlCommand("SELECT * FROM Student WHERE id = @StudentId", dbConn.getconnection);
+                MySqlCommand command = new MySqlCommand("SELECT * FROM Student WHERE student_id = @StudentId", dbConn.getconnection);
                 command.Parameters.AddWithValue("@StudentId", studentId);
 
                 dbConn.openConnect();

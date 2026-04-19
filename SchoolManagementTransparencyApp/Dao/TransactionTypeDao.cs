@@ -137,8 +137,8 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.Dao
             try
             {
                 MySqlCommand command = new MySqlCommand(
-                    "SELECT * FROM transaction_type WHERE id = @TransactionTypeId",
-                    dbConn.getconnection);
+                 "SELECT * FROM transaction_type WHERE transaction_type_id = @TransactionTypeId",
+                 dbConn.getconnection);
 
                 command.Parameters.AddWithValue("@TransactionTypeId", transaction_type_id);
 

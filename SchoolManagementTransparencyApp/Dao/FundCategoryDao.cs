@@ -92,8 +92,8 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.Dao
                 {
                     FundCategory fund_Category = new FundCategory
                     {
-                        FundId = reader.GetInt32("id"),
-                        FundName = reader.GetString("name")
+                        FundId = reader.GetInt32("fund_id"),
+                        FundName = reader.GetString("fund_name")
                     };
                     fundCategories.Add(fund_Category);
                 }

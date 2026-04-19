@@ -89,7 +89,7 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.Dao
             try
             {
                 MySqlCommand command = new MySqlCommand(
-                    "DELETE FROM Violation_Type WHERE id=@ViolationTypeId",
+                    "DELETE FROM Violation_Type WHERE violation_type_id=@ViolationTypeId",
                     dbConn.getconnection);
 
                 command.Parameters.AddWithValue("@ViolationTypeId", violationTypeId);
@@ -128,7 +128,7 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.Dao
                     {
                         ViolationType violation = new ViolationType
                         {
-                            ViolationTypeId = Convert.ToInt32(reader["id"]),
+                            ViolationTypeId = Convert.ToInt32(reader["violation_type_id"]),
                             ViolationName = reader["violation_name"].ToString(),
                             Fee = Convert.ToDecimal(reader["fee"]),
                             Category = reader["category"].ToString(),

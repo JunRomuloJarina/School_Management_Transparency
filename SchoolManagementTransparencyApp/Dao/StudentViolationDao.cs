@@ -18,7 +18,12 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.Dao
         {
             try
             {
-                MySqlCommand command = new MySqlCommand("INSERT INTO student_violations (student_id, violation_id, violation_date, status) VALUES (@StudentId, @ViolationId, @ViolationDate, @Status)", dbConn.getconnection);
+                // Use student_violation (singular) and correct column names
+                MySqlCommand command = new MySqlCommand(
+                    "INSERT INTO student_violation (student_id, violation_type_id, date_issued, status) " +
+                    "VALUES (@StudentId, @ViolationId, @ViolationDate, @Status)",
+                    dbConn.getconnection); 
+
                 command.Parameters.AddWithValue("@StudentId", student_Violation.StudentId);
                 command.Parameters.AddWithValue("@ViolationId", student_Violation.ViolationTypeId);
                 command.Parameters.AddWithValue("@ViolationDate", student_Violation.DateIssued);
@@ -123,7 +128,7 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.Dao
                     {
                         StudentViolation violation = new StudentViolation
                         {
-                            StudentViolationId = Convert.ToInt32(reader["id"]),
+                            StudentViolationId = Convert.ToInt32(reader["student_violation_id"]),
                             StudentId = Convert.ToInt32(reader["student_id"]),
                             ViolationTypeId = Convert.ToInt32(reader["violation_type_id"]),
                             DateIssued = Convert.ToDateTime(reader["date_issued"]),
