@@ -79,5 +79,10 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.Winfrom
         {
 
         }
+
+        private void guna2Separator1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
