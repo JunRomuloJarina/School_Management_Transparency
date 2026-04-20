@@ -59,15 +59,5 @@ namespace School_Management_Transparency.Properties {
                 resourceCulture = value;
             }
         }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap dzo_nzkGVjsIkG8_unsplash {
-            get {
-                object obj = ResourceManager.GetObject("dzo-nzkGVjsIkG8-unsplash", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
     }
 }
