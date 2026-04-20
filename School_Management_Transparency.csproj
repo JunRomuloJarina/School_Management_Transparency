@@ -248,13 +248,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\7b284218-2aef-4094-869b-ffaccb5d1f9d1.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\7b284218-2aef-4094-869b-ffaccb5d1f9d2.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\dzo-nzkGVjsIkG8-unsplash.jpg" />
+    <Folder Include="Resources\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
