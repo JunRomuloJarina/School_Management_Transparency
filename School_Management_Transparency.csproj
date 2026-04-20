@@ -149,7 +149,7 @@
     <Compile Include="SchoolManagementTransparencyApp\Controller\CourseController.cs" />
     <Compile Include="SchoolManagementTransparencyApp\Controller\EnrollmentController.cs" />
     <Compile Include="SchoolManagementTransparencyApp\Controller\ExpenseTransactionController.cs" />
-    <Compile Include="SchoolManagementTransparencyApp\Controller\FinancialContoller.cs" />
+    <Compile Include="SchoolManagementTransparencyApp\Controller\FinancialController.cs" />
     <Compile Include="SchoolManagementTransparencyApp\Controller\FundCategoryController.cs" />
     <Compile Include="SchoolManagementTransparencyApp\Controller\IncomeTransactionController.cs" />
     <Compile Include="SchoolManagementTransparencyApp\Controller\StudentController.cs" />
@@ -196,28 +196,28 @@
     <Compile Include="SchoolManagementTransparencyApp\Service\ViolationTypeService.cs" />
     <Compile Include="SchoolManagementTransparencyApp\Util\DatabaseConnection.cs" />
     <Compile Include="SchoolManagementTransparencyApp\Util\UserAccountSession.cs" />
-    <Compile Include="SchoolManagementTransparencyApp\Winfroms\Admin_Form.cs">
+    <Compile Include="SchoolManagementTransparencyApp\Winforms\Admin_Form.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SchoolManagementTransparencyApp\Winfroms\Admin_Form.Designer.cs">
+    <Compile Include="SchoolManagementTransparencyApp\Winforms\Admin_Form.Designer.cs">
       <DependentUpon>Admin_Form.cs</DependentUpon>
     </Compile>
-    <Compile Include="SchoolManagementTransparencyApp\Winfroms\Login_Form.cs">
+    <Compile Include="SchoolManagementTransparencyApp\Winforms\Login_Form.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SchoolManagementTransparencyApp\Winfroms\Login_Form.Designer.cs">
+    <Compile Include="SchoolManagementTransparencyApp\Winforms\Login_Form.Designer.cs">
       <DependentUpon>Login_Form.cs</DependentUpon>
     </Compile>
-    <Compile Include="SchoolManagementTransparencyApp\Winfroms\SBO_FORM.cs">
+    <Compile Include="SchoolManagementTransparencyApp\Winforms\SBO_FORM.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SchoolManagementTransparencyApp\Winfroms\SBO_FORM.Designer.cs">
+    <Compile Include="SchoolManagementTransparencyApp\Winforms\SBO_FORM.Designer.cs">
       <DependentUpon>SBO_FORM.cs</DependentUpon>
     </Compile>
-    <Compile Include="SchoolManagementTransparencyApp\Winfroms\Student_Form.cs">
+    <Compile Include="SchoolManagementTransparencyApp\Winforms\Student_Form.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SchoolManagementTransparencyApp\Winfroms\Student_Form.Designer.cs">
+    <Compile Include="SchoolManagementTransparencyApp\Winforms\Student_Form.Designer.cs">
       <DependentUpon>Student_Form.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -228,7 +228,11 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="SchoolManagementTransparencyApp\Winforms\Login_Form.resx">
+      <DependentUpon>Login_Form.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -243,6 +247,14 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\7b284218-2aef-4094-869b-ffaccb5d1f9d1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\7b284218-2aef-4094-869b-ffaccb5d1f9d2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dzo-nzkGVjsIkG8-unsplash.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

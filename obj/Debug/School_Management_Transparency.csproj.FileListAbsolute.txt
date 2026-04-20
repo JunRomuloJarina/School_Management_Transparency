@@ -44,3 +44,4 @@ C:\Visual_Studio_Repo\SchoolManagementTransparency\School_Management_Transparenc
 C:\Visual_Studio_Repo\SchoolManagementTransparency\School_Management_Transparency\bin\Debug\System.CodeDom.dll
 C:\Visual_Studio_Repo\SchoolManagementTransparency\School_Management_Transparency\bin\Debug\Newtonsoft.Json.xml
 C:\Visual_Studio_Repo\SchoolManagementTransparency\School_Management_Transparency\bin\Debug\System.CodeDom.xml
+C:\Visual_Studio_Repo\SchoolManagementTransparency\School_Management_Transparency\obj\Debug\School_Management_Transparency.SchoolManagementTransparencyApp.Winfroms.Login_Form.resources

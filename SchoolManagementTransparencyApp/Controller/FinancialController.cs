@@ -9,7 +9,7 @@ using System.Windows.Forms;
 
 namespace School_Management_Transparency.SchoolManagementTransparencyApp.Controller
 {
-    internal class FinancialContoller
+    internal class FinancialController
     {
 
         private readonly FinancialService _financialService = new FinancialService();

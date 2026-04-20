@@ -122,7 +122,7 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.Dao
                     {
                         Student student = new Student
                         {
-                            StudentId = Convert.ToInt32(reader["id"]),
+                            StudentId = Convert.ToInt32(reader["student_id"]),
                             UserId = Convert.ToInt32(reader["user_id"]),
                             FirstName = reader["first_name"].ToString(),
                             MiddleName = reader["middle_name"].ToString(),
