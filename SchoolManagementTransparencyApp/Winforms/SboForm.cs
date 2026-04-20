@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace School_Management_Transparency.SchoolManagementTransparencyApp.Winfroms
 {
-    public partial class SBO_FORM : Form
+    public partial class SboForm : Form
     {
-        public SBO_FORM()
+        public SboForm()
         {
             InitializeComponent();
         }

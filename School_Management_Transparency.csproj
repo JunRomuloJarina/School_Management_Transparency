@@ -196,29 +196,29 @@
     <Compile Include="SchoolManagementTransparencyApp\Service\ViolationTypeService.cs" />
     <Compile Include="SchoolManagementTransparencyApp\Util\DatabaseConnection.cs" />
     <Compile Include="SchoolManagementTransparencyApp\Util\UserAccountSession.cs" />
-    <Compile Include="SchoolManagementTransparencyApp\Winforms\Admin_Form.cs">
+    <Compile Include="SchoolManagementTransparencyApp\Winforms\AdminForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SchoolManagementTransparencyApp\Winforms\Admin_Form.Designer.cs">
-      <DependentUpon>Admin_Form.cs</DependentUpon>
+    <Compile Include="SchoolManagementTransparencyApp\Winforms\AdminForm.Designer.cs">
+      <DependentUpon>AdminForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="SchoolManagementTransparencyApp\Winforms\Login_Form.cs">
+    <Compile Include="SchoolManagementTransparencyApp\Winforms\LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SchoolManagementTransparencyApp\Winforms\Login_Form.Designer.cs">
-      <DependentUpon>Login_Form.cs</DependentUpon>
+    <Compile Include="SchoolManagementTransparencyApp\Winforms\LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="SchoolManagementTransparencyApp\Winforms\SBO_FORM.cs">
+    <Compile Include="SchoolManagementTransparencyApp\Winforms\SboForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SchoolManagementTransparencyApp\Winforms\SBO_FORM.Designer.cs">
-      <DependentUpon>SBO_FORM.cs</DependentUpon>
+    <Compile Include="SchoolManagementTransparencyApp\Winforms\SboForm.Designer.cs">
+      <DependentUpon>SboForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="SchoolManagementTransparencyApp\Winforms\Student_Form.cs">
+    <Compile Include="SchoolManagementTransparencyApp\Winforms\StudentForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SchoolManagementTransparencyApp\Winforms\Student_Form.Designer.cs">
-      <DependentUpon>Student_Form.cs</DependentUpon>
+    <Compile Include="SchoolManagementTransparencyApp\Winforms\StudentForm.Designer.cs">
+      <DependentUpon>StudentForm.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -230,8 +230,8 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="SchoolManagementTransparencyApp\Winforms\Login_Form.resx">
-      <DependentUpon>Login_Form.cs</DependentUpon>
+    <EmbeddedResource Include="SchoolManagementTransparencyApp\Winforms\LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

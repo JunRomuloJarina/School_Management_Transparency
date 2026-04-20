@@ -1,6 +1,6 @@
 ﻿namespace School_Management_Transparency.SchoolManagementTransparencyApp.Winfroms
 {
-    partial class Admin_Form
+    partial class StudentForm
     {
         /// <summary>
         /// Required designer variable.
@@ -31,7 +31,7 @@
             this.components = new System.ComponentModel.Container();
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Admin_Form";
+            this.Text = "Student_Form";
         }
 
         #endregion

@@ -1,6 +1,6 @@
 ﻿namespace School_Management_Transparency.SchoolManagementTransparencyApp.Winfroms
 {
-    partial class Login_Form
+    partial class LoginForm
     {
         /// <summary>
         /// Required designer variable.
