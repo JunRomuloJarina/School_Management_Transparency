@@ -52,6 +52,8 @@
             this.cuiLabel1 = new CuoreUI.Controls.cuiLabel();
             this.CreateAccountContainerPanel = new Guna.UI2.WinForms.Guna2ShadowPanel();
             this.label5 = new System.Windows.Forms.Label();
+            this.guna2DragControl3 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
+            this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2GradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
             this.LoginContainerPanel.SuspendLayout();
@@ -74,11 +76,12 @@
             this.guna2GradientPanel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2GradientPanel1.BackgroundImage = global::School_Management_Transparency.Properties.Resources.ncbii_login_img;
             this.guna2GradientPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.guna2GradientPanel1.Controls.Add(this.LoginContainerPanel);
+            this.guna2GradientPanel1.Controls.Add(this.guna2ControlBox1);
             this.guna2GradientPanel1.Controls.Add(this.cuiLabel3);
             this.guna2GradientPanel1.Controls.Add(this.guna2CirclePictureBox1);
             this.guna2GradientPanel1.Controls.Add(this.label4);
             this.guna2GradientPanel1.Controls.Add(this.guna2GradientPanel2);
-            this.guna2GradientPanel1.Controls.Add(this.LoginContainerPanel);
             this.guna2GradientPanel1.Controls.Add(this.CreateAccountContainerPanel);
             this.guna2GradientPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.guna2GradientPanel1.Location = new System.Drawing.Point(0, 0);
@@ -90,21 +93,22 @@
             // cuiLabel3
             // 
             this.cuiLabel3.Content = "Changing\\ Life,\\ Bridging\\ the\\ Future\'s\\.";
-            this.cuiLabel3.Font = new System.Drawing.Font("Arial Narrow", 72F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cuiLabel3.Font = new System.Drawing.Font("Elephant", 60F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cuiLabel3.ForeColor = System.Drawing.Color.Red;
             this.cuiLabel3.HorizontalAlignment = System.Drawing.StringAlignment.Center;
-            this.cuiLabel3.Location = new System.Drawing.Point(97, 157);
+            this.cuiLabel3.Location = new System.Drawing.Point(98, 162);
             this.cuiLabel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cuiLabel3.Name = "cuiLabel3";
-            this.cuiLabel3.Size = new System.Drawing.Size(675, 546);
+            this.cuiLabel3.Size = new System.Drawing.Size(709, 498);
             this.cuiLabel3.TabIndex = 6;
             this.cuiLabel3.VerticalAlignment = System.Drawing.StringAlignment.Near;
+            this.cuiLabel3.Load += new System.EventHandler(this.cuiLabel3_Load);
             // 
             // guna2CirclePictureBox1
             // 
             this.guna2CirclePictureBox1.Image = global::School_Management_Transparency.Properties.Resources._358464576_927074755048849_6401788493384110444_n;
             this.guna2CirclePictureBox1.ImageRotate = 0F;
-            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(88, 12);
+            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(96, 12);
             this.guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
             this.guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.guna2CirclePictureBox1.Size = new System.Drawing.Size(70, 64);
@@ -119,7 +123,7 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Arial", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(167, 33);
+            this.label4.Location = new System.Drawing.Point(175, 33);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(351, 21);
             this.label4.TabIndex = 4;
@@ -130,9 +134,9 @@
             // 
             this.guna2GradientPanel2.FillColor = System.Drawing.Color.LightCoral;
             this.guna2GradientPanel2.FillColor2 = System.Drawing.Color.Maroon;
-            this.guna2GradientPanel2.Location = new System.Drawing.Point(0, 0);
+            this.guna2GradientPanel2.Location = new System.Drawing.Point(-1, 0);
             this.guna2GradientPanel2.Name = "guna2GradientPanel2";
-            this.guna2GradientPanel2.Size = new System.Drawing.Size(76, 873);
+            this.guna2GradientPanel2.Size = new System.Drawing.Size(90, 873);
             this.guna2GradientPanel2.TabIndex = 1;
             // 
             // LoginContainerPanel
@@ -155,7 +159,7 @@
             this.LoginContainerPanel.EdgeWidth = 10;
             this.LoginContainerPanel.FillColor = System.Drawing.Color.White;
             this.LoginContainerPanel.ForeColor = System.Drawing.Color.Black;
-            this.LoginContainerPanel.Location = new System.Drawing.Point(809, 68);
+            this.LoginContainerPanel.Location = new System.Drawing.Point(791, 69);
             this.LoginContainerPanel.Name = "LoginContainerPanel";
             this.LoginContainerPanel.Radius = 9;
             this.LoginContainerPanel.ShadowColor = System.Drawing.Color.Maroon;
@@ -178,13 +182,13 @@
             // 
             this.cuiLabel2.BackColor = System.Drawing.Color.Transparent;
             this.cuiLabel2.Content = resources.GetString("cuiLabel2.Content");
-            this.cuiLabel2.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cuiLabel2.Font = new System.Drawing.Font("Elephant", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cuiLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.cuiLabel2.HorizontalAlignment = System.Drawing.StringAlignment.Near;
-            this.cuiLabel2.Location = new System.Drawing.Point(80, 187);
+            this.cuiLabel2.Location = new System.Drawing.Point(24, 180);
             this.cuiLabel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cuiLabel2.Name = "cuiLabel2";
-            this.cuiLabel2.Size = new System.Drawing.Size(410, 96);
+            this.cuiLabel2.Size = new System.Drawing.Size(520, 96);
             this.cuiLabel2.TabIndex = 2;
             this.cuiLabel2.VerticalAlignment = System.Drawing.StringAlignment.Center;
             this.cuiLabel2.Load += new System.EventHandler(this.cuiLabel2_Load);
@@ -364,13 +368,13 @@
             // 
             this.cuiLabel1.BackColor = System.Drawing.Color.Transparent;
             this.cuiLabel1.Content = "SCHOOL\\ MANAGEMENT\\ TRANSPARENCY";
-            this.cuiLabel1.Font = new System.Drawing.Font("Arial", 30F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cuiLabel1.Font = new System.Drawing.Font("Elephant", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cuiLabel1.ForeColor = System.Drawing.Color.Black;
             this.cuiLabel1.HorizontalAlignment = System.Drawing.StringAlignment.Center;
-            this.cuiLabel1.Location = new System.Drawing.Point(39, 15);
+            this.cuiLabel1.Location = new System.Drawing.Point(24, 15);
             this.cuiLabel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cuiLabel1.Name = "cuiLabel1";
-            this.cuiLabel1.Size = new System.Drawing.Size(475, 202);
+            this.cuiLabel1.Size = new System.Drawing.Size(512, 202);
             this.cuiLabel1.TabIndex = 1;
             this.cuiLabel1.VerticalAlignment = System.Drawing.StringAlignment.Near;
             // 
@@ -379,7 +383,7 @@
             this.CreateAccountContainerPanel.BackColor = System.Drawing.Color.Transparent;
             this.CreateAccountContainerPanel.EdgeWidth = 10;
             this.CreateAccountContainerPanel.FillColor = System.Drawing.Color.White;
-            this.CreateAccountContainerPanel.Location = new System.Drawing.Point(809, 68);
+            this.CreateAccountContainerPanel.Location = new System.Drawing.Point(791, 69);
             this.CreateAccountContainerPanel.Name = "CreateAccountContainerPanel";
             this.CreateAccountContainerPanel.Radius = 9;
             this.CreateAccountContainerPanel.ShadowColor = System.Drawing.Color.Maroon;
@@ -398,6 +402,26 @@
             this.label5.Size = new System.Drawing.Size(114, 39);
             this.label5.TabIndex = 10;
             this.label5.Text = "Login";
+            // 
+            // guna2DragControl3
+            // 
+            this.guna2DragControl3.DockIndicatorTransparencyValue = 0.6D;
+            this.guna2DragControl3.TargetControl = this.LoginContainerPanel;
+            this.guna2DragControl3.UseTransparentDrag = true;
+            // 
+            // guna2ControlBox1
+            // 
+            this.guna2ControlBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2ControlBox1.FillColor = System.Drawing.Color.Silver;
+            this.guna2ControlBox1.ForeColor = System.Drawing.Color.Transparent;
+            this.guna2ControlBox1.HoverState.FillColor = System.Drawing.Color.Red;
+            this.guna2ControlBox1.HoverState.IconColor = System.Drawing.Color.Black;
+            this.guna2ControlBox1.IconColor = System.Drawing.Color.Black;
+            this.guna2ControlBox1.Location = new System.Drawing.Point(1342, 12);
+            this.guna2ControlBox1.Name = "guna2ControlBox1";
+            this.guna2ControlBox1.Size = new System.Drawing.Size(39, 24);
+            this.guna2ControlBox1.TabIndex = 11;
+            this.guna2ControlBox1.Click += new System.EventHandler(this.guna2ControlBox1_Click);
             // 
             // LoginForm
             // 
@@ -442,5 +466,7 @@
         private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox1;
         private CuoreUI.Controls.cuiLabel cuiLabel3;
         private System.Windows.Forms.Label label5;
+        private Guna.UI2.WinForms.Guna2DragControl guna2DragControl3;
+        private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
     }
 }

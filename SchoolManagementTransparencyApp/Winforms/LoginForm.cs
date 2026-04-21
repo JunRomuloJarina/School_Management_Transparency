@@ -94,5 +94,15 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.Winfrom
         {
 
         }
+
+        private void cuiLabel3_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2ControlBox1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
