@@ -84,5 +84,15 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.Winfrom
         {
 
         }
+
+        private void cuiLabel2_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

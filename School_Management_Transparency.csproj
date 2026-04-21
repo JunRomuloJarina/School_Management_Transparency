@@ -146,6 +146,11 @@
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="SchoolManagementTransparencyApp\Controller\CourseController.cs" />
     <Compile Include="SchoolManagementTransparencyApp\Controller\EnrollmentController.cs" />
     <Compile Include="SchoolManagementTransparencyApp\Controller\ExpenseTransactionController.cs" />
@@ -222,14 +227,9 @@
     </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <EmbeddedResource Include="SchoolManagementTransparencyApp\Winforms\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -248,7 +248,13 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Resources\" />
+    <None Include="Resources\ncbii_login_img.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ncbii-log.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\358464576_927074755048849_6401788493384110444_n.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
