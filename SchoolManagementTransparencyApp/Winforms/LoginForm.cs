@@ -104,5 +104,10 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.Winfrom
         {
             Application.Exit();
         }
+
+        private void CreateAccountContainerPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
