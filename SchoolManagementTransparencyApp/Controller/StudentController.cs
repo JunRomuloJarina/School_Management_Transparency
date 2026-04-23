@@ -106,5 +106,31 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.Control
                 return false;
             }
         }
+
+        // Method to get the profile of the currently logged-in student
+        public Student GetCurrentStudentProfile()
+        {
+            try
+            {
+                // 1. Get the current UserID from the Account Service
+                UserAccountService userAccountService = new UserAccountService();
+                int currentUserId = userAccountService.GetCurrentUserId();
+
+                // 2. Fetch the student record linked to that UserID
+                Student currentStudent = _studentService.GetStudentByUserId(currentUserId);
+
+                if (currentStudent == null)
+                {
+                    MessageBox.Show("Profile not found. Please contact the administrator.");
+                }
+
+                return currentStudent;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Profile Error: " + ex.Message);
+                return null;
+            }
+        }
     }
 }

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using School_Management_Transparency.SchoolManagementTransparencyApp.Controller;
+using School_Management_Transparency.SchoolManagementTransparencyApp.Model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +17,13 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.Winfrom
         public StudentForm()
         {
             InitializeComponent();
+        }
+
+  
+
+
+        private void StudentForm_Load(object sender, EventArgs e)
+        {
         }
     }
 }

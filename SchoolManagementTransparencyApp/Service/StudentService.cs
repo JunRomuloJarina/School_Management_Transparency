@@ -47,5 +47,13 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.Service
             if (id <= 0) return null;
             return _studentDao.GetStudentById(id);
         }
+
+        public Student GetStudentByUserId(int userId)
+        {
+            if (userId <= 0) return null;
+
+            // We use LINQ to find the student that matches the logged-in UserID
+            return _studentDao.GetAllStudent().FirstOrDefault(s => s.UserId == userId);
+        }
     }
 }

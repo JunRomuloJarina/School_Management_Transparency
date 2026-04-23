@@ -225,8 +225,11 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.Winfrom
 
                 //MessageBox.Show("Account created successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                new StudentForm().Show(); // Open the student dashboard
-                this.Hide(); // Hide the login form after successful account creation
+                if( studentAccountCreated )
+                {
+                    new StudentForm().Show(); // Open the student dashboard
+                    this.Hide(); // Hide the login form after successful account creation
+                }
 
             }
 
