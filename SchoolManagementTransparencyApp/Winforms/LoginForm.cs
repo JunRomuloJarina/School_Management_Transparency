@@ -1,4 +1,5 @@
 ﻿using School_Management_Transparency.SchoolManagementTransparencyApp.Controller;
+using School_Management_Transparency.SchoolManagementTransparencyApp.Model;
 using School_Management_Transparency.SchoolManagementTransparencyApp.Util;
 using System;
 using System.Collections.Generic;
@@ -87,18 +88,15 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.Winfrom
                 {
                     if (role.Equals("ADMIN", StringComparison.OrdinalIgnoreCase))
                     {
-                        AdminForm adminDashboard = new AdminForm();
-                        adminDashboard.Show();
+                        new AdminForm().Show();
                     }
                     else if (role.Equals("SBO", StringComparison.OrdinalIgnoreCase))
                     {
-                        SboForm sboForm = new SboForm();
-                        sboForm.Show();
+                        new SboForm().Show();
                     }
                     else if (role.Equals("STUDENT", StringComparison.OrdinalIgnoreCase))
                     {
-                        StudentForm studentForm = new StudentForm();
-                        studentForm.Show();
+                        new StudentForm().Show();
                     }
                     else
                     {
@@ -180,6 +178,102 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.Winfrom
         private void showPassword_CheckedChanged(object sender, EventArgs e)
         {
             passwordLoginTxtbox.PasswordChar = showPassword.Checked ? '\0' : '●';
+        }
+
+        private void createAccountBtn_Click(object sender, EventArgs e)
+        {
+            int age = DateTime.Now.Year - dateOfBirtchDatePicker.Value.Year;
+
+            bool userAccountCreated = userAccountController.RegisterUser(
+                usernameCreateTxtBox.Text,
+                passwordCreateTxtBox.Text,
+                "STUDENT" // Default role for new accounts
+            );
+
+            //get the userId of the newly created account to link with the student record
+            int getCurrentId = userAccountController.GetUserIdByUsername( usernameCreateTxtBox.Text );
+
+            if ( userAccountCreated ) {
+
+                bool studentAccountCreated = studentController.AddNewStudent(
+                   firstNameTextBox.Text,
+                   middleNameTextBox.Text,
+                   lastNameTextBox.Text,
+                   age,
+                   genderComboBox.SelectedItem?.ToString() ?? "",
+                   addressTextBox.Text,
+                   dateOfBirtchDatePicker.Value,
+                   contactNumberTextBox.Text,
+                   getCurrentId // Placeholder for userId, should be linked to the created user account
+                );
+
+                //MessageBox.Show("Account created successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                StudentSession.Session = studentAccountCreated;// Set the current user session
+
+                new StudentForm().Show(); // Open the student dashboard
+
+            }
+
+        }
+
+        private void genderComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lastNameTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label10_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void firstNameTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void middleNameTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void addressTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label11_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void contactNumberTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label13_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

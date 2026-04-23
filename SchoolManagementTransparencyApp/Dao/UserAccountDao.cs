@@ -37,7 +37,7 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.Dao
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                Console.WriteLine(ex.Message);
             }
             finally
             {
@@ -243,6 +243,41 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.Dao
             return null;
         }
 
+
+        public int GetUserIdByUsername(string username)
+        {
+            try
+            {
+                // Using BINARY for case-sensitivity to match your Login logic
+                MySqlCommand command = new MySqlCommand(
+                    "SELECT user_id FROM User_Account WHERE BINARY username = @Username",
+                    dbConn.getconnection);
+
+                command.Parameters.AddWithValue("@Username", username);
+
+                dbConn.openConnect();
+
+                // ExecuteScalar is perfect here as we only need the ID (a single value)
+                object result = command.ExecuteScalar();
+
+                if (result != null)
+                {
+                    dbConn.closeConnect();
+                    return Convert.ToInt32(result);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error retrieving User ID: " + ex.Message);
+            }
+            finally
+            {
+                dbConn.closeConnect();
+            }
+
+            // Return 0 or -1 if the user is not found
+            return 0;
+        }
 
 
 

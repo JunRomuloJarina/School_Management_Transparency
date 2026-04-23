@@ -67,5 +67,23 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.Service
             LoggedInUsername = null;
             LoggedInRole = null;
         }
+
+        public int GetCurrentUserId()
+        {
+            if (string.IsNullOrEmpty(LoggedInUsername)) return 0;
+            return _userDao.GetUserIdByUsername(LoggedInUsername);
+        }
+
+        public int GetIdFromUsername(string username)
+        {
+            // Basic validation: Don't query the DB if the string is empty
+            if (string.IsNullOrWhiteSpace(username))
+            {
+                return 0;
+            }
+
+            // Call the DAO method you just created
+            return _userDao.GetUserIdByUsername(username);
+        }
     }
 }

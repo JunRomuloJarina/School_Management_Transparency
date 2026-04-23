@@ -200,6 +200,7 @@
     <Compile Include="SchoolManagementTransparencyApp\Service\UserAccountService.cs" />
     <Compile Include="SchoolManagementTransparencyApp\Service\ViolationTypeService.cs" />
     <Compile Include="SchoolManagementTransparencyApp\Util\DatabaseConnection.cs" />
+    <Compile Include="SchoolManagementTransparencyApp\Util\StudentSession.cs" />
     <Compile Include="SchoolManagementTransparencyApp\Util\UserAccountSession.cs" />
     <Compile Include="SchoolManagementTransparencyApp\Winforms\AdminForm.cs">
       <SubType>Form</SubType>

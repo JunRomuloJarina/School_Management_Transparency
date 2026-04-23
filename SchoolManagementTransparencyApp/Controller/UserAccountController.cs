@@ -23,7 +23,6 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.Control
             }
             else
             {
-                MessageBox.Show("Invalid Username or Password.", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
         }
@@ -115,6 +114,31 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.Control
         public string GetLoggedInUserRole()
         {
                 return UserAccountService.LoggedInRole;
+        }
+
+        public int GetCurrentUserId()
+        {
+            return _userService.GetCurrentUserId();
+        }
+
+        public int GetUserIdByUsername(string username)
+        {
+            try
+            {
+                int id = _userService.GetIdFromUsername(username);
+
+                if (id == 0)
+                {
+                    return 0;
+                }
+
+                return id;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Controller Error: " + ex.Message);
+                return 0;
+            }
         }
     }
 }
