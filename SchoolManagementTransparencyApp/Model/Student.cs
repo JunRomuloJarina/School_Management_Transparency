@@ -40,9 +40,6 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.Model
             return $"[ID: {StudentId}] {FirstName} {LastName} - {ContactNumber}";
         }
 
-        public static implicit operator Student(bool v)
-        {
-            throw new NotImplementedException();
-        }
+        
     }
 }

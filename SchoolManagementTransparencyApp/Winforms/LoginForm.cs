@@ -182,6 +182,22 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.Winfrom
 
         private void createAccountBtn_Click(object sender, EventArgs e)
         {
+            var isValidInput = new LoginInputValidator().ValidateLoginInput(usernameCreateTxtBox.Text, passwordCreateTxtBox.Text);
+            var isValidStudentInput = new StudentCreateInputValidator().ValidateStudentInput(firstNameTextBox.Text, lastNameTextBox.Text);
+
+            if (!isValidStudentInput)
+            {
+                MessageBox.Show("Invalid student information. Please check the first name and last name.", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if (!isValidInput)
+            {
+                MessageBox.Show("Invalid input. Please check your username and password.", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+
             int age = DateTime.Now.Year - dateOfBirtchDatePicker.Value.Year;
 
             bool userAccountCreated = userAccountController.RegisterUser(
@@ -208,9 +224,9 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.Winfrom
                 );
 
                 //MessageBox.Show("Account created successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                StudentSession.Session = studentAccountCreated;// Set the current user session
 
                 new StudentForm().Show(); // Open the student dashboard
+                this.Hide(); // Hide the login form after successful account creation
 
             }
 
