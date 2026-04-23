@@ -92,3 +92,5 @@ C:\Visual_Studio_Repo\SMT\bin\Debug\System.Threading.Tasks.Extensions.xml
 C:\Visual_Studio_Repo\SMT\obj\Debug\School_Management_Transparency.Properties.Resources.resources
 C:\Visual_Studio_Repo\SMT\obj\Debug\School_Management_Transparency.csproj.CoreCompileInputs.cache
 C:\Visual_Studio_Repo\SMT\obj\Debug\School_M.0AF7F4A0.Up2Date
+C:\Visual_Studio_Repo\SMT\obj\Debug\School_Management_Transparency.SchoolManagementTransparencyApp.Winfroms.StudentForm.resources
+C:\Visual_Studio_Repo\SMT\obj\Debug\School_Management_Transparency.SchoolManagementTransparencyApp.Winfroms.AdminForm.resources
