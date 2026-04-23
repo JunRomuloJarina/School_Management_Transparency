@@ -95,5 +95,26 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.Control
             MessageBox.Show(result, "Delete Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             return false;
         }
+
+        public UserAccount GetUserById(int id)
+        {
+            return _userService.GetAll().FirstOrDefault(u => u.UserId == id);
+        }
+
+
+        public List<UserAccount> GetAllUsers()
+        {
+            return _userService.GetAll();
+        }
+
+        public string GetLoggedInUsername()
+        {
+            return UserAccountService.LoggedInUsername;
+        }
+
+        public string GetLoggedInUserRole()
+        {
+                return UserAccountService.LoggedInRole;
+        }
     }
 }

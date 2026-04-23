@@ -1,4 +1,6 @@
-﻿using System;
+﻿using School_Management_Transparency.SchoolManagementTransparencyApp.Controller;
+using School_Management_Transparency.SchoolManagementTransparencyApp.Util;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,8 +19,11 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.Winfrom
             InitializeComponent();
         }
 
+        private StudentController studentController = new StudentController();
+        private UserAccountController userAccountController = new UserAccountController();
 
-     
+
+
 
         private void Login_Form_Load(object sender, EventArgs e)
         {
@@ -68,8 +73,53 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.Winfrom
 
         private void signInBtn_Click(object sender, EventArgs e)
         {
+            String username = usernameLoginTxtbox.Text;
+            String password = passwordLoginTxtbox.Text;
 
+            bool result = userAccountController.Login(username, password);
+
+            if (result)
+            {
+                MessageBox.Show("Login successful!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                string role = userAccountController.GetLoggedInUserRole();
+
+                if (role != null)
+                {
+                    if (role.Equals("ADMIN", StringComparison.OrdinalIgnoreCase))
+                    {
+                        AdminForm adminDashboard = new AdminForm();
+                        adminDashboard.Show();
+                    }
+                    else if (role.Equals("SBO", StringComparison.OrdinalIgnoreCase))
+                    {
+                        SboForm sboForm = new SboForm();
+                        sboForm.Show();
+                    }
+                    else if (role.Equals("STUDENT", StringComparison.OrdinalIgnoreCase))
+                    {
+                        StudentForm studentForm = new StudentForm();
+                        studentForm.Show();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Unknown role assigned to the user.", "Role Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                    this.Hide(); // Hide login form after successful login
+
+                }
+                else
+                {
+                    MessageBox.Show("Failed to retrieve user role.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                }
+            }
+            else
+            {
+                MessageBox.Show("Invalid username or password. Please try again.", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+            }
         }
+
 
         private void label3_Click(object sender, EventArgs e)
         {
@@ -125,6 +175,11 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.Winfrom
         private void label12_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void showPassword_CheckedChanged(object sender, EventArgs e)
+        {
+            passwordLoginTxtbox.PasswordChar = showPassword.Checked ? '\0' : '●';
         }
     }
 }
