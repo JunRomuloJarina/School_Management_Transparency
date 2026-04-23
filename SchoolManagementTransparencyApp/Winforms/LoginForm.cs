@@ -42,7 +42,8 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.Winfrom
 
         private void signupBtn_Click(object sender, EventArgs e)
         {
-
+            CreateAccountContainerPanel.Visible = true;
+            LoginContainerPanel.Visible = false;
         }
 
         private void label4_Click(object sender, EventArgs e)
@@ -102,10 +103,26 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.Winfrom
 
         private void guna2ControlBox1_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            this.Close();
         }
 
         private void CreateAccountContainerPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void backBtn_Click(object sender, EventArgs e)
+        {
+            LoginContainerPanel.Visible = true;
+            CreateAccountContainerPanel.Visible = false;
+        }
+
+        private void dateOfBirtchDatePicker_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label12_Click(object sender, EventArgs e)
         {
 
         }
