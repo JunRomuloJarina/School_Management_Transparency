@@ -193,33 +193,37 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.Dao
         }
 
 
+        public List<dynamic> GetAllViolations()
+        {
+            List<dynamic> list = new List<dynamic>();
+            try
+            {
+                // Now using your actual schema to get the real Violation Name
+                string query = @"
+            SELECT s.first_name, s.last_name, vt.violation_name 
+            FROM student_violation sv
+            JOIN student s ON sv.student_id = s.student_id
+            JOIN violation_type vt ON sv.violation_type_id = vt.violation_type_id";
 
+                MySqlCommand command = new MySqlCommand(query, dbConn.getconnection);
+                dbConn.openConnect();
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+                using (MySqlDataReader reader = command.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        list.Add(new
+                        {
+                            StudentName = reader["first_name"].ToString() + " " + reader["last_name"].ToString(),
+                            ViolationType = reader["violation_name"].ToString() // Real data instead of placeholder
+                        });
+                    }
+                }
+            }
+            catch (Exception ex) { MessageBox.Show("Database Error: " + ex.Message); }
+            finally { dbConn.closeConnect(); }
+            return list;
+        }
 
     }
 }

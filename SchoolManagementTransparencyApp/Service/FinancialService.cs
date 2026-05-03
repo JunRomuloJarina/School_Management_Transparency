@@ -39,10 +39,31 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.Service
             return "Transaction failed at the database level.";
         }
 
+        DashboardDao _dao = new DashboardDao();
         public List<FundBalanceReport> GetTransparencyReport()
         {
             FinancialDao financialDao = new FinancialDao();
             return financialDao.GetFundBalanceReport();
+        }
+
+        public string GetTotalStudents() => _dao.GetTotalStudentsCount().ToString();
+
+        public string GetFormattedTotalFunds()
+        {
+            // Fetch raw totals from your DashboardDao
+            decimal totalIncome = _dao.GetTotalFundsAmount();
+            decimal totalExpenses = _dao.GetTotalExpensesAmount();
+
+            // Deduct expenses from income to get the actual available balance
+            decimal netBalance = totalIncome - totalExpenses;
+
+            return netBalance.ToString("N2"); // Formats as 1,234.56
+        }
+
+        public string GetFormattedTotalExpenses()
+        {
+            decimal total = _dao.GetTotalExpensesAmount();
+            return total.ToString("N2");
         }
     }
 }

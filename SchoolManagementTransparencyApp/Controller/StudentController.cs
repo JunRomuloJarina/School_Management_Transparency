@@ -132,5 +132,28 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.Control
                 return null;
             }
         }
+
+        public void LoadViolationGrid(DataGridView dgv)
+        {
+            try
+            {
+                dgv.DataSource = null;
+                // Fetch the data from service
+                var data = _studentService.GetViolationLogs();
+
+                if (data != null && data.Count > 0)
+                {
+                    dgv.DataSource = data;
+
+                    // Optional: Make the columns look nice
+                    if (dgv.Columns["StudentName"] != null) dgv.Columns["StudentName"].HeaderText = "Student Name";
+                    if (dgv.Columns["ViolationType"] != null) dgv.Columns["ViolationType"].HeaderText = "Violation Committed";
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Controller Error: " + ex.Message);
+            }
+        }
     }
 }

@@ -55,5 +55,10 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.Service
             // We use LINQ to find the student that matches the logged-in UserID
             return _studentDao.GetAllStudent().FirstOrDefault(s => s.UserId == userId);
         }
+
+        public List<dynamic> GetViolationLogs()
+        {
+            return _studentDao.GetAllViolations();
+        }
     }
 }

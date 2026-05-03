@@ -32,13 +32,36 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginForm));
             this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.guna2DragControl2 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
-            this.guna2DragControl3 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.guna2ControlBox1 = new Guna.UI2.WinForms.Guna2ControlBox();
             this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.label4 = new System.Windows.Forms.Label();
             this.guna2GradientPanel2 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.cuiLabel3 = new CuoreUI.Controls.cuiLabel();
+            this.CreateAccountContainerPanel = new Guna.UI2.WinForms.Guna2ShadowPanel();
+            this.genderComboBox = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.createAccountBtn = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.backBtn = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.dateOfBirtchDatePicker = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.usernameCreateLbale = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.middleNameTextBox = new Guna.UI2.WinForms.Guna2TextBox();
+            this.passwordCreateTxtBox = new Guna.UI2.WinForms.Guna2TextBox();
+            this.usernameCreateTxtBox = new Guna.UI2.WinForms.Guna2TextBox();
+            this.contactNumberTextBox = new Guna.UI2.WinForms.Guna2TextBox();
+            this.addressTextBox = new Guna.UI2.WinForms.Guna2TextBox();
+            this.lastNameTextBox = new Guna.UI2.WinForms.Guna2TextBox();
+            this.firstNameTextBox = new Guna.UI2.WinForms.Guna2TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.guna2Separator4 = new Guna.UI2.WinForms.Guna2Separator();
+            this.guna2Separator3 = new Guna.UI2.WinForms.Guna2Separator();
             this.LoginContainerPanel = new Guna.UI2.WinForms.Guna2ShadowPanel();
             this.showPassword = new Guna.UI2.WinForms.Guna2CheckBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -54,34 +77,11 @@
             this.passwordLoginTxtbox = new Guna.UI2.WinForms.Guna2TextBox();
             this.usernameLoginTxtbox = new Guna.UI2.WinForms.Guna2TextBox();
             this.cuiLabel1 = new CuoreUI.Controls.cuiLabel();
-            this.CreateAccountContainerPanel = new Guna.UI2.WinForms.Guna2ShadowPanel();
-            this.createAccountBtn = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.backBtn = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.dateOfBirtchDatePicker = new Guna.UI2.WinForms.Guna2DateTimePicker();
-            this.genderComboBox = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.middleNameTextBox = new Guna.UI2.WinForms.Guna2TextBox();
-            this.contactNumberTextBox = new Guna.UI2.WinForms.Guna2TextBox();
-            this.addressTextBox = new Guna.UI2.WinForms.Guna2TextBox();
-            this.lastNameTextBox = new Guna.UI2.WinForms.Guna2TextBox();
-            this.firstNameTextBox = new Guna.UI2.WinForms.Guna2TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.guna2Separator4 = new Guna.UI2.WinForms.Guna2Separator();
-            this.guna2Separator3 = new Guna.UI2.WinForms.Guna2Separator();
-            this.usernameCreateTxtBox = new Guna.UI2.WinForms.Guna2TextBox();
-            this.passwordCreateTxtBox = new Guna.UI2.WinForms.Guna2TextBox();
-            this.usernameCreateLbale = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
+            this.guna2DragControl3 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.guna2GradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
-            this.LoginContainerPanel.SuspendLayout();
             this.CreateAccountContainerPanel.SuspendLayout();
+            this.LoginContainerPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // guna2DragControl1
@@ -96,12 +96,6 @@
             this.guna2DragControl2.TargetControl = this.guna2GradientPanel1;
             this.guna2DragControl2.UseTransparentDrag = true;
             // 
-            // guna2DragControl3
-            // 
-            this.guna2DragControl3.DockIndicatorTransparencyValue = 0.6D;
-            this.guna2DragControl3.TargetControl = this.LoginContainerPanel;
-            this.guna2DragControl3.UseTransparentDrag = true;
-            // 
             // guna2GradientPanel1
             // 
             this.guna2GradientPanel1.BackColor = System.Drawing.Color.Transparent;
@@ -112,8 +106,8 @@
             this.guna2GradientPanel1.Controls.Add(this.label4);
             this.guna2GradientPanel1.Controls.Add(this.guna2GradientPanel2);
             this.guna2GradientPanel1.Controls.Add(this.cuiLabel3);
-            this.guna2GradientPanel1.Controls.Add(this.CreateAccountContainerPanel);
             this.guna2GradientPanel1.Controls.Add(this.LoginContainerPanel);
+            this.guna2GradientPanel1.Controls.Add(this.CreateAccountContainerPanel);
             this.guna2GradientPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.guna2GradientPanel1.Location = new System.Drawing.Point(0, 0);
             this.guna2GradientPanel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -187,6 +181,472 @@
             this.cuiLabel3.TabIndex = 6;
             this.cuiLabel3.VerticalAlignment = System.Drawing.StringAlignment.Near;
             this.cuiLabel3.Load += new System.EventHandler(this.cuiLabel3_Load);
+            // 
+            // CreateAccountContainerPanel
+            // 
+            this.CreateAccountContainerPanel.BackColor = System.Drawing.Color.Transparent;
+            this.CreateAccountContainerPanel.Controls.Add(this.genderComboBox);
+            this.CreateAccountContainerPanel.Controls.Add(this.createAccountBtn);
+            this.CreateAccountContainerPanel.Controls.Add(this.backBtn);
+            this.CreateAccountContainerPanel.Controls.Add(this.dateOfBirtchDatePicker);
+            this.CreateAccountContainerPanel.Controls.Add(this.label8);
+            this.CreateAccountContainerPanel.Controls.Add(this.label10);
+            this.CreateAccountContainerPanel.Controls.Add(this.label12);
+            this.CreateAccountContainerPanel.Controls.Add(this.label15);
+            this.CreateAccountContainerPanel.Controls.Add(this.usernameCreateLbale);
+            this.CreateAccountContainerPanel.Controls.Add(this.label13);
+            this.CreateAccountContainerPanel.Controls.Add(this.label11);
+            this.CreateAccountContainerPanel.Controls.Add(this.label9);
+            this.CreateAccountContainerPanel.Controls.Add(this.label6);
+            this.CreateAccountContainerPanel.Controls.Add(this.middleNameTextBox);
+            this.CreateAccountContainerPanel.Controls.Add(this.passwordCreateTxtBox);
+            this.CreateAccountContainerPanel.Controls.Add(this.usernameCreateTxtBox);
+            this.CreateAccountContainerPanel.Controls.Add(this.contactNumberTextBox);
+            this.CreateAccountContainerPanel.Controls.Add(this.addressTextBox);
+            this.CreateAccountContainerPanel.Controls.Add(this.lastNameTextBox);
+            this.CreateAccountContainerPanel.Controls.Add(this.firstNameTextBox);
+            this.CreateAccountContainerPanel.Controls.Add(this.label7);
+            this.CreateAccountContainerPanel.Controls.Add(this.guna2Separator4);
+            this.CreateAccountContainerPanel.Controls.Add(this.guna2Separator3);
+            this.CreateAccountContainerPanel.EdgeWidth = 10;
+            this.CreateAccountContainerPanel.FillColor = System.Drawing.Color.White;
+            this.CreateAccountContainerPanel.Location = new System.Drawing.Point(791, 69);
+            this.CreateAccountContainerPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.CreateAccountContainerPanel.Name = "CreateAccountContainerPanel";
+            this.CreateAccountContainerPanel.Radius = 9;
+            this.CreateAccountContainerPanel.ShadowColor = System.Drawing.Color.Maroon;
+            this.CreateAccountContainerPanel.ShadowDepth = 120;
+            this.CreateAccountContainerPanel.ShadowShift = 10;
+            this.CreateAccountContainerPanel.ShadowStyle = Guna.UI2.WinForms.Guna2ShadowPanel.ShadowMode.ForwardDiagonal;
+            this.CreateAccountContainerPanel.Size = new System.Drawing.Size(563, 769);
+            this.CreateAccountContainerPanel.TabIndex = 2;
+            this.CreateAccountContainerPanel.Visible = false;
+            this.CreateAccountContainerPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.CreateAccountContainerPanel_Paint);
+            // 
+            // genderComboBox
+            // 
+            this.genderComboBox.AutoRoundedCorners = true;
+            this.genderComboBox.BackColor = System.Drawing.Color.White;
+            this.genderComboBox.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.genderComboBox.CustomizableEdges.TopLeft = false;
+            this.genderComboBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.genderComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.genderComboBox.FocusedColor = System.Drawing.Color.Maroon;
+            this.genderComboBox.FocusedState.BorderColor = System.Drawing.Color.Maroon;
+            this.genderComboBox.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.genderComboBox.ForeColor = System.Drawing.Color.Black;
+            this.genderComboBox.HoverState.BorderColor = System.Drawing.Color.Maroon;
+            this.genderComboBox.ItemHeight = 30;
+            this.genderComboBox.Items.AddRange(new object[] {
+            "",
+            "MALE",
+            "FEMALE",
+            "OTHERS"});
+            this.genderComboBox.Location = new System.Drawing.Point(30, 260);
+            this.genderComboBox.Name = "genderComboBox";
+            this.genderComboBox.Size = new System.Drawing.Size(168, 36);
+            this.genderComboBox.TabIndex = 15;
+            this.genderComboBox.SelectedIndexChanged += new System.EventHandler(this.genderComboBox_SelectedIndexChanged);
+            // 
+            // createAccountBtn
+            // 
+            this.createAccountBtn.Animated = true;
+            this.createAccountBtn.AnimatedGIF = true;
+            this.createAccountBtn.AutoRoundedCorners = true;
+            this.createAccountBtn.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.createAccountBtn.BorderThickness = 1;
+            this.createAccountBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.createAccountBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.createAccountBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.createAccountBtn.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.createAccountBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.createAccountBtn.FillColor = System.Drawing.Color.Tomato;
+            this.createAccountBtn.FillColor2 = System.Drawing.Color.Maroon;
+            this.createAccountBtn.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.createAccountBtn.ForeColor = System.Drawing.Color.White;
+            this.createAccountBtn.HoverState.BorderColor = System.Drawing.Color.Maroon;
+            this.createAccountBtn.HoverState.FillColor = System.Drawing.Color.White;
+            this.createAccountBtn.HoverState.FillColor2 = System.Drawing.Color.WhiteSmoke;
+            this.createAccountBtn.HoverState.ForeColor = System.Drawing.Color.Black;
+            this.createAccountBtn.Location = new System.Drawing.Point(178, 649);
+            this.createAccountBtn.Name = "createAccountBtn";
+            this.createAccountBtn.PressedColor = System.Drawing.Color.Maroon;
+            this.createAccountBtn.Size = new System.Drawing.Size(336, 45);
+            this.createAccountBtn.TabIndex = 17;
+            this.createAccountBtn.Text = "Create Account";
+            this.createAccountBtn.Click += new System.EventHandler(this.createAccountBtn_Click);
+            // 
+            // backBtn
+            // 
+            this.backBtn.Animated = true;
+            this.backBtn.AnimatedGIF = true;
+            this.backBtn.AutoRoundedCorners = true;
+            this.backBtn.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.backBtn.BorderThickness = 1;
+            this.backBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.backBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.backBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.backBtn.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.backBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.backBtn.FillColor = System.Drawing.Color.Tomato;
+            this.backBtn.FillColor2 = System.Drawing.Color.Maroon;
+            this.backBtn.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.backBtn.ForeColor = System.Drawing.Color.White;
+            this.backBtn.HoverState.BorderColor = System.Drawing.Color.Maroon;
+            this.backBtn.HoverState.FillColor = System.Drawing.Color.White;
+            this.backBtn.HoverState.FillColor2 = System.Drawing.Color.White;
+            this.backBtn.HoverState.ForeColor = System.Drawing.Color.Black;
+            this.backBtn.Image = global::School_Management_Transparency.Properties.Resources.arrow_back_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24;
+            this.backBtn.Location = new System.Drawing.Point(30, 648);
+            this.backBtn.Name = "backBtn";
+            this.backBtn.PressedColor = System.Drawing.Color.Maroon;
+            this.backBtn.Size = new System.Drawing.Size(124, 45);
+            this.backBtn.TabIndex = 17;
+            this.backBtn.Text = "Back";
+            this.backBtn.Click += new System.EventHandler(this.backBtn_Click);
+            // 
+            // dateOfBirtchDatePicker
+            // 
+            this.dateOfBirtchDatePicker.AutoRoundedCorners = true;
+            this.dateOfBirtchDatePicker.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dateOfBirtchDatePicker.BorderThickness = 1;
+            this.dateOfBirtchDatePicker.Checked = true;
+            this.dateOfBirtchDatePicker.CheckedState.BorderColor = System.Drawing.Color.White;
+            this.dateOfBirtchDatePicker.CustomFormat = "yyyy-MM-dd";
+            this.dateOfBirtchDatePicker.CustomizableEdges.TopLeft = false;
+            this.dateOfBirtchDatePicker.FillColor = System.Drawing.Color.White;
+            this.dateOfBirtchDatePicker.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.dateOfBirtchDatePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateOfBirtchDatePicker.HoverState.BorderColor = System.Drawing.Color.Maroon;
+            this.dateOfBirtchDatePicker.Location = new System.Drawing.Point(30, 421);
+            this.dateOfBirtchDatePicker.MaxDate = new System.DateTime(2109, 12, 25, 23, 59, 59, 999);
+            this.dateOfBirtchDatePicker.MinDate = new System.DateTime(1950, 12, 25, 23, 59, 59, 999);
+            this.dateOfBirtchDatePicker.Name = "dateOfBirtchDatePicker";
+            this.dateOfBirtchDatePicker.Size = new System.Drawing.Size(166, 36);
+            this.dateOfBirtchDatePicker.TabIndex = 16;
+            this.dateOfBirtchDatePicker.Value = new System.DateTime(2026, 4, 23, 15, 23, 31, 80);
+            this.dateOfBirtchDatePicker.ValueChanged += new System.EventHandler(this.dateOfBirtchDatePicker_ValueChanged);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label8.Location = new System.Drawing.Point(374, 71);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(96, 17);
+            this.label8.TabIndex = 14;
+            this.label8.Text = "Middle Name:";
+            this.label8.Click += new System.EventHandler(this.label8_Click);
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label10.Location = new System.Drawing.Point(35, 240);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(60, 17);
+            this.label10.TabIndex = 14;
+            this.label10.Text = "Gender:";
+            this.label10.Click += new System.EventHandler(this.label10_Click);
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label12.Location = new System.Drawing.Point(35, 397);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(166, 17);
+            this.label12.TabIndex = 14;
+            this.label12.Text = "Date of Birth: (Required)";
+            this.label12.Click += new System.EventHandler(this.label12_Click);
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label15.Location = new System.Drawing.Point(298, 550);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(78, 17);
+            this.label15.TabIndex = 14;
+            this.label15.Text = "Password:";
+            this.label15.Click += new System.EventHandler(this.label13_Click);
+            // 
+            // usernameCreateLbale
+            // 
+            this.usernameCreateLbale.AutoSize = true;
+            this.usernameCreateLbale.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.usernameCreateLbale.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.usernameCreateLbale.Location = new System.Drawing.Point(35, 550);
+            this.usernameCreateLbale.Name = "usernameCreateLbale";
+            this.usernameCreateLbale.Size = new System.Drawing.Size(80, 17);
+            this.usernameCreateLbale.TabIndex = 14;
+            this.usernameCreateLbale.Text = "Username:";
+            this.usernameCreateLbale.Click += new System.EventHandler(this.label13_Click);
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label13.Location = new System.Drawing.Point(35, 473);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(119, 17);
+            this.label13.TabIndex = 14;
+            this.label13.Text = "Contact Number:";
+            this.label13.Click += new System.EventHandler(this.label13_Click);
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label11.Location = new System.Drawing.Point(35, 314);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(66, 17);
+            this.label11.TabIndex = 14;
+            this.label11.Text = "Address:";
+            this.label11.Click += new System.EventHandler(this.label11_Click);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label9.Location = new System.Drawing.Point(35, 155);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(83, 17);
+            this.label9.TabIndex = 14;
+            this.label9.Text = "Last Name:";
+            this.label9.Click += new System.EventHandler(this.label9_Click);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label6.Location = new System.Drawing.Point(35, 71);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(88, 17);
+            this.label6.TabIndex = 14;
+            this.label6.Text = "First Name: ";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
+            // 
+            // middleNameTextBox
+            // 
+            this.middleNameTextBox.Animated = true;
+            this.middleNameTextBox.AutoRoundedCorners = true;
+            this.middleNameTextBox.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.middleNameTextBox.BorderRadius = 23;
+            this.middleNameTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.middleNameTextBox.CustomizableEdges.TopLeft = false;
+            this.middleNameTextBox.DefaultText = "";
+            this.middleNameTextBox.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.middleNameTextBox.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.middleNameTextBox.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.middleNameTextBox.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.middleNameTextBox.FocusedState.BorderColor = System.Drawing.Color.Maroon;
+            this.middleNameTextBox.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.middleNameTextBox.ForeColor = System.Drawing.Color.Black;
+            this.middleNameTextBox.HoverState.BorderColor = System.Drawing.Color.Maroon;
+            this.middleNameTextBox.Location = new System.Drawing.Point(363, 92);
+            this.middleNameTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.middleNameTextBox.MaxLength = 12;
+            this.middleNameTextBox.Name = "middleNameTextBox";
+            this.middleNameTextBox.PlaceholderText = "Optional";
+            this.middleNameTextBox.SelectedText = "";
+            this.middleNameTextBox.Size = new System.Drawing.Size(168, 48);
+            this.middleNameTextBox.TabIndex = 13;
+            this.middleNameTextBox.TextChanged += new System.EventHandler(this.middleNameTextBox_TextChanged);
+            // 
+            // passwordCreateTxtBox
+            // 
+            this.passwordCreateTxtBox.Animated = true;
+            this.passwordCreateTxtBox.AutoRoundedCorners = true;
+            this.passwordCreateTxtBox.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.passwordCreateTxtBox.BorderRadius = 23;
+            this.passwordCreateTxtBox.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.passwordCreateTxtBox.CustomizableEdges.TopLeft = false;
+            this.passwordCreateTxtBox.DefaultText = "";
+            this.passwordCreateTxtBox.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.passwordCreateTxtBox.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.passwordCreateTxtBox.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.passwordCreateTxtBox.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.passwordCreateTxtBox.FocusedState.BorderColor = System.Drawing.Color.Maroon;
+            this.passwordCreateTxtBox.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.passwordCreateTxtBox.ForeColor = System.Drawing.Color.Black;
+            this.passwordCreateTxtBox.HoverState.BorderColor = System.Drawing.Color.Maroon;
+            this.passwordCreateTxtBox.Location = new System.Drawing.Point(281, 571);
+            this.passwordCreateTxtBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.passwordCreateTxtBox.MaxLength = 20;
+            this.passwordCreateTxtBox.Name = "passwordCreateTxtBox";
+            this.passwordCreateTxtBox.PlaceholderText = "Required";
+            this.passwordCreateTxtBox.SelectedText = "";
+            this.passwordCreateTxtBox.Size = new System.Drawing.Size(246, 48);
+            this.passwordCreateTxtBox.TabIndex = 13;
+            this.passwordCreateTxtBox.TextChanged += new System.EventHandler(this.contactNumberTextBox_TextChanged);
+            // 
+            // usernameCreateTxtBox
+            // 
+            this.usernameCreateTxtBox.Animated = true;
+            this.usernameCreateTxtBox.AutoRoundedCorners = true;
+            this.usernameCreateTxtBox.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.usernameCreateTxtBox.BorderRadius = 23;
+            this.usernameCreateTxtBox.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.usernameCreateTxtBox.CustomizableEdges.TopLeft = false;
+            this.usernameCreateTxtBox.DefaultText = "";
+            this.usernameCreateTxtBox.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.usernameCreateTxtBox.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.usernameCreateTxtBox.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.usernameCreateTxtBox.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.usernameCreateTxtBox.FocusedState.BorderColor = System.Drawing.Color.Maroon;
+            this.usernameCreateTxtBox.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.usernameCreateTxtBox.ForeColor = System.Drawing.Color.Black;
+            this.usernameCreateTxtBox.HoverState.BorderColor = System.Drawing.Color.Maroon;
+            this.usernameCreateTxtBox.Location = new System.Drawing.Point(24, 571);
+            this.usernameCreateTxtBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.usernameCreateTxtBox.MaxLength = 20;
+            this.usernameCreateTxtBox.Name = "usernameCreateTxtBox";
+            this.usernameCreateTxtBox.PlaceholderText = "Required";
+            this.usernameCreateTxtBox.SelectedText = "";
+            this.usernameCreateTxtBox.Size = new System.Drawing.Size(246, 48);
+            this.usernameCreateTxtBox.TabIndex = 13;
+            this.usernameCreateTxtBox.TextChanged += new System.EventHandler(this.contactNumberTextBox_TextChanged);
+            // 
+            // contactNumberTextBox
+            // 
+            this.contactNumberTextBox.Animated = true;
+            this.contactNumberTextBox.AutoRoundedCorners = true;
+            this.contactNumberTextBox.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.contactNumberTextBox.BorderRadius = 23;
+            this.contactNumberTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.contactNumberTextBox.CustomizableEdges.TopLeft = false;
+            this.contactNumberTextBox.DefaultText = "";
+            this.contactNumberTextBox.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.contactNumberTextBox.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.contactNumberTextBox.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.contactNumberTextBox.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.contactNumberTextBox.FocusedState.BorderColor = System.Drawing.Color.Maroon;
+            this.contactNumberTextBox.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.contactNumberTextBox.ForeColor = System.Drawing.Color.Black;
+            this.contactNumberTextBox.HoverState.BorderColor = System.Drawing.Color.Maroon;
+            this.contactNumberTextBox.Location = new System.Drawing.Point(30, 494);
+            this.contactNumberTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.contactNumberTextBox.MaxLength = 13;
+            this.contactNumberTextBox.Name = "contactNumberTextBox";
+            this.contactNumberTextBox.PlaceholderText = "Optional";
+            this.contactNumberTextBox.SelectedText = "";
+            this.contactNumberTextBox.Size = new System.Drawing.Size(387, 48);
+            this.contactNumberTextBox.TabIndex = 13;
+            this.contactNumberTextBox.TextChanged += new System.EventHandler(this.contactNumberTextBox_TextChanged);
+            // 
+            // addressTextBox
+            // 
+            this.addressTextBox.Animated = true;
+            this.addressTextBox.AutoRoundedCorners = true;
+            this.addressTextBox.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.addressTextBox.BorderRadius = 23;
+            this.addressTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.addressTextBox.CustomizableEdges.TopLeft = false;
+            this.addressTextBox.DefaultText = "";
+            this.addressTextBox.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.addressTextBox.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.addressTextBox.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.addressTextBox.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.addressTextBox.FocusedState.BorderColor = System.Drawing.Color.Maroon;
+            this.addressTextBox.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.addressTextBox.ForeColor = System.Drawing.Color.Black;
+            this.addressTextBox.HoverState.BorderColor = System.Drawing.Color.Maroon;
+            this.addressTextBox.Location = new System.Drawing.Point(30, 335);
+            this.addressTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.addressTextBox.MaxLength = 100;
+            this.addressTextBox.Name = "addressTextBox";
+            this.addressTextBox.PlaceholderText = "Optional";
+            this.addressTextBox.SelectedText = "";
+            this.addressTextBox.Size = new System.Drawing.Size(387, 48);
+            this.addressTextBox.TabIndex = 13;
+            this.addressTextBox.TextChanged += new System.EventHandler(this.addressTextBox_TextChanged);
+            // 
+            // lastNameTextBox
+            // 
+            this.lastNameTextBox.Animated = true;
+            this.lastNameTextBox.AutoRoundedCorners = true;
+            this.lastNameTextBox.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.lastNameTextBox.BorderRadius = 23;
+            this.lastNameTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.lastNameTextBox.CustomizableEdges.TopLeft = false;
+            this.lastNameTextBox.DefaultText = "";
+            this.lastNameTextBox.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.lastNameTextBox.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.lastNameTextBox.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.lastNameTextBox.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.lastNameTextBox.FocusedState.BorderColor = System.Drawing.Color.Maroon;
+            this.lastNameTextBox.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.lastNameTextBox.ForeColor = System.Drawing.Color.Black;
+            this.lastNameTextBox.HoverState.BorderColor = System.Drawing.Color.Maroon;
+            this.lastNameTextBox.Location = new System.Drawing.Point(30, 176);
+            this.lastNameTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.lastNameTextBox.MaxLength = 12;
+            this.lastNameTextBox.Name = "lastNameTextBox";
+            this.lastNameTextBox.PlaceholderText = "Required";
+            this.lastNameTextBox.SelectedText = "";
+            this.lastNameTextBox.Size = new System.Drawing.Size(387, 48);
+            this.lastNameTextBox.TabIndex = 13;
+            this.lastNameTextBox.TextChanged += new System.EventHandler(this.lastNameTextBox_TextChanged);
+            // 
+            // firstNameTextBox
+            // 
+            this.firstNameTextBox.Animated = true;
+            this.firstNameTextBox.AutoRoundedCorners = true;
+            this.firstNameTextBox.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.firstNameTextBox.BorderRadius = 23;
+            this.firstNameTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.firstNameTextBox.CustomizableEdges.TopLeft = false;
+            this.firstNameTextBox.DefaultText = "";
+            this.firstNameTextBox.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.firstNameTextBox.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.firstNameTextBox.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.firstNameTextBox.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.firstNameTextBox.FocusedState.BorderColor = System.Drawing.Color.Maroon;
+            this.firstNameTextBox.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.firstNameTextBox.ForeColor = System.Drawing.Color.Black;
+            this.firstNameTextBox.HoverState.BorderColor = System.Drawing.Color.Maroon;
+            this.firstNameTextBox.Location = new System.Drawing.Point(32, 92);
+            this.firstNameTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.firstNameTextBox.MaxLength = 12;
+            this.firstNameTextBox.Name = "firstNameTextBox";
+            this.firstNameTextBox.PlaceholderText = "Required";
+            this.firstNameTextBox.SelectedText = "";
+            this.firstNameTextBox.Size = new System.Drawing.Size(318, 48);
+            this.firstNameTextBox.TabIndex = 13;
+            this.firstNameTextBox.TextChanged += new System.EventHandler(this.firstNameTextBox_TextChanged);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Cooper Black", 19.8F);
+            this.label7.Location = new System.Drawing.Point(142, 9);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(277, 38);
+            this.label7.TabIndex = 11;
+            this.label7.Text = "Create Account";
+            // 
+            // guna2Separator4
+            // 
+            this.guna2Separator4.Location = new System.Drawing.Point(30, 724);
+            this.guna2Separator4.Name = "guna2Separator4";
+            this.guna2Separator4.Size = new System.Drawing.Size(497, 10);
+            this.guna2Separator4.TabIndex = 12;
+            // 
+            // guna2Separator3
+            // 
+            this.guna2Separator3.Location = new System.Drawing.Point(30, 25);
+            this.guna2Separator3.Name = "guna2Separator3";
+            this.guna2Separator3.Size = new System.Drawing.Size(497, 10);
+            this.guna2Separator3.TabIndex = 12;
             // 
             // LoginContainerPanel
             // 
@@ -415,6 +875,7 @@
             this.passwordLoginTxtbox.HoverState.BorderColor = System.Drawing.Color.Maroon;
             this.passwordLoginTxtbox.Location = new System.Drawing.Point(107, 446);
             this.passwordLoginTxtbox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.passwordLoginTxtbox.MaxLength = 20;
             this.passwordLoginTxtbox.Name = "passwordLoginTxtbox";
             this.passwordLoginTxtbox.PasswordChar = '*';
             this.passwordLoginTxtbox.PlaceholderText = "";
@@ -443,6 +904,7 @@
             this.usernameLoginTxtbox.HoverState.BorderColor = System.Drawing.Color.Maroon;
             this.usernameLoginTxtbox.Location = new System.Drawing.Point(107, 367);
             this.usernameLoginTxtbox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.usernameLoginTxtbox.MaxLength = 20;
             this.usernameLoginTxtbox.Name = "usernameLoginTxtbox";
             this.usernameLoginTxtbox.PlaceholderText = "";
             this.usernameLoginTxtbox.SelectedText = "";
@@ -466,464 +928,11 @@
             this.cuiLabel1.TabIndex = 1;
             this.cuiLabel1.VerticalAlignment = System.Drawing.StringAlignment.Near;
             // 
-            // CreateAccountContainerPanel
+            // guna2DragControl3
             // 
-            this.CreateAccountContainerPanel.BackColor = System.Drawing.Color.Transparent;
-            this.CreateAccountContainerPanel.Controls.Add(this.genderComboBox);
-            this.CreateAccountContainerPanel.Controls.Add(this.createAccountBtn);
-            this.CreateAccountContainerPanel.Controls.Add(this.backBtn);
-            this.CreateAccountContainerPanel.Controls.Add(this.dateOfBirtchDatePicker);
-            this.CreateAccountContainerPanel.Controls.Add(this.label8);
-            this.CreateAccountContainerPanel.Controls.Add(this.label10);
-            this.CreateAccountContainerPanel.Controls.Add(this.label12);
-            this.CreateAccountContainerPanel.Controls.Add(this.label15);
-            this.CreateAccountContainerPanel.Controls.Add(this.usernameCreateLbale);
-            this.CreateAccountContainerPanel.Controls.Add(this.label13);
-            this.CreateAccountContainerPanel.Controls.Add(this.label11);
-            this.CreateAccountContainerPanel.Controls.Add(this.label9);
-            this.CreateAccountContainerPanel.Controls.Add(this.label6);
-            this.CreateAccountContainerPanel.Controls.Add(this.middleNameTextBox);
-            this.CreateAccountContainerPanel.Controls.Add(this.passwordCreateTxtBox);
-            this.CreateAccountContainerPanel.Controls.Add(this.usernameCreateTxtBox);
-            this.CreateAccountContainerPanel.Controls.Add(this.contactNumberTextBox);
-            this.CreateAccountContainerPanel.Controls.Add(this.addressTextBox);
-            this.CreateAccountContainerPanel.Controls.Add(this.lastNameTextBox);
-            this.CreateAccountContainerPanel.Controls.Add(this.firstNameTextBox);
-            this.CreateAccountContainerPanel.Controls.Add(this.label7);
-            this.CreateAccountContainerPanel.Controls.Add(this.guna2Separator4);
-            this.CreateAccountContainerPanel.Controls.Add(this.guna2Separator3);
-            this.CreateAccountContainerPanel.EdgeWidth = 10;
-            this.CreateAccountContainerPanel.FillColor = System.Drawing.Color.White;
-            this.CreateAccountContainerPanel.Location = new System.Drawing.Point(791, 69);
-            this.CreateAccountContainerPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.CreateAccountContainerPanel.Name = "CreateAccountContainerPanel";
-            this.CreateAccountContainerPanel.Radius = 9;
-            this.CreateAccountContainerPanel.ShadowColor = System.Drawing.Color.Maroon;
-            this.CreateAccountContainerPanel.ShadowDepth = 120;
-            this.CreateAccountContainerPanel.ShadowShift = 10;
-            this.CreateAccountContainerPanel.ShadowStyle = Guna.UI2.WinForms.Guna2ShadowPanel.ShadowMode.ForwardDiagonal;
-            this.CreateAccountContainerPanel.Size = new System.Drawing.Size(563, 769);
-            this.CreateAccountContainerPanel.TabIndex = 2;
-            this.CreateAccountContainerPanel.Visible = false;
-            this.CreateAccountContainerPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.CreateAccountContainerPanel_Paint);
-            // 
-            // createAccountBtn
-            // 
-            this.createAccountBtn.Animated = true;
-            this.createAccountBtn.AnimatedGIF = true;
-            this.createAccountBtn.AutoRoundedCorners = true;
-            this.createAccountBtn.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.createAccountBtn.BorderThickness = 1;
-            this.createAccountBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.createAccountBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.createAccountBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.createAccountBtn.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.createAccountBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.createAccountBtn.FillColor = System.Drawing.Color.Tomato;
-            this.createAccountBtn.FillColor2 = System.Drawing.Color.Maroon;
-            this.createAccountBtn.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.createAccountBtn.ForeColor = System.Drawing.Color.White;
-            this.createAccountBtn.HoverState.BorderColor = System.Drawing.Color.Maroon;
-            this.createAccountBtn.HoverState.FillColor = System.Drawing.Color.White;
-            this.createAccountBtn.HoverState.FillColor2 = System.Drawing.Color.WhiteSmoke;
-            this.createAccountBtn.HoverState.ForeColor = System.Drawing.Color.Black;
-            this.createAccountBtn.Location = new System.Drawing.Point(178, 649);
-            this.createAccountBtn.Name = "createAccountBtn";
-            this.createAccountBtn.PressedColor = System.Drawing.Color.Maroon;
-            this.createAccountBtn.Size = new System.Drawing.Size(336, 45);
-            this.createAccountBtn.TabIndex = 17;
-            this.createAccountBtn.Text = "Create Account";
-            this.createAccountBtn.Click += new System.EventHandler(this.createAccountBtn_Click);
-            // 
-            // backBtn
-            // 
-            this.backBtn.Animated = true;
-            this.backBtn.AnimatedGIF = true;
-            this.backBtn.AutoRoundedCorners = true;
-            this.backBtn.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.backBtn.BorderThickness = 1;
-            this.backBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.backBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.backBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.backBtn.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.backBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.backBtn.FillColor = System.Drawing.Color.Tomato;
-            this.backBtn.FillColor2 = System.Drawing.Color.Maroon;
-            this.backBtn.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.backBtn.ForeColor = System.Drawing.Color.White;
-            this.backBtn.HoverState.BorderColor = System.Drawing.Color.Maroon;
-            this.backBtn.HoverState.FillColor = System.Drawing.Color.White;
-            this.backBtn.HoverState.FillColor2 = System.Drawing.Color.White;
-            this.backBtn.HoverState.ForeColor = System.Drawing.Color.Black;
-            this.backBtn.Image = global::School_Management_Transparency.Properties.Resources.arrow_back_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24;
-            this.backBtn.Location = new System.Drawing.Point(30, 648);
-            this.backBtn.Name = "backBtn";
-            this.backBtn.PressedColor = System.Drawing.Color.Maroon;
-            this.backBtn.Size = new System.Drawing.Size(124, 45);
-            this.backBtn.TabIndex = 17;
-            this.backBtn.Text = "Back";
-            this.backBtn.Click += new System.EventHandler(this.backBtn_Click);
-            // 
-            // dateOfBirtchDatePicker
-            // 
-            this.dateOfBirtchDatePicker.AutoRoundedCorners = true;
-            this.dateOfBirtchDatePicker.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dateOfBirtchDatePicker.BorderThickness = 1;
-            this.dateOfBirtchDatePicker.Checked = true;
-            this.dateOfBirtchDatePicker.CheckedState.BorderColor = System.Drawing.Color.White;
-            this.dateOfBirtchDatePicker.CustomFormat = "yyyy-MM-dd";
-            this.dateOfBirtchDatePicker.CustomizableEdges.TopLeft = false;
-            this.dateOfBirtchDatePicker.FillColor = System.Drawing.Color.White;
-            this.dateOfBirtchDatePicker.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.dateOfBirtchDatePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateOfBirtchDatePicker.HoverState.BorderColor = System.Drawing.Color.Maroon;
-            this.dateOfBirtchDatePicker.Location = new System.Drawing.Point(30, 421);
-            this.dateOfBirtchDatePicker.MaxDate = new System.DateTime(2109, 12, 25, 23, 59, 59, 999);
-            this.dateOfBirtchDatePicker.MinDate = new System.DateTime(1950, 12, 25, 23, 59, 59, 999);
-            this.dateOfBirtchDatePicker.Name = "dateOfBirtchDatePicker";
-            this.dateOfBirtchDatePicker.Size = new System.Drawing.Size(166, 36);
-            this.dateOfBirtchDatePicker.TabIndex = 16;
-            this.dateOfBirtchDatePicker.Value = new System.DateTime(2026, 4, 23, 15, 23, 31, 80);
-            this.dateOfBirtchDatePicker.ValueChanged += new System.EventHandler(this.dateOfBirtchDatePicker_ValueChanged);
-            // 
-            // genderComboBox
-            // 
-            this.genderComboBox.AutoRoundedCorners = true;
-            this.genderComboBox.BackColor = System.Drawing.Color.White;
-            this.genderComboBox.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.genderComboBox.CustomizableEdges.TopLeft = false;
-            this.genderComboBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.genderComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.genderComboBox.FocusedColor = System.Drawing.Color.Maroon;
-            this.genderComboBox.FocusedState.BorderColor = System.Drawing.Color.Maroon;
-            this.genderComboBox.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.genderComboBox.ForeColor = System.Drawing.Color.Black;
-            this.genderComboBox.HoverState.BorderColor = System.Drawing.Color.Maroon;
-            this.genderComboBox.ItemHeight = 30;
-            this.genderComboBox.Items.AddRange(new object[] {
-            "",
-            "MALE",
-            "FEMALE",
-            "OTHERS"});
-            this.genderComboBox.Location = new System.Drawing.Point(30, 260);
-            this.genderComboBox.Name = "genderComboBox";
-            this.genderComboBox.Size = new System.Drawing.Size(168, 36);
-            this.genderComboBox.TabIndex = 15;
-            this.genderComboBox.SelectedIndexChanged += new System.EventHandler(this.genderComboBox_SelectedIndexChanged);
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label8.Location = new System.Drawing.Point(374, 71);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(96, 17);
-            this.label8.TabIndex = 14;
-            this.label8.Text = "Middle Name:";
-            this.label8.Click += new System.EventHandler(this.label8_Click);
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label10.Location = new System.Drawing.Point(35, 240);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(60, 17);
-            this.label10.TabIndex = 14;
-            this.label10.Text = "Gender:";
-            this.label10.Click += new System.EventHandler(this.label10_Click);
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label12.Location = new System.Drawing.Point(35, 397);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(166, 17);
-            this.label12.TabIndex = 14;
-            this.label12.Text = "Date of Birth: (Required)";
-            this.label12.Click += new System.EventHandler(this.label12_Click);
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label13.Location = new System.Drawing.Point(35, 473);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(119, 17);
-            this.label13.TabIndex = 14;
-            this.label13.Text = "Contact Number:";
-            this.label13.Click += new System.EventHandler(this.label13_Click);
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label11.Location = new System.Drawing.Point(35, 314);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(66, 17);
-            this.label11.TabIndex = 14;
-            this.label11.Text = "Address:";
-            this.label11.Click += new System.EventHandler(this.label11_Click);
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label9.Location = new System.Drawing.Point(35, 155);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(83, 17);
-            this.label9.TabIndex = 14;
-            this.label9.Text = "Last Name:";
-            this.label9.Click += new System.EventHandler(this.label9_Click);
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label6.Location = new System.Drawing.Point(35, 71);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(88, 17);
-            this.label6.TabIndex = 14;
-            this.label6.Text = "First Name: ";
-            this.label6.Click += new System.EventHandler(this.label6_Click);
-            // 
-            // middleNameTextBox
-            // 
-            this.middleNameTextBox.Animated = true;
-            this.middleNameTextBox.AutoRoundedCorners = true;
-            this.middleNameTextBox.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.middleNameTextBox.BorderRadius = 23;
-            this.middleNameTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.middleNameTextBox.CustomizableEdges.TopLeft = false;
-            this.middleNameTextBox.DefaultText = "";
-            this.middleNameTextBox.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.middleNameTextBox.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.middleNameTextBox.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.middleNameTextBox.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.middleNameTextBox.FocusedState.BorderColor = System.Drawing.Color.Maroon;
-            this.middleNameTextBox.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.middleNameTextBox.ForeColor = System.Drawing.Color.Black;
-            this.middleNameTextBox.HoverState.BorderColor = System.Drawing.Color.Maroon;
-            this.middleNameTextBox.Location = new System.Drawing.Point(363, 92);
-            this.middleNameTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.middleNameTextBox.Name = "middleNameTextBox";
-            this.middleNameTextBox.PlaceholderText = "Optional";
-            this.middleNameTextBox.SelectedText = "";
-            this.middleNameTextBox.Size = new System.Drawing.Size(168, 48);
-            this.middleNameTextBox.TabIndex = 13;
-            this.middleNameTextBox.TextChanged += new System.EventHandler(this.middleNameTextBox_TextChanged);
-            // 
-            // contactNumberTextBox
-            // 
-            this.contactNumberTextBox.Animated = true;
-            this.contactNumberTextBox.AutoRoundedCorners = true;
-            this.contactNumberTextBox.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.contactNumberTextBox.BorderRadius = 23;
-            this.contactNumberTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.contactNumberTextBox.CustomizableEdges.TopLeft = false;
-            this.contactNumberTextBox.DefaultText = "";
-            this.contactNumberTextBox.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.contactNumberTextBox.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.contactNumberTextBox.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.contactNumberTextBox.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.contactNumberTextBox.FocusedState.BorderColor = System.Drawing.Color.Maroon;
-            this.contactNumberTextBox.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.contactNumberTextBox.ForeColor = System.Drawing.Color.Black;
-            this.contactNumberTextBox.HoverState.BorderColor = System.Drawing.Color.Maroon;
-            this.contactNumberTextBox.Location = new System.Drawing.Point(30, 494);
-            this.contactNumberTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.contactNumberTextBox.Name = "contactNumberTextBox";
-            this.contactNumberTextBox.PlaceholderText = "Optional";
-            this.contactNumberTextBox.SelectedText = "";
-            this.contactNumberTextBox.Size = new System.Drawing.Size(387, 48);
-            this.contactNumberTextBox.TabIndex = 13;
-            this.contactNumberTextBox.TextChanged += new System.EventHandler(this.contactNumberTextBox_TextChanged);
-            // 
-            // addressTextBox
-            // 
-            this.addressTextBox.Animated = true;
-            this.addressTextBox.AutoRoundedCorners = true;
-            this.addressTextBox.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.addressTextBox.BorderRadius = 23;
-            this.addressTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.addressTextBox.CustomizableEdges.TopLeft = false;
-            this.addressTextBox.DefaultText = "";
-            this.addressTextBox.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.addressTextBox.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.addressTextBox.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.addressTextBox.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.addressTextBox.FocusedState.BorderColor = System.Drawing.Color.Maroon;
-            this.addressTextBox.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.addressTextBox.ForeColor = System.Drawing.Color.Black;
-            this.addressTextBox.HoverState.BorderColor = System.Drawing.Color.Maroon;
-            this.addressTextBox.Location = new System.Drawing.Point(30, 335);
-            this.addressTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.addressTextBox.Name = "addressTextBox";
-            this.addressTextBox.PlaceholderText = "Optional";
-            this.addressTextBox.SelectedText = "";
-            this.addressTextBox.Size = new System.Drawing.Size(387, 48);
-            this.addressTextBox.TabIndex = 13;
-            this.addressTextBox.TextChanged += new System.EventHandler(this.addressTextBox_TextChanged);
-            // 
-            // lastNameTextBox
-            // 
-            this.lastNameTextBox.Animated = true;
-            this.lastNameTextBox.AutoRoundedCorners = true;
-            this.lastNameTextBox.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.lastNameTextBox.BorderRadius = 23;
-            this.lastNameTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.lastNameTextBox.CustomizableEdges.TopLeft = false;
-            this.lastNameTextBox.DefaultText = "";
-            this.lastNameTextBox.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.lastNameTextBox.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.lastNameTextBox.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.lastNameTextBox.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.lastNameTextBox.FocusedState.BorderColor = System.Drawing.Color.Maroon;
-            this.lastNameTextBox.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.lastNameTextBox.ForeColor = System.Drawing.Color.Black;
-            this.lastNameTextBox.HoverState.BorderColor = System.Drawing.Color.Maroon;
-            this.lastNameTextBox.Location = new System.Drawing.Point(30, 176);
-            this.lastNameTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.lastNameTextBox.Name = "lastNameTextBox";
-            this.lastNameTextBox.PlaceholderText = "Required";
-            this.lastNameTextBox.SelectedText = "";
-            this.lastNameTextBox.Size = new System.Drawing.Size(387, 48);
-            this.lastNameTextBox.TabIndex = 13;
-            this.lastNameTextBox.TextChanged += new System.EventHandler(this.lastNameTextBox_TextChanged);
-            // 
-            // firstNameTextBox
-            // 
-            this.firstNameTextBox.Animated = true;
-            this.firstNameTextBox.AutoRoundedCorners = true;
-            this.firstNameTextBox.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.firstNameTextBox.BorderRadius = 23;
-            this.firstNameTextBox.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.firstNameTextBox.CustomizableEdges.TopLeft = false;
-            this.firstNameTextBox.DefaultText = "";
-            this.firstNameTextBox.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.firstNameTextBox.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.firstNameTextBox.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.firstNameTextBox.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.firstNameTextBox.FocusedState.BorderColor = System.Drawing.Color.Maroon;
-            this.firstNameTextBox.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.firstNameTextBox.ForeColor = System.Drawing.Color.Black;
-            this.firstNameTextBox.HoverState.BorderColor = System.Drawing.Color.Maroon;
-            this.firstNameTextBox.Location = new System.Drawing.Point(32, 92);
-            this.firstNameTextBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.firstNameTextBox.Name = "firstNameTextBox";
-            this.firstNameTextBox.PlaceholderText = "Required";
-            this.firstNameTextBox.SelectedText = "";
-            this.firstNameTextBox.Size = new System.Drawing.Size(318, 48);
-            this.firstNameTextBox.TabIndex = 13;
-            this.firstNameTextBox.TextChanged += new System.EventHandler(this.firstNameTextBox_TextChanged);
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Cooper Black", 19.8F);
-            this.label7.Location = new System.Drawing.Point(142, 9);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(277, 38);
-            this.label7.TabIndex = 11;
-            this.label7.Text = "Create Account";
-            // 
-            // guna2Separator4
-            // 
-            this.guna2Separator4.Location = new System.Drawing.Point(30, 724);
-            this.guna2Separator4.Name = "guna2Separator4";
-            this.guna2Separator4.Size = new System.Drawing.Size(497, 10);
-            this.guna2Separator4.TabIndex = 12;
-            // 
-            // guna2Separator3
-            // 
-            this.guna2Separator3.Location = new System.Drawing.Point(30, 25);
-            this.guna2Separator3.Name = "guna2Separator3";
-            this.guna2Separator3.Size = new System.Drawing.Size(497, 10);
-            this.guna2Separator3.TabIndex = 12;
-            // 
-            // usernameCreateTxtBox
-            // 
-            this.usernameCreateTxtBox.Animated = true;
-            this.usernameCreateTxtBox.AutoRoundedCorners = true;
-            this.usernameCreateTxtBox.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.usernameCreateTxtBox.BorderRadius = 23;
-            this.usernameCreateTxtBox.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.usernameCreateTxtBox.CustomizableEdges.TopLeft = false;
-            this.usernameCreateTxtBox.DefaultText = "";
-            this.usernameCreateTxtBox.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.usernameCreateTxtBox.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.usernameCreateTxtBox.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.usernameCreateTxtBox.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.usernameCreateTxtBox.FocusedState.BorderColor = System.Drawing.Color.Maroon;
-            this.usernameCreateTxtBox.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.usernameCreateTxtBox.ForeColor = System.Drawing.Color.Black;
-            this.usernameCreateTxtBox.HoverState.BorderColor = System.Drawing.Color.Maroon;
-            this.usernameCreateTxtBox.Location = new System.Drawing.Point(24, 571);
-            this.usernameCreateTxtBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.usernameCreateTxtBox.Name = "usernameCreateTxtBox";
-            this.usernameCreateTxtBox.PlaceholderText = "Required";
-            this.usernameCreateTxtBox.SelectedText = "";
-            this.usernameCreateTxtBox.Size = new System.Drawing.Size(246, 48);
-            this.usernameCreateTxtBox.TabIndex = 13;
-            this.usernameCreateTxtBox.TextChanged += new System.EventHandler(this.contactNumberTextBox_TextChanged);
-            // 
-            // passwordCreateTxtBox
-            // 
-            this.passwordCreateTxtBox.Animated = true;
-            this.passwordCreateTxtBox.AutoRoundedCorners = true;
-            this.passwordCreateTxtBox.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.passwordCreateTxtBox.BorderRadius = 23;
-            this.passwordCreateTxtBox.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.passwordCreateTxtBox.CustomizableEdges.TopLeft = false;
-            this.passwordCreateTxtBox.DefaultText = "";
-            this.passwordCreateTxtBox.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.passwordCreateTxtBox.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.passwordCreateTxtBox.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.passwordCreateTxtBox.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.passwordCreateTxtBox.FocusedState.BorderColor = System.Drawing.Color.Maroon;
-            this.passwordCreateTxtBox.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.passwordCreateTxtBox.ForeColor = System.Drawing.Color.Black;
-            this.passwordCreateTxtBox.HoverState.BorderColor = System.Drawing.Color.Maroon;
-            this.passwordCreateTxtBox.Location = new System.Drawing.Point(281, 571);
-            this.passwordCreateTxtBox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.passwordCreateTxtBox.Name = "passwordCreateTxtBox";
-            this.passwordCreateTxtBox.PlaceholderText = "Required";
-            this.passwordCreateTxtBox.SelectedText = "";
-            this.passwordCreateTxtBox.Size = new System.Drawing.Size(246, 48);
-            this.passwordCreateTxtBox.TabIndex = 13;
-            this.passwordCreateTxtBox.TextChanged += new System.EventHandler(this.contactNumberTextBox_TextChanged);
-            // 
-            // usernameCreateLbale
-            // 
-            this.usernameCreateLbale.AutoSize = true;
-            this.usernameCreateLbale.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.usernameCreateLbale.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.usernameCreateLbale.Location = new System.Drawing.Point(35, 550);
-            this.usernameCreateLbale.Name = "usernameCreateLbale";
-            this.usernameCreateLbale.Size = new System.Drawing.Size(80, 17);
-            this.usernameCreateLbale.TabIndex = 14;
-            this.usernameCreateLbale.Text = "Username:";
-            this.usernameCreateLbale.Click += new System.EventHandler(this.label13_Click);
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label15.Location = new System.Drawing.Point(298, 550);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(78, 17);
-            this.label15.TabIndex = 14;
-            this.label15.Text = "Password:";
-            this.label15.Click += new System.EventHandler(this.label13_Click);
+            this.guna2DragControl3.DockIndicatorTransparencyValue = 0.6D;
+            this.guna2DragControl3.TargetControl = this.LoginContainerPanel;
+            this.guna2DragControl3.UseTransparentDrag = true;
             // 
             // LoginForm
             // 
@@ -940,10 +949,10 @@
             this.guna2GradientPanel1.ResumeLayout(false);
             this.guna2GradientPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).EndInit();
-            this.LoginContainerPanel.ResumeLayout(false);
-            this.LoginContainerPanel.PerformLayout();
             this.CreateAccountContainerPanel.ResumeLayout(false);
             this.CreateAccountContainerPanel.PerformLayout();
+            this.LoginContainerPanel.ResumeLayout(false);
+            this.LoginContainerPanel.PerformLayout();
             this.ResumeLayout(false);
 
         }

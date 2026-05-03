@@ -151,6 +151,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="SchoolManagementTransparencyApp\Controller\AdminDashboardController.cs" />
     <Compile Include="SchoolManagementTransparencyApp\Controller\CourseController.cs" />
     <Compile Include="SchoolManagementTransparencyApp\Controller\EnrollmentController.cs" />
     <Compile Include="SchoolManagementTransparencyApp\Controller\ExpenseTransactionController.cs" />
@@ -164,6 +165,7 @@
     <Compile Include="SchoolManagementTransparencyApp\Controller\UserAccountController.cs" />
     <Compile Include="SchoolManagementTransparencyApp\Controller\ViolationTypeController.cs" />
     <Compile Include="SchoolManagementTransparencyApp\Dao\CourseDao.cs" />
+    <Compile Include="SchoolManagementTransparencyApp\Dao\DashboardDao.cs" />
     <Compile Include="SchoolManagementTransparencyApp\Dao\EnrollmentDao.cs" />
     <Compile Include="SchoolManagementTransparencyApp\Dao\ExpenseTransactionDao.cs" />
     <Compile Include="SchoolManagementTransparencyApp\Dao\FinancialDao.cs" />
@@ -269,6 +271,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\visibility_off_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logout_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
