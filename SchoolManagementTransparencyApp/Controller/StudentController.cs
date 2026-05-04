@@ -1,4 +1,5 @@
-﻿using School_Management_Transparency.SchoolManagementTransparencyApp.Model;
+﻿using School_Management_Transparency.SchoolManagementTransparencyApp.Dao;
+using School_Management_Transparency.SchoolManagementTransparencyApp.Model;
 using School_Management_Transparency.SchoolManagementTransparencyApp.Service;
 using System;
 using System.Collections.Generic;
@@ -154,6 +155,17 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.Control
             {
                 MessageBox.Show("Controller Error: " + ex.Message);
             }
+        }
+
+        public void LoadStudentManagementGrid(DataGridView dgv)
+        {
+            StudentDao dao = new StudentDao();
+            dgv.DataSource = dao.GetStudentWithAccountDetails();
+
+            // Hide the User ID from the grid (we only need it for the logic)
+            if (dgv.Columns["User ID"] != null) dgv.Columns["User ID"].Visible = false;
+
+            dgv.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
     }
 }

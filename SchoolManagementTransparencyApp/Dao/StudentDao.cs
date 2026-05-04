@@ -3,6 +3,7 @@ using School_Management_Transparency.SchoolManagementTransparencyApp.Model;
 using School_Management_Transparency.SchoolManagementTransparencyApp.Util;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -223,6 +224,34 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.Dao
             catch (Exception ex) { MessageBox.Show("Database Error: " + ex.Message); }
             finally { dbConn.closeConnect(); }
             return list;
+        }
+
+        public DataTable GetStudentWithAccountDetails()
+        {
+            DataTable dt = new DataTable();
+            try
+            {
+                // Joining students with user_account based on user_id
+                string query = @"
+                    SELECT 
+                        s.student_id AS 'Student ID', 
+                        s.first_name AS 'First Name', 
+                        s.last_name AS 'Last Name',
+                        s.course AS 'Course',
+                        ua.username AS 'Account Name',
+                        ua.user_id AS 'User ID'
+                    FROM student s
+                    INNER JOIN user_account ua ON s.user_id = ua.user_id
+                    ORDER BY s.student_id DESC";
+
+                MySqlCommand command = new MySqlCommand(query, dbConn.getconnection);
+                dbConn.openConnect();
+                MySqlDataAdapter adapter = new MySqlDataAdapter(command);
+                adapter.Fill(dt);
+            }
+            catch (Exception ex) { MessageBox.Show("Database Error: " + ex.Message); }
+            finally { dbConn.closeConnect(); }
+            return dt;
         }
 
     }
