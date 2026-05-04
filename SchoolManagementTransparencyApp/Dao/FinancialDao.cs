@@ -57,5 +57,40 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.Dao
 
             return reports;
         }
+
+
+        public List<dynamic> GetFundLeaderboard()
+        {
+            List<dynamic> list = new List<dynamic>();
+            try
+            {
+                // Using your exact schema: 'fund_name' and 'fund_id'
+                string query = @"
+            SELECT 
+                fc.fund_name,
+                (IFNULL((SELECT SUM(amount) FROM income_transaction WHERE fund_id = fc.fund_id), 0) - 
+                 IFNULL((SELECT SUM(amount) FROM expense_transaction WHERE fund_id = fc.fund_id), 0)) AS balance
+            FROM fund_category fc
+            ORDER BY balance DESC";
+
+                MySqlCommand command = new MySqlCommand(query, dbConn.getconnection);
+                dbConn.openConnect();
+
+                using (MySqlDataReader reader = command.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        list.Add(new
+                        {
+                            FundCategory = reader["fund_name"].ToString(),
+                            AvailableBalance = Convert.ToDecimal(reader["balance"])
+                        });
+                    }
+                }
+            }
+            catch (Exception ex) { MessageBox.Show("DAO Error: " + ex.Message); }
+            finally { dbConn.closeConnect(); }
+            return list;
+        }
     }
 }

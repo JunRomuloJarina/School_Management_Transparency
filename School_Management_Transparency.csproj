@@ -201,6 +201,42 @@
     <Compile Include="SchoolManagementTransparencyApp\Service\TransactionTypeService.cs" />
     <Compile Include="SchoolManagementTransparencyApp\Service\UserAccountService.cs" />
     <Compile Include="SchoolManagementTransparencyApp\Service\ViolationTypeService.cs" />
+    <Compile Include="SchoolManagementTransparencyApp\UserControls\UC_EXPENSE.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SchoolManagementTransparencyApp\UserControls\UC_EXPENSE.Designer.cs">
+      <DependentUpon>UC_EXPENSE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SchoolManagementTransparencyApp\UserControls\UC_FUND.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SchoolManagementTransparencyApp\UserControls\UC_FUND.Designer.cs">
+      <DependentUpon>UC_FUND.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SchoolManagementTransparencyApp\UserControls\UC_INCOME.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SchoolManagementTransparencyApp\UserControls\UC_INCOME.Designer.cs">
+      <DependentUpon>UC_INCOME.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SchoolManagementTransparencyApp\UserControls\UC_STUDENT.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SchoolManagementTransparencyApp\UserControls\UC_STUDENT.Designer.cs">
+      <DependentUpon>UC_STUDENT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SchoolManagementTransparencyApp\UserControls\UC_STUDENT_VIOLATION.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SchoolManagementTransparencyApp\UserControls\UC_STUDENT_VIOLATION.Designer.cs">
+      <DependentUpon>UC_STUDENT_VIOLATION.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SchoolManagementTransparencyApp\UserControls\UC_USER_ACCOUNT.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SchoolManagementTransparencyApp\UserControls\UC_USER_ACCOUNT.Designer.cs">
+      <DependentUpon>UC_USER_ACCOUNT.cs</DependentUpon>
+    </Compile>
     <Compile Include="SchoolManagementTransparencyApp\Util\DatabaseConnection.cs" />
     <Compile Include="SchoolManagementTransparencyApp\Util\LoginInputValidator.cs" />
     <Compile Include="SchoolManagementTransparencyApp\Util\StudentCreateInputValidator.cs" />
@@ -233,6 +269,24 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SchoolManagementTransparencyApp\UserControls\UC_EXPENSE.resx">
+      <DependentUpon>UC_EXPENSE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SchoolManagementTransparencyApp\UserControls\UC_FUND.resx">
+      <DependentUpon>UC_FUND.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SchoolManagementTransparencyApp\UserControls\UC_INCOME.resx">
+      <DependentUpon>UC_INCOME.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SchoolManagementTransparencyApp\UserControls\UC_STUDENT.resx">
+      <DependentUpon>UC_STUDENT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SchoolManagementTransparencyApp\UserControls\UC_STUDENT_VIOLATION.resx">
+      <DependentUpon>UC_STUDENT_VIOLATION.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SchoolManagementTransparencyApp\UserControls\UC_USER_ACCOUNT.resx">
+      <DependentUpon>UC_USER_ACCOUNT.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SchoolManagementTransparencyApp\Winforms\AdminForm.resx">
       <DependentUpon>AdminForm.cs</DependentUpon>

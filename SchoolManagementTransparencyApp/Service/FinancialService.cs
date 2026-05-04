@@ -65,5 +65,12 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.Service
             decimal total = _dao.GetTotalExpensesAmount();
             return total.ToString("N2");
         }
+
+        // Add this inside your FinancialService class
+        public List<dynamic> GetFundLeaderboard()
+        {
+            FinancialDao financialDao = new FinancialDao();
+            return financialDao.GetFundLeaderboard();
+        }
     }
 }

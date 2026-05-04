@@ -32,11 +32,44 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.Control
             lblExpenses.Text = "₱ " + _financialService.GetFormattedTotalExpenses();
         }
 
+        //public void FilterGridToTopViolators(DataGridView dgv)
+        //{
+        //    if (dgv.Rows.Count == 0) return;
+
+        //    // 1. Read the grid data
+        //    var rows = dgv.Rows.Cast<DataGridViewRow>()
+        //        .Where(row => !row.IsNewRow && row.Cells["StudentName"].Value != null)
+        //        .Select(row => new {
+        //            Name = row.Cells["StudentName"].Value.ToString()
+        //        }).ToList();
+
+        //    if (!rows.Any()) return;
+
+        //    // 2. Count the violations for each student
+        //    var counts = rows.GroupBy(r => r.Name)
+        //                     .Select(g => new {
+        //                         StudentName = g.Key,
+        //                         TotalViolations = g.Count()
+        //                     })
+        //                     .OrderByDescending(c => c.TotalViolations)
+        //                     .ToList();
+
+        //    // 3. Find the highest number of violations
+        //    int maxViolations = counts.First().TotalViolations;
+
+        //    // 4. Update the grid to show ONLY the top students and their score
+        //    dgv.DataSource = null;
+        //    dgv.DataSource = counts.Where(c => c.TotalViolations == maxViolations).ToList();
+
+        //    // Auto-resize columns for a cleaner look
+        //    dgv.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+        //}
+
         public void FilterGridToTopViolators(DataGridView dgv)
         {
             if (dgv.Rows.Count == 0) return;
 
-            // 1. Read the grid data
+            // 1. Extract names from the grid (populated by the Service/DAO)
             var rows = dgv.Rows.Cast<DataGridViewRow>()
                 .Where(row => !row.IsNewRow && row.Cells["StudentName"].Value != null)
                 .Select(row => new {
@@ -45,26 +78,50 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.Control
 
             if (!rows.Any()) return;
 
-            // 2. Count the violations for each student
-            var counts = rows.GroupBy(r => r.Name)
-                             .Select(g => new {
-                                 StudentName = g.Key,
-                                 TotalViolations = g.Count()
-                             })
-                             .OrderByDescending(c => c.TotalViolations)
-                             .ToList();
+            // 2. Group by Name and Count occurrences
+            // We sort by Count (Descending) so the biggest offender is at the top
+            var leaderboard = rows.GroupBy(r => r.Name)
+                                 .Select(g => new {
+                                     StudentName = g.Key,
+                                     TotalViolations = g.Count()
+                                 })
+                                 .OrderByDescending(c => c.TotalViolations)
+                                 .ToList();
 
-            // 3. Find the highest number of violations
-            int maxViolations = counts.First().TotalViolations;
-
-            // 4. Update the grid to show ONLY the top students and their score
+            // 3. Bind the entire sorted list to the Grid
             dgv.DataSource = null;
-            dgv.DataSource = counts.Where(c => c.TotalViolations == maxViolations).ToList();
+            dgv.DataSource = leaderboard;
 
-            // Auto-resize columns for a cleaner look
+            // 4. UI Cleanup: Make it look like a professional leaderboard
+            if (dgv.Columns["StudentName"] != null) dgv.Columns["StudentName"].HeaderText = "Student Name";
+            if (dgv.Columns["TotalViolations"] != null) dgv.Columns["TotalViolations"].HeaderText = "Violation Count";
+
             dgv.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
 
+
+        public void LoadFundTransparencyGrid(DataGridView dgv)
+        {
+            // 1. Fetch the data from the DAO (or Service)
+            var fundData = _financialService.GetFundLeaderboard();
+
+            if (fundData == null || fundData.Count == 0) return;
+
+            // 2. Bind to Grid
+            dgv.DataSource = null;
+            dgv.DataSource = fundData;
+
+            // 3. Format the Balance column as Currency
+            if (dgv.Columns["Balance"] != null)
+            {
+                dgv.Columns["Balance"].DefaultCellStyle.Format = "₱ #,##0.00";
+                dgv.Columns["Balance"].HeaderText = "Available Balance";
+            }
+
+            if (dgv.Columns["Category"] != null) dgv.Columns["Category"].HeaderText = "Fund Category";
+
+            dgv.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+        }
 
     }
 }

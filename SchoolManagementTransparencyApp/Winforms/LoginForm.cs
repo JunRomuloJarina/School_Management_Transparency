@@ -151,7 +151,7 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.Winfrom
 
         private void guna2ControlBox1_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Application.Exit();
         }
 
         private void CreateAccountContainerPanel_Paint(object sender, PaintEventArgs e)
