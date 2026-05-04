@@ -17,8 +17,9 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.Winfrom
         public AdminForm()
         {
             InitializeComponent();
-            frmAdminDashboard_Load();
-            this.Load += new EventHandler(AdminForm_Load);
+            //frmAdminDashboard_Load();
+            //this.Load += new EventHandler(AdminForm_Load);
+            addUserControl(new UC_HOME());
         }
 
         AdminDashboardController _dashboardController = new AdminDashboardController();
@@ -28,35 +29,34 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.Winfrom
         private void addUserControl(UserControl userControl)
         {
             userControl.Dock = DockStyle.Fill;
-            userControlContainer.Controls.Clear();
-            userControlContainer.Controls.Add(userControl);
-            userControlContainer.Show();
+            kpi_container_panel.Controls.Clear();
+            kpi_container_panel.Controls.Add(userControl);
+            kpi_container_panel.Show();
             userControl.BringToFront(); 
         }
 
         private void AdminForm_Load(object sender, EventArgs e)
         {
-            frmAdminDashboard_Load();
+            //frmAdminDashboard_Load();
         }
 
-        private void RefreshMostViolatedGrid()
-        {
-            // 1. First, load all violations normally
-            _studentController.LoadViolationGrid(mostviolatedstudent_dgv);
+        //private void RefreshMostViolatedGrid()
+        //{
+        //    // 1. First, load all violations normally
+        //    _studentController.LoadViolationGrid(mostviolatedstudent_dgv);
 
-            // 2. Immediately filter it to show ONLY the top offenders
-            _dashboardController.FilterGridToTopViolators(mostviolatedstudent_dgv);
-        }
+        //    // 2. Immediately filter it to show ONLY the top offenders
+        //    _dashboardController.FilterGridToTopViolators(mostviolatedstudent_dgv);
+        //}
 
-        private void frmAdminDashboard_Load()
-        {
-            // One call to update all KPI labels
-            _dashboardController.UpdateDashboardKPIs(totalStudent_label, totalFunds_label, allExpense_label);
-            RefreshMostViolatedGrid();
-            _dashboardController.LoadFundTransparencyGrid(fundTransparency_dgv);
-            userControlContainer.Hide();
+        //private void frmAdminDashboard_Load()
+        //{
+        //    // One call to update all KPI labels
+        //    _dashboardController.UpdateDashboardKPIs(totalStudent_label, totalFunds_label, allExpense_label);
+        //    RefreshMostViolatedGrid();
+        //    _dashboardController.LoadFundTransparencyGrid(fundTransparency_dgv);
 
-        }
+        //}
 
         private void adminLogoutBtn_Click(object sender, EventArgs e)
         {
@@ -92,7 +92,7 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.Winfrom
 
         private void homeBtn_Click(object sender, EventArgs e)
         {
-            frmAdminDashboard_Load();
+            addUserControl(new UC_HOME());
         }
 
         private void fundTransparency_dgv_CellContentClick(object sender, DataGridViewCellEventArgs e)

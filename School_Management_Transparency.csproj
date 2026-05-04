@@ -213,6 +213,12 @@
     <Compile Include="SchoolManagementTransparencyApp\UserControls\UC_FUND.Designer.cs">
       <DependentUpon>UC_FUND.cs</DependentUpon>
     </Compile>
+    <Compile Include="SchoolManagementTransparencyApp\UserControls\UC_HOME.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SchoolManagementTransparencyApp\UserControls\UC_HOME.Designer.cs">
+      <DependentUpon>UC_HOME.cs</DependentUpon>
+    </Compile>
     <Compile Include="SchoolManagementTransparencyApp\UserControls\UC_INCOME.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -275,6 +281,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="SchoolManagementTransparencyApp\UserControls\UC_FUND.resx">
       <DependentUpon>UC_FUND.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SchoolManagementTransparencyApp\UserControls\UC_HOME.resx">
+      <DependentUpon>UC_HOME.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SchoolManagementTransparencyApp\UserControls\UC_INCOME.resx">
       <DependentUpon>UC_INCOME.cs</DependentUpon>

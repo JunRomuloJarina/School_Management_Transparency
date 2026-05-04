@@ -100,3 +100,4 @@ C:\Visual_Studio_Repo\SMT\obj\Debug\School_Management_Transparency.SchoolManagem
 C:\Visual_Studio_Repo\SMT\obj\Debug\School_Management_Transparency.SchoolManagementTransparencyApp.UserControls.UC_STUDENT.resources
 C:\Visual_Studio_Repo\SMT\obj\Debug\School_Management_Transparency.SchoolManagementTransparencyApp.UserControls.UC_STUDENT_VIOLATION.resources
 C:\Visual_Studio_Repo\SMT\obj\Debug\School_Management_Transparency.SchoolManagementTransparencyApp.UserControls.UC_USER_ACCOUNT.resources
+C:\Visual_Studio_Repo\SMT\obj\Debug\School_Management_Transparency.SchoolManagementTransparencyApp.UserControls.UC_HOME.resources
