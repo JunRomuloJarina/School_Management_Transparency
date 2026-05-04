@@ -3,6 +3,7 @@ using School_Management_Transparency.SchoolManagementTransparencyApp.Model;
 using School_Management_Transparency.SchoolManagementTransparencyApp.Util;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -279,7 +280,69 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.Dao
             return 0;
         }
 
-       
+
+
+        public Dictionary<string, int> GetUserRoleCounts()
+        {
+            var counts = new Dictionary<string, int>
+            {
+                { "ADMIN", 0 },
+                { "STUDENT", 0 },
+                { "SBO", 0 }
+            };
+
+            try
+            {
+                // One query to rule them all: grouping by role
+                string query = "SELECT role, COUNT(*) as total FROM user_account GROUP BY role";
+
+                MySqlCommand command = new MySqlCommand(query, dbConn.getconnection);
+                dbConn.openConnect();
+
+                using (MySqlDataReader reader = command.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        string role = reader["role"].ToString().ToUpper();
+                        if (counts.ContainsKey(role))
+                        {
+                            counts[role] = Convert.ToInt32(reader["total"]);
+                        }
+                    }
+                }
+            }
+            catch (Exception ex) { MessageBox.Show("User Stats Error: " + ex.Message); }
+            finally { dbConn.closeConnect(); }
+
+            return counts;
+        }
+
+        public DataTable SearchUserAccounts(string searchTerm)
+        {
+            DataTable dt = new DataTable();
+            try
+            {
+                // Searches across multiple columns using OR logic
+                string query = @"
+            SELECT user_id, username, password, role, created_at 
+            FROM user_account 
+            WHERE username LIKE @search 
+               OR password LIKE @search 
+               OR role LIKE @search 
+               OR user_id LIKE @search";
+
+                MySqlCommand command = new MySqlCommand(query, dbConn.getconnection);
+                // The % allows searching for "admin" and finding "administrator"
+                command.Parameters.AddWithValue("@search", "%" + searchTerm + "%");
+
+                dbConn.openConnect();
+                MySqlDataAdapter adapter = new MySqlDataAdapter(command);
+                adapter.Fill(dt);
+            }
+            catch (Exception ex) { MessageBox.Show("Search Error: " + ex.Message); }
+            finally { dbConn.closeConnect(); }
+            return dt;
+        }
 
 
     }

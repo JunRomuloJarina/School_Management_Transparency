@@ -1,6 +1,7 @@
 ﻿using School_Management_Transparency.SchoolManagementTransparencyApp.Service;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -119,6 +120,30 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.Control
             }
 
             if (dgv.Columns["Category"] != null) dgv.Columns["Category"].HeaderText = "Fund Category";
+
+            dgv.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+        }
+
+        public void UpdateUserRoleKPIs(Label lblAdmin, Label lblStudent, Label lblSbo)
+        {
+            var stats = _financialService.GetDashboardUserStats();
+
+            lblAdmin.Text = stats["ADMIN"].ToString();
+            lblStudent.Text = stats["STUDENT"].ToString();
+            lblSbo.Text = stats["SBO"].ToString();
+        }
+
+        public void ExecuteUserSearch(DataGridView dgv, string term)
+        {
+            DataTable results = _financialService.GetUserSearchResults(term);
+
+            dgv.DataSource = results;
+
+            // Formatting for the grid
+            if (dgv.Columns["user_id"] != null) dgv.Columns["user_id"].HeaderText = "ID";
+            if (dgv.Columns["username"] != null) dgv.Columns["username"].HeaderText = "Username";
+            if (dgv.Columns["password"] != null) dgv.Columns["password"].HeaderText = "Password";
+            if (dgv.Columns["role"] != null) dgv.Columns["role"].HeaderText = "Access Role";
 
             dgv.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }

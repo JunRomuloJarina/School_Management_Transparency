@@ -42,7 +42,7 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.Control
                 dgv.DataSource = _userService.GetAll();
 
                 // Hide passwords for security in the UI
-                if (dgv.Columns["Password"] != null) dgv.Columns["Password"].Visible = false;
+                //if (dgv.Columns["Password"] != null) dgv.Columns["Password"].Visible = false;
             }
             catch (Exception ex)
             {
@@ -139,6 +139,21 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.Control
                 MessageBox.Show("Controller Error: " + ex.Message);
                 return 0;
             }
+        }
+
+        public void SearchUsers(DataGridView dgv, string term)
+        {
+            var allUsers = _userService.GetAll(); // Get the List<UserAccount>
+
+            var filteredList = allUsers.Where(u =>
+                u.Username.ToLower().Contains(term.ToLower()) ||
+                u.Role.ToLower().Contains(term.ToLower())
+            ).ToList();
+
+            dgv.DataSource = null;
+            dgv.DataSource = filteredList; // Binding as a List keeps column names consistent
+
+            //if (dgv.Columns["Password"] != null) dgv.Columns["Password"].Visible = false;
         }
     }
 }

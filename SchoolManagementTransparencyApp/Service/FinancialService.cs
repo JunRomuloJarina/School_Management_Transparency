@@ -2,6 +2,7 @@
 using School_Management_Transparency.SchoolManagementTransparencyApp.Model;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -71,6 +72,19 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.Service
         {
             FinancialDao financialDao = new FinancialDao();
             return financialDao.GetFundLeaderboard();
+        }
+
+
+        private readonly UserAccountDao _userDao = new UserAccountDao();
+
+        public Dictionary<string, int> GetDashboardUserStats()
+        {
+            return _userDao.GetUserRoleCounts();
+        }
+
+        public DataTable GetUserSearchResults(string term)
+        {
+            return _userDao.SearchUserAccounts(term);
         }
     }
 }
