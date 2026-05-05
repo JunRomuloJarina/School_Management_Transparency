@@ -45,8 +45,8 @@
             this.userAccountBtn = new Guna.UI2.WinForms.Guna2GradientButton();
             this.homeBtn = new Guna.UI2.WinForms.Guna2GradientButton();
             this.label1 = new System.Windows.Forms.Label();
-            this.guna2DragControl2 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.kpi_container_panel = new Guna.UI2.WinForms.Guna2ShadowPanel();
+            this.guna2DragControl2 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.contentContainerPanel.SuspendLayout();
             this.guna2GradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
@@ -90,7 +90,7 @@
             this.guna2GradientPanel1.FillColor2 = System.Drawing.Color.Firebrick;
             this.guna2GradientPanel1.Location = new System.Drawing.Point(0, 0);
             this.guna2GradientPanel1.Name = "guna2GradientPanel1";
-            this.guna2GradientPanel1.Size = new System.Drawing.Size(368, 918);
+            this.guna2GradientPanel1.Size = new System.Drawing.Size(301, 918);
             this.guna2GradientPanel1.TabIndex = 0;
             // 
             // guna2CirclePictureBox1
@@ -98,10 +98,10 @@
             this.guna2CirclePictureBox1.FillColor = System.Drawing.Color.Transparent;
             this.guna2CirclePictureBox1.Image = global::School_Management_Transparency.Properties.Resources.ncbii_log;
             this.guna2CirclePictureBox1.ImageRotate = 0F;
-            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(31, 90);
+            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(12, 99);
             this.guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
             this.guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CirclePictureBox1.Size = new System.Drawing.Size(301, 235);
+            this.guna2CirclePictureBox1.Size = new System.Drawing.Size(271, 232);
             this.guna2CirclePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.guna2CirclePictureBox1.TabIndex = 3;
             this.guna2CirclePictureBox1.TabStop = false;
@@ -111,7 +111,7 @@
             this.guna2Separator2.BackColor = System.Drawing.Color.Transparent;
             this.guna2Separator2.Location = new System.Drawing.Point(12, 880);
             this.guna2Separator2.Name = "guna2Separator2";
-            this.guna2Separator2.Size = new System.Drawing.Size(343, 10);
+            this.guna2Separator2.Size = new System.Drawing.Size(276, 10);
             this.guna2Separator2.TabIndex = 2;
             // 
             // guna2Separator3
@@ -119,15 +119,15 @@
             this.guna2Separator3.BackColor = System.Drawing.Color.Transparent;
             this.guna2Separator3.Location = new System.Drawing.Point(12, 337);
             this.guna2Separator3.Name = "guna2Separator3";
-            this.guna2Separator3.Size = new System.Drawing.Size(343, 10);
+            this.guna2Separator3.Size = new System.Drawing.Size(276, 10);
             this.guna2Separator3.TabIndex = 2;
             // 
             // guna2Separator1
             // 
             this.guna2Separator1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Separator1.Location = new System.Drawing.Point(12, 69);
+            this.guna2Separator1.Location = new System.Drawing.Point(12, 83);
             this.guna2Separator1.Name = "guna2Separator1";
-            this.guna2Separator1.Size = new System.Drawing.Size(343, 10);
+            this.guna2Separator1.Size = new System.Drawing.Size(276, 10);
             this.guna2Separator1.TabIndex = 2;
             // 
             // adminLogoutBtn
@@ -150,7 +150,7 @@
             this.adminLogoutBtn.Image = global::School_Management_Transparency.Properties.Resources.logout_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24;
             this.adminLogoutBtn.Location = new System.Drawing.Point(31, 817);
             this.adminLogoutBtn.Name = "adminLogoutBtn";
-            this.adminLogoutBtn.Size = new System.Drawing.Size(301, 45);
+            this.adminLogoutBtn.Size = new System.Drawing.Size(234, 45);
             this.adminLogoutBtn.TabIndex = 1;
             this.adminLogoutBtn.Text = "LOG OUT";
             this.adminLogoutBtn.Click += new System.EventHandler(this.adminLogoutBtn_Click);
@@ -178,9 +178,9 @@
             this.fundBtn.HoverState.FillColor = System.Drawing.Color.Gray;
             this.fundBtn.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.fundBtn.HoverState.ForeColor = System.Drawing.Color.White;
-            this.fundBtn.Location = new System.Drawing.Point(31, 741);
+            this.fundBtn.Location = new System.Drawing.Point(26, 729);
             this.fundBtn.Name = "fundBtn";
-            this.fundBtn.Size = new System.Drawing.Size(301, 45);
+            this.fundBtn.Size = new System.Drawing.Size(252, 46);
             this.fundBtn.TabIndex = 1;
             this.fundBtn.Text = "FUND";
             this.fundBtn.Click += new System.EventHandler(this.fundBtn_Click);
@@ -208,9 +208,9 @@
             this.expenseBtn.HoverState.FillColor = System.Drawing.Color.Gray;
             this.expenseBtn.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.expenseBtn.HoverState.ForeColor = System.Drawing.Color.White;
-            this.expenseBtn.Location = new System.Drawing.Point(31, 681);
+            this.expenseBtn.Location = new System.Drawing.Point(26, 669);
             this.expenseBtn.Name = "expenseBtn";
-            this.expenseBtn.Size = new System.Drawing.Size(301, 45);
+            this.expenseBtn.Size = new System.Drawing.Size(252, 46);
             this.expenseBtn.TabIndex = 1;
             this.expenseBtn.Text = "EXPENSE";
             this.expenseBtn.Click += new System.EventHandler(this.expenseBtn_Click);
@@ -238,9 +238,9 @@
             this.incomeBtn.HoverState.FillColor = System.Drawing.Color.Gray;
             this.incomeBtn.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.incomeBtn.HoverState.ForeColor = System.Drawing.Color.White;
-            this.incomeBtn.Location = new System.Drawing.Point(31, 621);
+            this.incomeBtn.Location = new System.Drawing.Point(26, 609);
             this.incomeBtn.Name = "incomeBtn";
-            this.incomeBtn.Size = new System.Drawing.Size(301, 45);
+            this.incomeBtn.Size = new System.Drawing.Size(252, 46);
             this.incomeBtn.TabIndex = 1;
             this.incomeBtn.Text = "INCOME";
             this.incomeBtn.Click += new System.EventHandler(this.incomeBtn_Click);
@@ -268,9 +268,9 @@
             this.studentViolationBtn.HoverState.FillColor = System.Drawing.Color.Gray;
             this.studentViolationBtn.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.studentViolationBtn.HoverState.ForeColor = System.Drawing.Color.White;
-            this.studentViolationBtn.Location = new System.Drawing.Point(31, 561);
+            this.studentViolationBtn.Location = new System.Drawing.Point(26, 549);
             this.studentViolationBtn.Name = "studentViolationBtn";
-            this.studentViolationBtn.Size = new System.Drawing.Size(301, 45);
+            this.studentViolationBtn.Size = new System.Drawing.Size(252, 46);
             this.studentViolationBtn.TabIndex = 1;
             this.studentViolationBtn.Text = " STUDENT VIOLATION";
             this.studentViolationBtn.Click += new System.EventHandler(this.studentViolationBtn_Click);
@@ -298,9 +298,9 @@
             this.studentBtn.HoverState.FillColor = System.Drawing.Color.Gray;
             this.studentBtn.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.studentBtn.HoverState.ForeColor = System.Drawing.Color.White;
-            this.studentBtn.Location = new System.Drawing.Point(31, 501);
+            this.studentBtn.Location = new System.Drawing.Point(26, 489);
             this.studentBtn.Name = "studentBtn";
-            this.studentBtn.Size = new System.Drawing.Size(301, 45);
+            this.studentBtn.Size = new System.Drawing.Size(252, 46);
             this.studentBtn.TabIndex = 1;
             this.studentBtn.Text = "STUDENT";
             this.studentBtn.Click += new System.EventHandler(this.studentBtn_Click);
@@ -328,9 +328,9 @@
             this.userAccountBtn.HoverState.FillColor = System.Drawing.Color.Gray;
             this.userAccountBtn.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.userAccountBtn.HoverState.ForeColor = System.Drawing.Color.White;
-            this.userAccountBtn.Location = new System.Drawing.Point(31, 441);
+            this.userAccountBtn.Location = new System.Drawing.Point(26, 429);
             this.userAccountBtn.Name = "userAccountBtn";
-            this.userAccountBtn.Size = new System.Drawing.Size(301, 45);
+            this.userAccountBtn.Size = new System.Drawing.Size(252, 46);
             this.userAccountBtn.TabIndex = 1;
             this.userAccountBtn.Text = "USER ACCOUNT";
             this.userAccountBtn.Click += new System.EventHandler(this.userAccountBtn_Click);
@@ -358,9 +358,9 @@
             this.homeBtn.HoverState.FillColor = System.Drawing.Color.Gray;
             this.homeBtn.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.homeBtn.HoverState.ForeColor = System.Drawing.Color.White;
-            this.homeBtn.Location = new System.Drawing.Point(31, 381);
+            this.homeBtn.Location = new System.Drawing.Point(26, 369);
             this.homeBtn.Name = "homeBtn";
-            this.homeBtn.Size = new System.Drawing.Size(301, 45);
+            this.homeBtn.Size = new System.Drawing.Size(252, 46);
             this.homeBtn.TabIndex = 1;
             this.homeBtn.Text = "HOME";
             this.homeBtn.Click += new System.EventHandler(this.homeBtn_Click);
@@ -369,34 +369,34 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Gill Sans Ultra Bold Condensed", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Gill Sans Ultra Bold Condensed", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(34, 21);
+            this.label1.Location = new System.Drawing.Point(12, 40);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(309, 45);
+            this.label1.Size = new System.Drawing.Size(271, 40);
             this.label1.TabIndex = 0;
             this.label1.Text = "ADMIN DASHBOARD";
-            // 
-            // guna2DragControl2
-            // 
-            this.guna2DragControl2.DockIndicatorTransparencyValue = 0.6D;
-            this.guna2DragControl2.TargetControl = this.kpi_container_panel;
-            this.guna2DragControl2.UseTransparentDrag = true;
             // 
             // kpi_container_panel
             // 
             this.kpi_container_panel.BackColor = System.Drawing.Color.Transparent;
             this.kpi_container_panel.Dock = System.Windows.Forms.DockStyle.Right;
             this.kpi_container_panel.FillColor = System.Drawing.Color.White;
-            this.kpi_container_panel.Location = new System.Drawing.Point(374, 0);
+            this.kpi_container_panel.Location = new System.Drawing.Point(294, 0);
             this.kpi_container_panel.Name = "kpi_container_panel";
             this.kpi_container_panel.Radius = 10;
             this.kpi_container_panel.ShadowColor = System.Drawing.Color.Red;
             this.kpi_container_panel.ShadowDepth = 150;
             this.kpi_container_panel.ShadowShift = 10;
-            this.kpi_container_panel.Size = new System.Drawing.Size(1199, 918);
+            this.kpi_container_panel.Size = new System.Drawing.Size(1279, 918);
             this.kpi_container_panel.TabIndex = 1;
             this.kpi_container_panel.Paint += new System.Windows.Forms.PaintEventHandler(this.kpi_container_panel_Paint);
+            // 
+            // guna2DragControl2
+            // 
+            this.guna2DragControl2.DockIndicatorTransparencyValue = 0.6D;
+            this.guna2DragControl2.TargetControl = this.kpi_container_panel;
+            this.guna2DragControl2.UseTransparentDrag = true;
             // 
             // AdminForm
             // 

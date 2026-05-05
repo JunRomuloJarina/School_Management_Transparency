@@ -43,12 +43,12 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.Service
             return _violationDao.DeleteStudentViolation(id) ? "Violation deleted." : "Delete failed.";
         }
 
-        public List<StudentViolation> GetAll() => _violationDao.GetAllStudentViolations();
+        public List<StudentViolation> GetAll() => _violationDao.GetAllStudentViolationsNormal();
 
         // Used for the "Collect Payment" screen
         public List<StudentViolation> GetUnpaidViolations()
         {
-            return _violationDao.GetAllStudentViolations().FindAll(v => v.Status == "UNPAID");
+            return _violationDao.GetAllStudentViolationsNormal().FindAll(v => v.Status == "UNPAID");
         }
     }
 }

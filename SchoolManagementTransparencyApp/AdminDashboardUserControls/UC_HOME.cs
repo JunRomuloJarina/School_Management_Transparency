@@ -1,4 +1,5 @@
 ﻿using School_Management_Transparency.SchoolManagementTransparencyApp.Controller;
+using School_Management_Transparency.SchoolManagementTransparencyApp.Dao;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -41,7 +42,26 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.UserCon
             _dashboardController.UpdateDashboardKPIs(totalStudent_label, totalFunds_label, allExpense_label);
             RefreshMostViolatedGrid();
             _dashboardController.LoadFundTransparencyGrid(fundTransparency_dgv);
+            RefreshOutstandingBalanceKPI();
+        }
 
+        private void totalFunds_label_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
+
+        private void RefreshOutstandingBalanceKPI()
+        {
+            DashboardDao dao = new DashboardDao();
+            decimal amountOwed = dao.GetTotalOutstandingBalance();
+
+            // Update your specific label
+            totalUnpaidMoneyLabel.Text = "₱" + amountOwed.ToString("N2");
+
+            // Optional: Make the text red to indicate it is a "debt" or "uncollected" amount
+            totalUnpaidMoneyLabel.ForeColor = System.Drawing.Color.DarkGoldenrod;
         }
     }
 }
