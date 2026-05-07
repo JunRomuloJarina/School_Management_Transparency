@@ -255,6 +255,134 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.Dao
             return dt;
         }
 
+        // 5. FILTER BY STATUS: Show only 'PAID' or 'UNPAID' records
+        public DataTable FilterViolationsByStatus(string status)
+        {
+            DataTable dt = new DataTable();
+            try
+            {
+                string query = @"
+        SELECT 
+            sv.student_violation_id AS 'Record ID', s.student_id AS 'Student ID',
+            CONCAT(s.first_name, ' ', s.last_name) AS 'Student Name',
+            c.course_name AS 'Course', vt.category AS 'Violation Category',
+            vt.violation_name AS 'Offense', vt.fee AS 'Penalty Fee',
+            sv.date_issued AS 'Date', sv.status AS 'Status'
+        FROM student_violation sv
+        INNER JOIN student s ON sv.student_id = s.student_id
+        INNER JOIN enrollment e ON s.student_id = e.student_id
+        INNER JOIN course c ON e.course_id = c.course_id
+        INNER JOIN violation_type vt ON sv.violation_type_id = vt.violation_type_id
+        WHERE sv.status = @status
+        ORDER BY sv.date_issued DESC";
+
+                MySqlCommand cmd = new MySqlCommand(query, dbConn.getconnection);
+                cmd.Parameters.AddWithValue("@status", status);
+
+                MySqlDataAdapter adapter = new MySqlDataAdapter(cmd);
+                adapter.Fill(dt);
+            }
+            catch (Exception ex) { MessageBox.Show("Filter Status Error: " + ex.Message); }
+            return dt;
+        }
+
+        public bool AddViolationRecord(int studentId, int violationTypeId, DateTime date, string status)
+        {
+            try
+            {
+                dbConn.openConnect();
+                string query = @"INSERT INTO student_violation (student_id, violation_type_id, date_issued, status) 
+                         VALUES (@sid, @vid, @date, @status)";
+
+                MySqlCommand cmd = new MySqlCommand(query, dbConn.getconnection);
+                cmd.Parameters.AddWithValue("@sid", studentId);
+                cmd.Parameters.AddWithValue("@vid", violationTypeId);
+                cmd.Parameters.AddWithValue("@date", date);
+                cmd.Parameters.AddWithValue("@status", status);
+
+                return cmd.ExecuteNonQuery() == 1;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Database Error: " + ex.Message);
+                return false;
+            }
+            finally { dbConn.closeConnect(); }
+        }
+
+
+        public DataTable GetViolationTypes()
+        {
+            DataTable dt = new DataTable();
+            try
+            {
+                string query = "SELECT violation_type_id, violation_name FROM violation_type ORDER BY violation_name";
+                MySqlDataAdapter adapter = new MySqlDataAdapter(new MySqlCommand(query, dbConn.getconnection));
+                adapter.Fill(dt);
+            }
+            catch (Exception ex) { MessageBox.Show(ex.Message); }
+            return dt;
+        }
+
+
+        public DataTable GetStudentLookupList()
+        {
+            DataTable dt = new DataTable();
+            try
+            {
+                // Simple join to show Name and Course for selection
+                string query = @"
+            SELECT 
+                s.student_id, 
+                CONCAT(s.last_name, ', ', s.first_name) AS 'Student Name',
+                c.course_name AS 'Course'
+            FROM student s
+            LEFT JOIN enrollment e ON s.student_id = e.student_id
+            LEFT JOIN course c ON e.course_id = c.course_id
+            ORDER BY s.last_name ASC";
+
+                MySqlDataAdapter adapter = new MySqlDataAdapter(new MySqlCommand(query, dbConn.getconnection));
+                adapter.Fill(dt);
+            }
+            catch (Exception ex) { MessageBox.Show("Lookup Error: " + ex.Message); }
+            return dt;
+        }
+
+
+        public DataTable SearchStudentsForViolation(string searchTerm, int courseId)
+        {
+            DataTable dt = new DataTable();
+            try
+            {
+                // Base Query
+                string query = @"
+                    SELECT 
+                        s.student_id, 
+                        CONCAT(s.last_name, ', ', s.first_name) AS 'Student Name',
+                        c.course_name AS 'Course'
+                    FROM student s
+                    LEFT JOIN enrollment e ON s.student_id = e.student_id
+                    LEFT JOIN course c ON e.course_id = c.course_id
+                    WHERE (s.first_name LIKE @s OR s.last_name LIKE @s OR c.course_name LIKE @s)";
+
+                // Append course filter if one is selected (0 is 'All Courses')
+                if (courseId > 0)
+                {
+                    query += " AND c.course_id = @cId";
+                }
+
+                query += " ORDER BY s.last_name ASC";
+
+                MySqlCommand cmd = new MySqlCommand(query, dbConn.getconnection);
+                cmd.Parameters.AddWithValue("@s", "%" + searchTerm + "%");
+                if (courseId > 0) cmd.Parameters.AddWithValue("@cId", courseId);
+
+                new MySqlDataAdapter(cmd).Fill(dt);
+            }
+            catch (Exception ex) { MessageBox.Show("Search Error: " + ex.Message); }
+            return dt;
+        }
+
 
     }
 }

@@ -3,6 +3,7 @@ using School_Management_Transparency.SchoolManagementTransparencyApp.Model;
 using School_Management_Transparency.SchoolManagementTransparencyApp.Util;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -150,6 +151,7 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.Dao
         }
 
         // 5. Get Violation Type By ID
+        [Obsolete("Use GetViolationTypesDataTable for DataGridView binding.")]
         public ViolationType GetViolationTypeById(int violationTypeId)
         {
             try
@@ -183,5 +185,106 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.Dao
             }
             return null;
         }
+
+        // 1. GET ALL FOR GRID (The New Method for CRUD)
+        public DataTable GetViolationTypesDataTable()
+        {
+            DataTable dt = new DataTable();
+            try
+            {
+                // We use Aliases (AS) so the Grid Headers look professional automatically
+                string query = "SELECT violation_type_id AS ID, violation_name AS 'Violation Name', " +
+                               "fee AS 'Penalty Fee', category AS 'Category', description AS 'Description' " +
+                               "FROM Violation_Type ORDER BY violation_name ASC";
+
+                MySqlDataAdapter adapter = new MySqlDataAdapter(new MySqlCommand(query, dbConn.getconnection));
+                adapter.Fill(dt);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error loading Table: " + ex.Message);
+            }
+            return dt;
+        }
+
+        // 2. SAVE (New Version with proper Feedback)
+        public bool SaveNewViolationType(ViolationType violation)
+        {
+            try
+            {
+                dbConn.openConnect();
+                string query = "INSERT INTO Violation_Type (violation_name, fee, category, description) " +
+                               "VALUES (@Name, @Fee, @Category, @Description)";
+
+                MySqlCommand command = new MySqlCommand(query, dbConn.getconnection);
+                command.Parameters.AddWithValue("@Name", violation.ViolationName);
+                command.Parameters.AddWithValue("@Fee", violation.Fee);
+                command.Parameters.AddWithValue("@Category", violation.Category);
+                command.Parameters.AddWithValue("@Description", violation.Description);
+
+                if (command.ExecuteNonQuery() == 1)
+                {
+                    MessageBox.Show("Violation Type added to the system successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return true;
+                }
+            }
+            catch (Exception ex) { MessageBox.Show(ex.Message); }
+            finally { dbConn.closeConnect(); }
+            return false;
+        }
+
+        // 3. UPDATE
+        public bool UpdateViolationTypes(ViolationType violation)
+        {
+            try
+            {
+                dbConn.openConnect();
+                string query = "UPDATE Violation_Type SET violation_name=@Name, fee=@Fee, " +
+                               "category=@Category, description=@Description WHERE violation_type_id=@Id";
+
+                MySqlCommand command = new MySqlCommand(query, dbConn.getconnection);
+                command.Parameters.AddWithValue("@Name", violation.ViolationName);
+                command.Parameters.AddWithValue("@Fee", violation.Fee);
+                command.Parameters.AddWithValue("@Category", violation.Category);
+                command.Parameters.AddWithValue("@Description", violation.Description);
+                command.Parameters.AddWithValue("@Id", violation.ViolationTypeId);
+
+                if (command.ExecuteNonQuery() == 1)
+                {
+                    MessageBox.Show("Record updated successfully.", "Update Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return true;
+                }
+            }
+            catch (Exception ex) { MessageBox.Show(ex.Message); }
+            finally { dbConn.closeConnect(); }
+            return false;
+        }
+
+        // 4. DELETE
+        public bool DeleteViolationTypes(int violationTypeId)
+        {
+            try
+            {
+                dbConn.openConnect();
+                string query = "DELETE FROM Violation_Type WHERE violation_type_id=@Id";
+
+                MySqlCommand command = new MySqlCommand(query, dbConn.getconnection);
+                command.Parameters.AddWithValue("@Id", violationTypeId);
+
+                if (command.ExecuteNonQuery() == 1)
+                {
+                    MessageBox.Show("Violation type has been removed.", "Deleted", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return true;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Cannot delete: This type is likely being used by a student record.\n" + ex.Message);
+            }
+            finally { dbConn.closeConnect(); }
+            return false;
+        }
+
+
     }
 }

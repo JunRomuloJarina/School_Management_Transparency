@@ -44,6 +44,7 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.UserCon
         {
             // Hide technical columns regardless of search or full load[cite: 1]
             if (studentDGV.Columns["user_id"] != null) studentDGV.Columns["user_id"].Visible = false;
+            if (studentDGV.Columns["course_id"] != null) studentDGV.Columns["course_id"].Visible = false;
             //if (studentDGV.Columns["password"] != null) studentDGV.Columns["password"].Visible = false;
             studentDGV.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }

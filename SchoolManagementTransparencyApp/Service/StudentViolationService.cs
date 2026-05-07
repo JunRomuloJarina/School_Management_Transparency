@@ -50,5 +50,10 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.Service
         {
             return _violationDao.GetAllStudentViolationsNormal().FindAll(v => v.Status == "UNPAID");
         }
+
+        public List<StudentViolation> GetPaidViolations()
+        {
+            return _violationDao.GetAllStudentViolationsNormal().FindAll(v => v.Status == "PAID");
+        }
     }
 }

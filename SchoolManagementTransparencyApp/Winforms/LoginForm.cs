@@ -96,14 +96,17 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.Winfrom
                     if (role.Equals("ADMIN", StringComparison.OrdinalIgnoreCase))
                     {
                         new AdminForm().Show();
+                        ClearLogin(); // Clear login fields after successful login
                     }
                     else if (role.Equals("SBO", StringComparison.OrdinalIgnoreCase))
                     {
                         new SboForm().Show();
+                        ClearLogin();
                     }
                     else if (role.Equals("STUDENT", StringComparison.OrdinalIgnoreCase))
                     {
                         new StudentForm().Show();
+                        ClearLogin();
                     }
                     else
                     {
@@ -123,6 +126,8 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.Winfrom
                 MessageBox.Show("Invalid username or password. Please try again.", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
             }
+
+            
         }
 
 
@@ -166,10 +171,30 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.Winfrom
 
         }
 
+        private void Clear()
+        {
+            firstNameTextBox.Clear();
+            lastNameTextBox.Clear();
+            middleNameTextBox.Clear();
+            addressTextBox.Clear();
+            contactNumberTextBox.Clear();
+            usernameCreateTxtBox.Clear();
+            passwordCreateTxtBox.Clear() ;
+        }
+        
+        private void ClearLogin()
+        {
+            usernameLoginTxtbox.Clear();
+            passwordLoginTxtbox.Clear();    
+        }
+
+
         private void backBtn_Click(object sender, EventArgs e)
         {
             LoginContainerPanel.Visible = true;
             CreateAccountContainerPanel.Visible = false;
+            Clear();
+            
         }
 
         private void dateOfBirtchDatePicker_ValueChanged(object sender, EventArgs e)
@@ -284,6 +309,7 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.Winfrom
                 // Open the dashboard
                 new StudentForm().Show();
                 this.Hide();
+                Clear(); // Clear the form for next time (optional since we're hiding it)
             }
             // No 'else' needed here because the DAO already shows a MessageBox if it fails
 
