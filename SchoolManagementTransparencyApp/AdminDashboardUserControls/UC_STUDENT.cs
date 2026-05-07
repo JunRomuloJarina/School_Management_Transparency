@@ -31,6 +31,15 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.UserCon
         }
 
 
+        private void LoadCourses()
+        {
+            courseCombo.DataSource = _dao.GetAvailableCourses();
+            courseCombo.DisplayMember = "course_name";
+            courseCombo.ValueMember = "course_id";
+            courseCombo.SelectedIndex = -1;
+        }
+
+
         private void FormatGrid()
         {
             // Hide technical columns regardless of search or full load[cite: 1]
@@ -43,11 +52,12 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.UserCon
         {
             try
             {
+                // Ensure the user clicked a valid row (not the header)
                 if (e.RowIndex >= 0)
                 {
                     var row = studentDGV.Rows[e.RowIndex];
 
-                    // Populate all profile fields from the student table
+                    // 1. Populate Profile Fields
                     firstNameTxt.Text = row.Cells["first_name"].Value?.ToString();
                     middleNameTxt.Text = row.Cells["middle_name"].Value?.ToString();
                     lastNameTxt.Text = row.Cells["last_name"].Value?.ToString();
@@ -55,24 +65,41 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.UserCon
                     genderCombo.Text = row.Cells["gender"].Value?.ToString();
                     addressTxt.Text = row.Cells["address"].Value?.ToString();
                     contactTxt.Text = row.Cells["contact_number"].Value?.ToString();
-                    dobPicker.Value = Convert.ToDateTime(row.Cells["date_of_birth"].Value);
 
-                    // Populate account fields from the user_account table
+                    if (row.Cells["date_of_birth"].Value != DBNull.Value)
+                        dobPicker.Value = Convert.ToDateTime(row.Cells["date_of_birth"].Value);
+
+                    // 2. Populate Account Fields
                     usernameTxt.Text = row.Cells["username"].Value?.ToString();
                     passwordTxt.Text = row.Cells["password"].Value?.ToString();
                     roleTxt.Text = row.Cells["role"].Value?.ToString();
 
-                    // Hidden Labels for Foreign Key logic
+                    // 3. NEW: Populate Course Selection
+                    // This works because we set 'ValueMember' to 'course_id' during Load
+                    if (row.Cells["course_id"].Value != DBNull.Value)
+                    {
+                        courseCombo.SelectedValue = row.Cells["course_id"].Value;
+                    }
+                    else
+                    {
+                        courseCombo.SelectedIndex = -1; // Clear selection if no course assigned
+                    }
+
+                    // 4. Hidden Labels for Foreign Key logic (Updates/Deletes)
                     lblSelectedStudentId.Text = row.Cells["student_id"].Value?.ToString();
                     lblSelectedUserId.Text = row.Cells["user_id"].Value?.ToString();
                 }
             }
-            catch(Exception ex) 
-            { }
+            catch (Exception ex)
+            {
+                // It's better to know what went wrong than to have an empty catch!
+                Console.WriteLine("Selection Error: " + ex.Message);
+            }
         }
 
         private void UC_STUDENT_Load(object sender, EventArgs e)
         {
+            LoadCourses();
             RefreshGrid();
 
             genderCombo.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
@@ -92,75 +119,57 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.UserCon
 
         private void addBtn_Click(object sender, EventArgs e)
         {
-            // 1. Safety check for the Age field
-            if (!int.TryParse(ageTxt.Text, out int age))
+            if (!int.TryParse(ageTxt.Text, out int age) || courseCombo.SelectedValue == null)
             {
-                MessageBox.Show("Please enter a valid number for Age.", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Please fill all fields and select a Course.");
                 return;
             }
 
-            // 2. Proceed with the DAO call using the 'age' variable we just created
+            int selectedCourseId = Convert.ToInt32(courseCombo.SelectedValue);
+
             bool success = _dao.CreateStudentWithAccount(
-                firstNameTxt.Text.Trim(),
-                middleNameTxt.Text.Trim(),
-                lastNameTxt.Text.Trim(),
-                age, // Using the parsed integer here
-                genderCombo.Text,
-                addressTxt.Text.Trim(),
-                dobPicker.Value,
-                contactTxt.Text.Trim(),
-                usernameTxt.Text.Trim(),
-                passwordTxt.Text.Trim(),
-                roleTxt.Text.Trim()
+                firstNameTxt.Text.Trim(), middleNameTxt.Text.Trim(), lastNameTxt.Text.Trim(),
+                age, genderCombo.Text, addressTxt.Text.Trim(), dobPicker.Value, contactTxt.Text.Trim(),
+                usernameTxt.Text.Trim(), passwordTxt.Text.Trim(), roleTxt.Text.Trim(),
+                selectedCourseId 
             );
 
-            if (success)
-            {
-                MessageBox.Show("Student Profile and Account Created!");
-                RefreshGrid();
-                ClearAll();
-            }
+            if (success) { MessageBox.Show("Success!"); RefreshGrid(); ClearAll(); }
         }
 
         private void updateBtn_Click(object sender, EventArgs e)
         {
-            try
-            {
-                if (string.IsNullOrEmpty(lblSelectedStudentId.Text)) return;
+            if (string.IsNullOrEmpty(lblSelectedStudentId.Text) || courseCombo.SelectedValue == null) return;
 
-                int sId = int.Parse(lblSelectedStudentId.Text);
-                int uId = int.Parse(lblSelectedUserId.Text);
+            bool success = _dao.UpdateStudentAndAccount(
+                int.Parse(lblSelectedStudentId.Text), int.Parse(lblSelectedUserId.Text),
+                firstNameTxt.Text.Trim(), middleNameTxt.Text.Trim(), lastNameTxt.Text.Trim(),
+                int.Parse(ageTxt.Text), genderCombo.Text, addressTxt.Text.Trim(),
+                dobPicker.Value, contactTxt.Text.Trim(),
+                usernameTxt.Text.Trim(), passwordTxt.Text.Trim(), roleTxt.Text,
+                Convert.ToInt32(courseCombo.SelectedValue) // <--- Added
+            );
 
-                bool success = _dao.UpdateStudentAndAccount(
-                    sId, uId,
-                    firstNameTxt.Text.Trim(), middleNameTxt.Text.Trim(), lastNameTxt.Text.Trim(),
-                    int.Parse(ageTxt.Text), genderCombo.Text, addressTxt.Text.Trim(),
-                    dobPicker.Value, contactTxt.Text.Trim(),
-                    usernameTxt.Text.Trim(), passwordTxt.Text.Trim(), roleTxt.Text
-                );
-
-                if (success)
-                {
-                    MessageBox.Show("Record Updated!");
-                    RefreshGrid();
-                }
-            }
-            catch (Exception ex)
-            {
-            }
+            if (success) { MessageBox.Show("Updated!"); RefreshGrid(); }
         }
 
         private void deleteBtn_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(lblSelectedStudentId.Text)) return;
+            if (string.IsNullOrEmpty(lblSelectedStudentId.Text) || string.IsNullOrEmpty(lblSelectedUserId.Text))
+            {
+                MessageBox.Show("Please select a student from the list first.");
+                return;
+            }
 
-            if (MessageBox.Show("Delete this student and their login account?", "Confirm", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            if (MessageBox.Show("Permanently delete this student, their enrollment, and login account?",
+                                "Confirm Deletion", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
             {
                 int sId = int.Parse(lblSelectedStudentId.Text);
                 int uId = int.Parse(lblSelectedUserId.Text);
 
                 if (_dao.DeleteStudentRecord(sId, uId))
                 {
+                    MessageBox.Show("All records associated with this student have been removed.");
                     RefreshGrid();
                     ClearAll();
                 }
@@ -179,6 +188,7 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.UserCon
             passwordTxt.Clear();
             genderCombo.Clear();
             roleTxt.Clear();
+            courseCombo.SelectedIndex = -1;
             dobPicker.Value = DateTime.Now;
 
             lblSelectedStudentId.Text = "";
@@ -190,7 +200,7 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.UserCon
             // 1. Check if the text is empty to avoid unnecessary processing
             if (string.IsNullOrWhiteSpace(ageTxt.Text)) return;
 
-            // 2. Validate if the input is a valid number
+            //2.Validate if the input is a valid number
             if (!int.TryParse(ageTxt.Text, out int age))
             {
                 // 3. If the user types a letter, show a warning and clear the invalid char
@@ -240,12 +250,16 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.UserCon
 
             if (string.IsNullOrEmpty(term))
             {
-                RefreshGrid(); // Show everything if the box is empty
+                RefreshGrid(); // If they clear the box, show everyone again
             }
             else
             {
-                // Call the search method and update the DataGridView
-                studentDGV.DataSource = _dao.SearchStudentProfiles(term);
+                // Update the grid with filtered results
+                DataTable results = _dao.SearchStudentProfiles(term);
+                studentDGV.DataSource = results;
+
+                // CRITICAL: Call your formatting method to hide IDs/Passwords again
+                FormatGrid();
             }
         }
 
@@ -262,6 +276,56 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.UserCon
         private void clearAllBtn_Click(object sender, EventArgs e)
         {
             ClearAll();
+        }
+
+        private void firstNameTxt_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void addressTxt_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void middleNameTxt_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lastNameTxt_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void courseCombo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblSelectedStudentId_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void usernameTxt_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void genderCombo_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void passwordTxt_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void roleTxt_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

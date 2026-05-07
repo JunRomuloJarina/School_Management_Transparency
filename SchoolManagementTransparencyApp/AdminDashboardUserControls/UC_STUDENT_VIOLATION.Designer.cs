@@ -33,10 +33,9 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.guna2ShadowPanel1 = new Guna.UI2.WinForms.Guna2ShadowPanel();
+            this.studentviolatorSelectorCombo = new Guna.UI2.WinForms.Guna2ComboBox();
             this.clearBtn = new Guna.UI2.WinForms.Guna2GradientButton();
             this.searchTxtbox = new Guna.UI2.WinForms.Guna2TextBox();
-            this.addStudentViolationContainerPanel = new Guna.UI2.WinForms.Guna2ShadowPanel();
-            this.studentviolatorSelectorCombo = new Guna.UI2.WinForms.Guna2ComboBox();
             this.studentviolationDGV = new Guna.UI2.WinForms.Guna2DataGridView();
             this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             this.guna2DragControl2 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
@@ -50,7 +49,6 @@
             this.guna2ShadowPanel1.Controls.Add(this.studentviolatorSelectorCombo);
             this.guna2ShadowPanel1.Controls.Add(this.clearBtn);
             this.guna2ShadowPanel1.Controls.Add(this.searchTxtbox);
-            this.guna2ShadowPanel1.Controls.Add(this.addStudentViolationContainerPanel);
             this.guna2ShadowPanel1.Controls.Add(this.studentviolationDGV);
             this.guna2ShadowPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.guna2ShadowPanel1.FillColor = System.Drawing.Color.White;
@@ -59,9 +57,25 @@
             this.guna2ShadowPanel1.ShadowColor = System.Drawing.Color.Black;
             this.guna2ShadowPanel1.ShadowDepth = 0;
             this.guna2ShadowPanel1.ShadowShift = 0;
-            this.guna2ShadowPanel1.Size = new System.Drawing.Size(1330, 918);
+            this.guna2ShadowPanel1.Size = new System.Drawing.Size(1292, 918);
             this.guna2ShadowPanel1.TabIndex = 0;
             this.guna2ShadowPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.guna2ShadowPanel1_Paint);
+            // 
+            // studentviolatorSelectorCombo
+            // 
+            this.studentviolatorSelectorCombo.BackColor = System.Drawing.Color.Transparent;
+            this.studentviolatorSelectorCombo.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.studentviolatorSelectorCombo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.studentviolatorSelectorCombo.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.studentviolatorSelectorCombo.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.studentviolatorSelectorCombo.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.studentviolatorSelectorCombo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.studentviolatorSelectorCombo.ItemHeight = 30;
+            this.studentviolatorSelectorCombo.Location = new System.Drawing.Point(900, 15);
+            this.studentviolatorSelectorCombo.Name = "studentviolatorSelectorCombo";
+            this.studentviolatorSelectorCombo.Size = new System.Drawing.Size(360, 36);
+            this.studentviolatorSelectorCombo.TabIndex = 1;
+            this.studentviolatorSelectorCombo.SelectedIndexChanged += new System.EventHandler(this.studentviolatorSelectorCombo_SelectedIndexChanged);
             // 
             // clearBtn
             // 
@@ -72,7 +86,7 @@
             this.clearBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.clearBtn.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.clearBtn.ForeColor = System.Drawing.Color.White;
-            this.clearBtn.Location = new System.Drawing.Point(232, 72);
+            this.clearBtn.Location = new System.Drawing.Point(586, 15);
             this.clearBtn.Name = "clearBtn";
             this.clearBtn.Size = new System.Drawing.Size(91, 36);
             this.clearBtn.TabIndex = 4;
@@ -91,7 +105,7 @@
             this.searchTxtbox.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.searchTxtbox.ForeColor = System.Drawing.Color.Black;
             this.searchTxtbox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.searchTxtbox.Location = new System.Drawing.Point(51, 72);
+            this.searchTxtbox.Location = new System.Drawing.Point(405, 15);
             this.searchTxtbox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.searchTxtbox.Name = "searchTxtbox";
             this.searchTxtbox.PlaceholderText = "SEARCH BOX";
@@ -99,35 +113,6 @@
             this.searchTxtbox.Size = new System.Drawing.Size(175, 36);
             this.searchTxtbox.TabIndex = 3;
             this.searchTxtbox.TextChanged += new System.EventHandler(this.searchTxtbox_TextChanged);
-            // 
-            // addStudentViolationContainerPanel
-            // 
-            this.addStudentViolationContainerPanel.BackColor = System.Drawing.Color.Transparent;
-            this.addStudentViolationContainerPanel.FillColor = System.Drawing.Color.WhiteSmoke;
-            this.addStudentViolationContainerPanel.Location = new System.Drawing.Point(665, 46);
-            this.addStudentViolationContainerPanel.Name = "addStudentViolationContainerPanel";
-            this.addStudentViolationContainerPanel.Radius = 10;
-            this.addStudentViolationContainerPanel.ShadowColor = System.Drawing.Color.Black;
-            this.addStudentViolationContainerPanel.ShadowShift = 15;
-            this.addStudentViolationContainerPanel.ShadowStyle = Guna.UI2.WinForms.Guna2ShadowPanel.ShadowMode.ForwardDiagonal;
-            this.addStudentViolationContainerPanel.Size = new System.Drawing.Size(616, 805);
-            this.addStudentViolationContainerPanel.TabIndex = 2;
-            // 
-            // studentviolatorSelectorCombo
-            // 
-            this.studentviolatorSelectorCombo.BackColor = System.Drawing.Color.Transparent;
-            this.studentviolatorSelectorCombo.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.studentviolatorSelectorCombo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.studentviolatorSelectorCombo.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.studentviolatorSelectorCombo.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.studentviolatorSelectorCombo.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.studentviolatorSelectorCombo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.studentviolatorSelectorCombo.ItemHeight = 30;
-            this.studentviolatorSelectorCombo.Location = new System.Drawing.Point(329, 72);
-            this.studentviolatorSelectorCombo.Name = "studentviolatorSelectorCombo";
-            this.studentviolatorSelectorCombo.Size = new System.Drawing.Size(296, 36);
-            this.studentviolatorSelectorCombo.TabIndex = 1;
-            this.studentviolatorSelectorCombo.SelectedIndexChanged += new System.EventHandler(this.studentviolatorSelectorCombo_SelectedIndexChanged);
             // 
             // studentviolationDGV
             // 
@@ -157,13 +142,13 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.studentviolationDGV.DefaultCellStyle = dataGridViewCellStyle3;
             this.studentviolationDGV.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.studentviolationDGV.Location = new System.Drawing.Point(36, 135);
+            this.studentviolationDGV.Location = new System.Drawing.Point(46, 72);
             this.studentviolationDGV.Name = "studentviolationDGV";
             this.studentviolationDGV.ReadOnly = true;
             this.studentviolationDGV.RowHeadersVisible = false;
             this.studentviolationDGV.RowHeadersWidth = 51;
             this.studentviolationDGV.RowTemplate.Height = 24;
-            this.studentviolationDGV.Size = new System.Drawing.Size(601, 514);
+            this.studentviolationDGV.Size = new System.Drawing.Size(1216, 514);
             this.studentviolationDGV.TabIndex = 0;
             this.studentviolationDGV.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.studentviolationDGV.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -207,7 +192,7 @@
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.guna2ShadowPanel1);
             this.Name = "UC_STUDENT_VIOLATION";
-            this.Size = new System.Drawing.Size(1330, 918);
+            this.Size = new System.Drawing.Size(1292, 918);
             this.guna2ShadowPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.studentviolationDGV)).EndInit();
             this.ResumeLayout(false);
@@ -219,7 +204,6 @@
         private Guna.UI2.WinForms.Guna2ShadowPanel guna2ShadowPanel1;
         private Guna.UI2.WinForms.Guna2DragControl guna2DragControl1;
         private Guna.UI2.WinForms.Guna2DragControl guna2DragControl2;
-        private Guna.UI2.WinForms.Guna2ShadowPanel addStudentViolationContainerPanel;
         private Guna.UI2.WinForms.Guna2ComboBox studentviolatorSelectorCombo;
         private Guna.UI2.WinForms.Guna2DataGridView studentviolationDGV;
         private Guna.UI2.WinForms.Guna2GradientButton clearBtn;
