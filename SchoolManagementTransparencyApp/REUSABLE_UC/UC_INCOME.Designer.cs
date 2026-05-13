@@ -28,9 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.incomeDGV = new Guna.UI2.WinForms.Guna2DataGridView();
             this.comboCourseFilter = new Guna.UI2.WinForms.Guna2ComboBox();
             this.paidBtn = new Guna.UI2.WinForms.Guna2GradientButton();
@@ -47,6 +48,7 @@
             this.clearSearch = new Guna.UI2.WinForms.Guna2GradientButton();
             this.comboFundSelect = new Guna.UI2.WinForms.Guna2ComboBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.incomeDGV)).BeginInit();
             this.guna2ShadowPanel1.SuspendLayout();
             this.guna2ShadowPanel2.SuspendLayout();
@@ -54,28 +56,32 @@
             // 
             // incomeDGV
             // 
-            dataGridViewCellStyle19.BackColor = System.Drawing.Color.White;
-            this.incomeDGV.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle19;
+            this.incomeDGV.AllowUserToAddRows = false;
+            this.incomeDGV.AllowUserToDeleteRows = false;
+            this.incomeDGV.AllowUserToResizeColumns = false;
+            this.incomeDGV.AllowUserToResizeRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(199)))), ((int)(((byte)(195)))));
+            this.incomeDGV.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.incomeDGV.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle20.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle20.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle20.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle20.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.incomeDGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle20;
-            this.incomeDGV.ColumnHeadersHeight = 18;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(67)))), ((int)(((byte)(54)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.incomeDGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.incomeDGV.ColumnHeadersHeight = 30;
             this.incomeDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle21.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle21.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle21.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle21.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle21.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle21.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.incomeDGV.DefaultCellStyle = dataGridViewCellStyle21;
-            this.incomeDGV.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(217)))), ((int)(((byte)(215)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(129)))), ((int)(((byte)(121)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.incomeDGV.DefaultCellStyle = dataGridViewCellStyle3;
+            this.incomeDGV.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(189)))), ((int)(((byte)(184)))));
             this.incomeDGV.Location = new System.Drawing.Point(47, 449);
             this.incomeDGV.Name = "incomeDGV";
             this.incomeDGV.ReadOnly = true;
@@ -84,27 +90,28 @@
             this.incomeDGV.RowTemplate.Height = 24;
             this.incomeDGV.Size = new System.Drawing.Size(1158, 253);
             this.incomeDGV.TabIndex = 0;
-            this.incomeDGV.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
+            this.incomeDGV.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Red;
+            this.incomeDGV.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(199)))), ((int)(((byte)(195)))));
             this.incomeDGV.ThemeStyle.AlternatingRowsStyle.Font = null;
             this.incomeDGV.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
             this.incomeDGV.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
             this.incomeDGV.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
             this.incomeDGV.ThemeStyle.BackColor = System.Drawing.Color.White;
-            this.incomeDGV.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.incomeDGV.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.incomeDGV.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(189)))), ((int)(((byte)(184)))));
+            this.incomeDGV.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(67)))), ((int)(((byte)(54)))));
             this.incomeDGV.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.incomeDGV.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.incomeDGV.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
             this.incomeDGV.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            this.incomeDGV.ThemeStyle.HeaderStyle.Height = 18;
+            this.incomeDGV.ThemeStyle.HeaderStyle.Height = 30;
             this.incomeDGV.ThemeStyle.ReadOnly = true;
-            this.incomeDGV.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.incomeDGV.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(217)))), ((int)(((byte)(215)))));
             this.incomeDGV.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.incomeDGV.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.incomeDGV.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.incomeDGV.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.Black;
             this.incomeDGV.ThemeStyle.RowsStyle.Height = 24;
-            this.incomeDGV.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.incomeDGV.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.incomeDGV.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(129)))), ((int)(((byte)(121)))));
+            this.incomeDGV.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
             this.incomeDGV.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.incomeDGV_CellContentClick);
             // 
             // comboCourseFilter
@@ -112,10 +119,11 @@
             this.comboCourseFilter.BackColor = System.Drawing.Color.Transparent;
             this.comboCourseFilter.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.comboCourseFilter.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboCourseFilter.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.comboCourseFilter.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.comboCourseFilter.FocusedColor = System.Drawing.Color.Red;
+            this.comboCourseFilter.FocusedState.BorderColor = System.Drawing.Color.Red;
             this.comboCourseFilter.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.comboCourseFilter.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.comboCourseFilter.HoverState.BorderColor = System.Drawing.Color.Maroon;
             this.comboCourseFilter.ItemHeight = 30;
             this.comboCourseFilter.Location = new System.Drawing.Point(770, 395);
             this.comboCourseFilter.Name = "comboCourseFilter";
@@ -125,14 +133,23 @@
             // 
             // paidBtn
             // 
+            this.paidBtn.Animated = true;
+            this.paidBtn.AnimatedGIF = true;
+            this.paidBtn.AutoRoundedCorners = true;
+            this.paidBtn.BorderColor = System.Drawing.Color.Gray;
+            this.paidBtn.BorderThickness = 1;
             this.paidBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.paidBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.paidBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.paidBtn.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.paidBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.paidBtn.FillColor = System.Drawing.Color.WhiteSmoke;
+            this.paidBtn.FillColor2 = System.Drawing.Color.Red;
             this.paidBtn.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.paidBtn.ForeColor = System.Drawing.Color.White;
-            this.paidBtn.Location = new System.Drawing.Point(55, 709);
+            this.paidBtn.HoverState.FillColor = System.Drawing.Color.Red;
+            this.paidBtn.HoverState.FillColor2 = System.Drawing.Color.WhiteSmoke;
+            this.paidBtn.Location = new System.Drawing.Point(55, 734);
             this.paidBtn.Name = "paidBtn";
             this.paidBtn.Size = new System.Drawing.Size(106, 37);
             this.paidBtn.TabIndex = 2;
@@ -141,14 +158,23 @@
             // 
             // unpaidBtn
             // 
+            this.unpaidBtn.Animated = true;
+            this.unpaidBtn.AnimatedGIF = true;
+            this.unpaidBtn.AutoRoundedCorners = true;
+            this.unpaidBtn.BorderColor = System.Drawing.Color.Gray;
+            this.unpaidBtn.BorderThickness = 1;
             this.unpaidBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.unpaidBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.unpaidBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.unpaidBtn.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.unpaidBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.unpaidBtn.FillColor = System.Drawing.Color.WhiteSmoke;
+            this.unpaidBtn.FillColor2 = System.Drawing.Color.Red;
             this.unpaidBtn.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.unpaidBtn.ForeColor = System.Drawing.Color.White;
-            this.unpaidBtn.Location = new System.Drawing.Point(167, 709);
+            this.unpaidBtn.HoverState.FillColor = System.Drawing.Color.Red;
+            this.unpaidBtn.HoverState.FillColor2 = System.Drawing.Color.WhiteSmoke;
+            this.unpaidBtn.Location = new System.Drawing.Point(167, 734);
             this.unpaidBtn.Name = "unpaidBtn";
             this.unpaidBtn.Size = new System.Drawing.Size(106, 37);
             this.unpaidBtn.TabIndex = 2;
@@ -157,14 +183,23 @@
             // 
             // showAllBtn
             // 
+            this.showAllBtn.Animated = true;
+            this.showAllBtn.AnimatedGIF = true;
+            this.showAllBtn.AutoRoundedCorners = true;
+            this.showAllBtn.BorderColor = System.Drawing.Color.Gray;
+            this.showAllBtn.BorderThickness = 1;
             this.showAllBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.showAllBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.showAllBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.showAllBtn.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.showAllBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.showAllBtn.FillColor = System.Drawing.Color.WhiteSmoke;
+            this.showAllBtn.FillColor2 = System.Drawing.Color.Red;
             this.showAllBtn.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.showAllBtn.ForeColor = System.Drawing.Color.White;
-            this.showAllBtn.Location = new System.Drawing.Point(279, 709);
+            this.showAllBtn.HoverState.FillColor = System.Drawing.Color.Red;
+            this.showAllBtn.HoverState.FillColor2 = System.Drawing.Color.WhiteSmoke;
+            this.showAllBtn.Location = new System.Drawing.Point(279, 734);
             this.showAllBtn.Name = "showAllBtn";
             this.showAllBtn.Size = new System.Drawing.Size(258, 37);
             this.showAllBtn.TabIndex = 3;
@@ -230,13 +265,22 @@
             // 
             // btnSettlePayment
             // 
+            this.btnSettlePayment.Animated = true;
+            this.btnSettlePayment.AnimatedGIF = true;
+            this.btnSettlePayment.AutoRoundedCorners = true;
+            this.btnSettlePayment.BorderColor = System.Drawing.Color.Gray;
+            this.btnSettlePayment.BorderThickness = 1;
             this.btnSettlePayment.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.btnSettlePayment.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.btnSettlePayment.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnSettlePayment.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.btnSettlePayment.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnSettlePayment.FillColor = System.Drawing.Color.WhiteSmoke;
+            this.btnSettlePayment.FillColor2 = System.Drawing.Color.Red;
             this.btnSettlePayment.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnSettlePayment.ForeColor = System.Drawing.Color.White;
+            this.btnSettlePayment.HoverState.FillColor = System.Drawing.Color.Red;
+            this.btnSettlePayment.HoverState.FillColor2 = System.Drawing.Color.WhiteSmoke;
             this.btnSettlePayment.Location = new System.Drawing.Point(1025, 752);
             this.btnSettlePayment.Name = "btnSettlePayment";
             this.btnSettlePayment.Size = new System.Drawing.Size(180, 45);
@@ -257,16 +301,18 @@
             // 
             // txtSearch
             // 
+            this.txtSearch.Animated = true;
+            this.txtSearch.AutoRoundedCorners = true;
             this.txtSearch.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtSearch.DefaultText = "";
             this.txtSearch.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.txtSearch.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.txtSearch.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtSearch.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtSearch.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtSearch.FocusedState.BorderColor = System.Drawing.Color.Red;
             this.txtSearch.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtSearch.ForeColor = System.Drawing.Color.Black;
-            this.txtSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtSearch.HoverState.BorderColor = System.Drawing.Color.Red;
             this.txtSearch.Location = new System.Drawing.Point(69, 395);
             this.txtSearch.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtSearch.Name = "txtSearch";
@@ -279,13 +325,22 @@
             // 
             // clearSearch
             // 
+            this.clearSearch.Animated = true;
+            this.clearSearch.AnimatedGIF = true;
+            this.clearSearch.AutoRoundedCorners = true;
+            this.clearSearch.BorderColor = System.Drawing.Color.Gray;
+            this.clearSearch.BorderThickness = 1;
             this.clearSearch.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.clearSearch.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.clearSearch.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.clearSearch.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.clearSearch.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.clearSearch.FillColor = System.Drawing.Color.WhiteSmoke;
+            this.clearSearch.FillColor2 = System.Drawing.Color.Red;
             this.clearSearch.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.clearSearch.ForeColor = System.Drawing.Color.White;
+            this.clearSearch.HoverState.FillColor = System.Drawing.Color.Red;
+            this.clearSearch.HoverState.FillColor2 = System.Drawing.Color.WhiteSmoke;
             this.clearSearch.Location = new System.Drawing.Point(304, 395);
             this.clearSearch.Name = "clearSearch";
             this.clearSearch.Size = new System.Drawing.Size(123, 36);
@@ -298,10 +353,11 @@
             this.comboFundSelect.BackColor = System.Drawing.Color.Transparent;
             this.comboFundSelect.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.comboFundSelect.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboFundSelect.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.comboFundSelect.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.comboFundSelect.FocusedColor = System.Drawing.Color.Red;
+            this.comboFundSelect.FocusedState.BorderColor = System.Drawing.Color.Red;
             this.comboFundSelect.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.comboFundSelect.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.comboFundSelect.HoverState.BorderColor = System.Drawing.Color.Maroon;
             this.comboFundSelect.ItemHeight = 30;
             this.comboFundSelect.Location = new System.Drawing.Point(680, 752);
             this.comboFundSelect.Name = "comboFundSelect";
@@ -318,6 +374,12 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Select Destination Fund:";
             this.label1.Click += new System.EventHandler(this.lblTotalIncome_Click);
+            // 
+            // guna2DragControl1
+            // 
+            this.guna2DragControl1.DockIndicatorTransparencyValue = 0.6D;
+            this.guna2DragControl1.TargetControl = this;
+            this.guna2DragControl1.UseTransparentDrag = true;
             // 
             // UC_INCOME
             // 
@@ -368,5 +430,6 @@
         private Guna.UI2.WinForms.Guna2GradientButton clearSearch;
         private Guna.UI2.WinForms.Guna2ComboBox comboFundSelect;
         private System.Windows.Forms.Label label1;
+        private Guna.UI2.WinForms.Guna2DragControl guna2DragControl1;
     }
 }

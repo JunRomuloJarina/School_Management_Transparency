@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.studentDGV = new Guna.UI2.WinForms.Guna2DataGridView();
             this.addBtn = new Guna.UI2.WinForms.Guna2GradientButton();
             this.updateBtn = new Guna.UI2.WinForms.Guna2GradientButton();
@@ -75,30 +75,32 @@
             // 
             // studentDGV
             // 
+            this.studentDGV.AllowUserToAddRows = false;
+            this.studentDGV.AllowUserToDeleteRows = false;
             this.studentDGV.AllowUserToResizeColumns = false;
             this.studentDGV.AllowUserToResizeRows = false;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
-            this.studentDGV.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(199)))), ((int)(((byte)(195)))));
+            this.studentDGV.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.studentDGV.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.studentDGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(67)))), ((int)(((byte)(54)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.studentDGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.studentDGV.ColumnHeadersHeight = 18;
             this.studentDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.studentDGV.DefaultCellStyle = dataGridViewCellStyle6;
-            this.studentDGV.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(217)))), ((int)(((byte)(215)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(129)))), ((int)(((byte)(121)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.studentDGV.DefaultCellStyle = dataGridViewCellStyle3;
+            this.studentDGV.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(189)))), ((int)(((byte)(184)))));
             this.studentDGV.Location = new System.Drawing.Point(18, 99);
             this.studentDGV.Name = "studentDGV";
             this.studentDGV.ReadOnly = true;
@@ -107,89 +109,118 @@
             this.studentDGV.RowTemplate.Height = 24;
             this.studentDGV.Size = new System.Drawing.Size(1252, 552);
             this.studentDGV.TabIndex = 0;
-            this.studentDGV.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
+            this.studentDGV.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Red;
+            this.studentDGV.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(199)))), ((int)(((byte)(195)))));
             this.studentDGV.ThemeStyle.AlternatingRowsStyle.Font = null;
             this.studentDGV.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
             this.studentDGV.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
             this.studentDGV.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
             this.studentDGV.ThemeStyle.BackColor = System.Drawing.Color.White;
-            this.studentDGV.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.studentDGV.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.studentDGV.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(189)))), ((int)(((byte)(184)))));
+            this.studentDGV.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(67)))), ((int)(((byte)(54)))));
             this.studentDGV.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.studentDGV.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.studentDGV.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
             this.studentDGV.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.studentDGV.ThemeStyle.HeaderStyle.Height = 18;
             this.studentDGV.ThemeStyle.ReadOnly = true;
-            this.studentDGV.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.studentDGV.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(217)))), ((int)(((byte)(215)))));
             this.studentDGV.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.studentDGV.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.studentDGV.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.studentDGV.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.Black;
             this.studentDGV.ThemeStyle.RowsStyle.Height = 24;
-            this.studentDGV.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.studentDGV.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.studentDGV.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(129)))), ((int)(((byte)(121)))));
+            this.studentDGV.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
             this.studentDGV.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.studentDGV_CellContentClick);
             // 
             // addBtn
             // 
+            this.addBtn.Animated = true;
+            this.addBtn.AnimatedGIF = true;
+            this.addBtn.AutoRoundedCorners = true;
+            this.addBtn.BorderColor = System.Drawing.Color.DimGray;
+            this.addBtn.BorderThickness = 1;
             this.addBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.addBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.addBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.addBtn.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.addBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.addBtn.FillColor = System.Drawing.Color.WhiteSmoke;
+            this.addBtn.FillColor2 = System.Drawing.Color.Red;
             this.addBtn.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.addBtn.ForeColor = System.Drawing.Color.White;
-            this.addBtn.Location = new System.Drawing.Point(135, 836);
+            this.addBtn.HoverState.FillColor = System.Drawing.Color.Red;
+            this.addBtn.HoverState.FillColor2 = System.Drawing.Color.WhiteSmoke;
+            this.addBtn.Location = new System.Drawing.Point(167, 836);
             this.addBtn.Name = "addBtn";
             this.addBtn.Size = new System.Drawing.Size(226, 45);
             this.addBtn.TabIndex = 1;
-            this.addBtn.Text = "ADD";
+            this.addBtn.Text = "Add Student";
             this.addBtn.Click += new System.EventHandler(this.addBtn_Click);
             // 
             // updateBtn
             // 
+            this.updateBtn.Animated = true;
+            this.updateBtn.AnimatedGIF = true;
+            this.updateBtn.AutoRoundedCorners = true;
+            this.updateBtn.BorderColor = System.Drawing.Color.DimGray;
+            this.updateBtn.BorderThickness = 1;
             this.updateBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.updateBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.updateBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.updateBtn.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.updateBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.updateBtn.FillColor = System.Drawing.Color.WhiteSmoke;
+            this.updateBtn.FillColor2 = System.Drawing.Color.Red;
             this.updateBtn.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.updateBtn.ForeColor = System.Drawing.Color.White;
-            this.updateBtn.Location = new System.Drawing.Point(385, 836);
+            this.updateBtn.HoverState.FillColor = System.Drawing.Color.Red;
+            this.updateBtn.HoverState.FillColor2 = System.Drawing.Color.WhiteSmoke;
+            this.updateBtn.Location = new System.Drawing.Point(419, 836);
             this.updateBtn.Name = "updateBtn";
             this.updateBtn.Size = new System.Drawing.Size(226, 45);
             this.updateBtn.TabIndex = 1;
-            this.updateBtn.Text = "UPDATE";
+            this.updateBtn.Text = "Update Student";
             this.updateBtn.Click += new System.EventHandler(this.updateBtn_Click);
             // 
             // deleteBtn
             // 
+            this.deleteBtn.Animated = true;
+            this.deleteBtn.AnimatedGIF = true;
+            this.deleteBtn.AutoRoundedCorners = true;
+            this.deleteBtn.BorderColor = System.Drawing.Color.DimGray;
+            this.deleteBtn.BorderThickness = 1;
             this.deleteBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.deleteBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.deleteBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.deleteBtn.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.deleteBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.deleteBtn.FillColor = System.Drawing.Color.WhiteSmoke;
+            this.deleteBtn.FillColor2 = System.Drawing.Color.Red;
             this.deleteBtn.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.deleteBtn.ForeColor = System.Drawing.Color.White;
-            this.deleteBtn.Location = new System.Drawing.Point(635, 836);
+            this.deleteBtn.HoverState.FillColor = System.Drawing.Color.Red;
+            this.deleteBtn.HoverState.FillColor2 = System.Drawing.Color.WhiteSmoke;
+            this.deleteBtn.Location = new System.Drawing.Point(671, 836);
             this.deleteBtn.Name = "deleteBtn";
             this.deleteBtn.Size = new System.Drawing.Size(226, 45);
             this.deleteBtn.TabIndex = 1;
-            this.deleteBtn.Text = "DELETE";
+            this.deleteBtn.Text = "Remove Student";
             this.deleteBtn.Click += new System.EventHandler(this.deleteBtn_Click);
             // 
             // firstNameTxt
             // 
+            this.firstNameTxt.AutoRoundedCorners = true;
             this.firstNameTxt.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.firstNameTxt.DefaultText = "";
             this.firstNameTxt.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.firstNameTxt.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.firstNameTxt.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.firstNameTxt.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.firstNameTxt.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.firstNameTxt.FocusedState.BorderColor = System.Drawing.Color.Red;
             this.firstNameTxt.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.firstNameTxt.ForeColor = System.Drawing.Color.Black;
-            this.firstNameTxt.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.firstNameTxt.HoverState.BorderColor = System.Drawing.Color.Red;
             this.firstNameTxt.Location = new System.Drawing.Point(43, 697);
             this.firstNameTxt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.firstNameTxt.MaxLength = 20;
@@ -203,16 +234,17 @@
             // 
             // lastNameTxt
             // 
+            this.lastNameTxt.AutoRoundedCorners = true;
             this.lastNameTxt.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.lastNameTxt.DefaultText = "";
             this.lastNameTxt.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.lastNameTxt.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.lastNameTxt.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.lastNameTxt.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.lastNameTxt.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.lastNameTxt.FocusedState.BorderColor = System.Drawing.Color.Red;
             this.lastNameTxt.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.lastNameTxt.ForeColor = System.Drawing.Color.Black;
-            this.lastNameTxt.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.lastNameTxt.HoverState.BorderColor = System.Drawing.Color.Red;
             this.lastNameTxt.Location = new System.Drawing.Point(467, 697);
             this.lastNameTxt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.lastNameTxt.MaxLength = 20;
@@ -226,16 +258,17 @@
             // 
             // passwordTxt
             // 
+            this.passwordTxt.AutoRoundedCorners = true;
             this.passwordTxt.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.passwordTxt.DefaultText = "";
             this.passwordTxt.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.passwordTxt.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.passwordTxt.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.passwordTxt.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.passwordTxt.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.passwordTxt.FocusedState.BorderColor = System.Drawing.Color.Red;
             this.passwordTxt.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.passwordTxt.ForeColor = System.Drawing.Color.Black;
-            this.passwordTxt.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.passwordTxt.HoverState.BorderColor = System.Drawing.Color.Red;
             this.passwordTxt.Location = new System.Drawing.Point(915, 778);
             this.passwordTxt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.passwordTxt.MaxLength = 20;
@@ -249,16 +282,17 @@
             // 
             // usernameTxt
             // 
+            this.usernameTxt.AutoRoundedCorners = true;
             this.usernameTxt.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.usernameTxt.DefaultText = "";
             this.usernameTxt.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.usernameTxt.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.usernameTxt.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.usernameTxt.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.usernameTxt.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.usernameTxt.FocusedState.BorderColor = System.Drawing.Color.Red;
             this.usernameTxt.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.usernameTxt.ForeColor = System.Drawing.Color.Black;
-            this.usernameTxt.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.usernameTxt.HoverState.BorderColor = System.Drawing.Color.Red;
             this.usernameTxt.Location = new System.Drawing.Point(711, 778);
             this.usernameTxt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.usernameTxt.MaxLength = 20;
@@ -272,16 +306,17 @@
             // 
             // genderCombo
             // 
+            this.genderCombo.AutoRoundedCorners = true;
             this.genderCombo.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.genderCombo.DefaultText = "";
             this.genderCombo.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.genderCombo.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.genderCombo.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.genderCombo.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.genderCombo.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.genderCombo.FocusedState.BorderColor = System.Drawing.Color.Red;
             this.genderCombo.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.genderCombo.ForeColor = System.Drawing.Color.Black;
-            this.genderCombo.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.genderCombo.HoverState.BorderColor = System.Drawing.Color.Red;
             this.genderCombo.Location = new System.Drawing.Point(872, 697);
             this.genderCombo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.genderCombo.MaxLength = 6;
@@ -295,16 +330,17 @@
             // 
             // roleTxt
             // 
+            this.roleTxt.AutoRoundedCorners = true;
             this.roleTxt.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.roleTxt.DefaultText = "";
             this.roleTxt.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.roleTxt.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.roleTxt.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.roleTxt.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.roleTxt.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.roleTxt.FocusedState.BorderColor = System.Drawing.Color.Red;
             this.roleTxt.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.roleTxt.ForeColor = System.Drawing.Color.Black;
-            this.roleTxt.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.roleTxt.HoverState.BorderColor = System.Drawing.Color.Red;
             this.roleTxt.Location = new System.Drawing.Point(1098, 778);
             this.roleTxt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.roleTxt.MaxLength = 7;
@@ -318,16 +354,17 @@
             // 
             // ageTxt
             // 
+            this.ageTxt.AutoRoundedCorners = true;
             this.ageTxt.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.ageTxt.DefaultText = "";
             this.ageTxt.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.ageTxt.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.ageTxt.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.ageTxt.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.ageTxt.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.ageTxt.FocusedState.BorderColor = System.Drawing.Color.Red;
             this.ageTxt.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.ageTxt.ForeColor = System.Drawing.Color.Black;
-            this.ageTxt.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.ageTxt.HoverState.BorderColor = System.Drawing.Color.Red;
             this.ageTxt.Location = new System.Drawing.Point(702, 697);
             this.ageTxt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ageTxt.MaxLength = 3;
@@ -341,11 +378,12 @@
             // 
             // dobPicker
             // 
+            this.dobPicker.AutoRoundedCorners = true;
             this.dobPicker.Checked = true;
             this.dobPicker.FillColor = System.Drawing.Color.White;
             this.dobPicker.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.dobPicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dobPicker.Location = new System.Drawing.Point(1024, 697);
+            this.dobPicker.Location = new System.Drawing.Point(1042, 697);
             this.dobPicker.MaxDate = new System.DateTime(2100, 2, 3, 0, 0, 0, 0);
             this.dobPicker.MinDate = new System.DateTime(1900, 2, 5, 0, 0, 0, 0);
             this.dobPicker.Name = "dobPicker";
@@ -400,16 +438,17 @@
             // 
             // middleNameTxt
             // 
+            this.middleNameTxt.AutoRoundedCorners = true;
             this.middleNameTxt.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.middleNameTxt.DefaultText = "";
             this.middleNameTxt.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.middleNameTxt.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.middleNameTxt.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.middleNameTxt.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.middleNameTxt.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.middleNameTxt.FocusedState.BorderColor = System.Drawing.Color.Red;
             this.middleNameTxt.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.middleNameTxt.ForeColor = System.Drawing.Color.Black;
-            this.middleNameTxt.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.middleNameTxt.HoverState.BorderColor = System.Drawing.Color.Red;
             this.middleNameTxt.Location = new System.Drawing.Point(255, 697);
             this.middleNameTxt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.middleNameTxt.MaxLength = 20;
@@ -423,16 +462,17 @@
             // 
             // addressTxt
             // 
+            this.addressTxt.AutoRoundedCorners = true;
             this.addressTxt.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.addressTxt.DefaultText = "";
             this.addressTxt.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.addressTxt.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.addressTxt.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.addressTxt.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.addressTxt.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.addressTxt.FocusedState.BorderColor = System.Drawing.Color.Red;
             this.addressTxt.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.addressTxt.ForeColor = System.Drawing.Color.Black;
-            this.addressTxt.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.addressTxt.HoverState.BorderColor = System.Drawing.Color.Red;
             this.addressTxt.Location = new System.Drawing.Point(43, 778);
             this.addressTxt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.addressTxt.MaxLength = 255;
@@ -446,16 +486,17 @@
             // 
             // contactTxt
             // 
+            this.contactTxt.AutoRoundedCorners = true;
             this.contactTxt.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.contactTxt.DefaultText = "";
             this.contactTxt.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.contactTxt.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.contactTxt.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.contactTxt.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.contactTxt.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.contactTxt.FocusedState.BorderColor = System.Drawing.Color.Red;
             this.contactTxt.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.contactTxt.ForeColor = System.Drawing.Color.Black;
-            this.contactTxt.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.contactTxt.HoverState.BorderColor = System.Drawing.Color.Red;
             this.contactTxt.Location = new System.Drawing.Point(255, 778);
             this.contactTxt.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.contactTxt.MaxLength = 20;
@@ -469,16 +510,19 @@
             // 
             // searchTxtbox
             // 
+            this.searchTxtbox.Animated = true;
+            this.searchTxtbox.BorderColor = System.Drawing.Color.DimGray;
+            this.searchTxtbox.BorderRadius = 1;
             this.searchTxtbox.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.searchTxtbox.DefaultText = "";
             this.searchTxtbox.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.searchTxtbox.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.searchTxtbox.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.searchTxtbox.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.searchTxtbox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.searchTxtbox.FocusedState.BorderColor = System.Drawing.Color.Red;
             this.searchTxtbox.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.searchTxtbox.ForeColor = System.Drawing.Color.Black;
-            this.searchTxtbox.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.searchTxtbox.HoverState.BorderColor = System.Drawing.Color.Red;
             this.searchTxtbox.Location = new System.Drawing.Point(497, 38);
             this.searchTxtbox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.searchTxtbox.Name = "searchTxtbox";
@@ -491,13 +535,20 @@
             // 
             // clearBtn
             // 
+            this.clearBtn.Animated = true;
+            this.clearBtn.BorderColor = System.Drawing.Color.DimGray;
+            this.clearBtn.BorderRadius = 1;
             this.clearBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.clearBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.clearBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.clearBtn.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.clearBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.clearBtn.FillColor = System.Drawing.Color.WhiteSmoke;
+            this.clearBtn.FillColor2 = System.Drawing.Color.Red;
             this.clearBtn.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.clearBtn.ForeColor = System.Drawing.Color.White;
+            this.clearBtn.HoverState.FillColor = System.Drawing.Color.Red;
+            this.clearBtn.HoverState.FillColor2 = System.Drawing.Color.WhiteSmoke;
             this.clearBtn.Location = new System.Drawing.Point(898, 38);
             this.clearBtn.Name = "clearBtn";
             this.clearBtn.Size = new System.Drawing.Size(148, 44);
@@ -661,18 +712,27 @@
             // 
             // clearAllBtn
             // 
+            this.clearAllBtn.Animated = true;
+            this.clearAllBtn.AnimatedGIF = true;
+            this.clearAllBtn.AutoRoundedCorners = true;
+            this.clearAllBtn.BorderColor = System.Drawing.Color.DimGray;
+            this.clearAllBtn.BorderThickness = 1;
             this.clearAllBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
             this.clearAllBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
             this.clearAllBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.clearAllBtn.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.clearAllBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.clearAllBtn.FillColor = System.Drawing.Color.WhiteSmoke;
+            this.clearAllBtn.FillColor2 = System.Drawing.Color.Red;
             this.clearAllBtn.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.clearAllBtn.ForeColor = System.Drawing.Color.White;
-            this.clearAllBtn.Location = new System.Drawing.Point(892, 835);
+            this.clearAllBtn.HoverState.FillColor = System.Drawing.Color.Red;
+            this.clearAllBtn.HoverState.FillColor2 = System.Drawing.Color.WhiteSmoke;
+            this.clearAllBtn.Location = new System.Drawing.Point(923, 835);
             this.clearAllBtn.Name = "clearAllBtn";
             this.clearAllBtn.Size = new System.Drawing.Size(180, 46);
             this.clearAllBtn.TabIndex = 10;
-            this.clearAllBtn.Text = "CLEAR ";
+            this.clearAllBtn.Text = "Clear Fields";
             this.clearAllBtn.Click += new System.EventHandler(this.clearAllBtn_Click);
             // 
             // guna2DragControl1
@@ -695,13 +755,15 @@
             // 
             // courseCombo
             // 
+            this.courseCombo.AutoRoundedCorners = true;
             this.courseCombo.BackColor = System.Drawing.Color.Transparent;
             this.courseCombo.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.courseCombo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.courseCombo.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.courseCombo.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.courseCombo.FocusedColor = System.Drawing.Color.Red;
+            this.courseCombo.FocusedState.BorderColor = System.Drawing.Color.Red;
             this.courseCombo.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.courseCombo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.courseCombo.HoverState.BorderColor = System.Drawing.Color.Red;
             this.courseCombo.ItemHeight = 30;
             this.courseCombo.Location = new System.Drawing.Point(467, 778);
             this.courseCombo.Name = "courseCombo";
