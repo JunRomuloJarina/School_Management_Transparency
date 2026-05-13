@@ -2,6 +2,7 @@
 using School_Management_Transparency.SchoolManagementTransparencyApp.Util;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -226,6 +227,38 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.Dao
             return outstanding;
         }
 
+        public DataTable GetTopUnpaidStudents()
+        {
+            // We group by student to see who has the most 'UNPAID' counts
+            string query = @"SELECT 
+                        CONCAT(s.last_name, ', ', s.first_name) AS 'Student Name', 
+                        COUNT(sv.student_violation_id) AS 'Unpaid Records',
+                        SUM(vt.fee) AS 'Total Debt'
+                     FROM student s
+                     JOIN student_violation sv ON s.student_id = sv.student_id
+                     JOIN violation_type vt ON sv.violation_type_id = vt.violation_type_id
+                     WHERE sv.status = 'UNPAID'
+                     GROUP BY s.student_id
+                     ORDER BY COUNT(sv.student_violation_id) DESC
+                     LIMIT 5;"; // Just the top 5 for the home dashboard
+
+            DataTable dt = new DataTable();
+            try
+            {
+                dbConn.openConnect();
+                MySqlDataAdapter da = new MySqlDataAdapter(query, dbConn.getconnection);
+                da.Fill(dt);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("DAO Error: " + ex.Message);
+            }
+            finally
+            {
+                dbConn.closeConnect();
+            }
+            return dt;
+        }
 
     }
 }

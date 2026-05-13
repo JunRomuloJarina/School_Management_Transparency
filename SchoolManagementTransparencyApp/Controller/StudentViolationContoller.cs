@@ -82,5 +82,7 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.Control
             cmb.DisplayMember = "LastName";
             cmb.ValueMember = "StudentId";
         }
+
+
     }
 }

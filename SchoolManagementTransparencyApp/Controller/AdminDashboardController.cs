@@ -1,7 +1,9 @@
-﻿using School_Management_Transparency.SchoolManagementTransparencyApp.Service;
+﻿using School_Management_Transparency.SchoolManagementTransparencyApp.Dao;
+using School_Management_Transparency.SchoolManagementTransparencyApp.Service;
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,6 +14,7 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.Control
     internal class AdminDashboardController
     {
         FinancialService _financialService = new FinancialService();
+        DashboardDao _dashboardDao = new DashboardDao();
 
         public void UpdateDashboardKPIs(Label lblStudents, Label lblFunds, Label lblExpenses)
         {
@@ -114,6 +117,23 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.Control
             if (dgv.Columns["role"] != null) dgv.Columns["role"].HeaderText = "Access Role";
 
             dgv.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+        }
+
+        public void LoadUnpaidLeaderboard(DataGridView dgv)
+        {
+            // Fetch data from DAO
+            DataTable dt = _dashboardDao.GetTopUnpaidStudents();
+            dgv.DataSource = dt;
+
+            // Formatting the columns for professional look
+            if (dgv.Columns.Contains("Total Debt"))
+            {
+                dgv.Columns["Total Debt"].DefaultCellStyle.Format = "₱#,##0.00";
+                dgv.Columns["Total Debt"].DefaultCellStyle.ForeColor = Color.DarkRed;
+            }
+
+            dgv.AllowUserToAddRows = false;
+            dgv.ReadOnly = true;
         }
 
     }

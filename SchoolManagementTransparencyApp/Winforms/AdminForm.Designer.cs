@@ -261,7 +261,7 @@
             this.studentViolationBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.studentViolationBtn.FillColor = System.Drawing.Color.Gray;
             this.studentViolationBtn.FillColor2 = System.Drawing.Color.WhiteSmoke;
-            this.studentViolationBtn.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.studentViolationBtn.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.studentViolationBtn.ForeColor = System.Drawing.Color.Black;
             this.studentViolationBtn.HoverState.BorderColor = System.Drawing.Color.Transparent;
             this.studentViolationBtn.HoverState.CustomBorderColor = System.Drawing.Color.GreenYellow;
@@ -272,7 +272,7 @@
             this.studentViolationBtn.Name = "studentViolationBtn";
             this.studentViolationBtn.Size = new System.Drawing.Size(252, 46);
             this.studentViolationBtn.TabIndex = 1;
-            this.studentViolationBtn.Text = " STUDENT VIOLATION";
+            this.studentViolationBtn.Text = "VIOLATIONS | EVENTS";
             this.studentViolationBtn.Click += new System.EventHandler(this.studentViolationBtn_Click);
             // 
             // studentBtn

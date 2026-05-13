@@ -3,6 +3,7 @@ using School_Management_Transparency.SchoolManagementTransparencyApp.Model;
 using School_Management_Transparency.SchoolManagementTransparencyApp.Util;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Runtime.Remoting.Messaging;
 using System.Text;
@@ -160,5 +161,109 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.Dao
             return course;
         }
 
+
+        // Unique name to avoid conflict with GetAllCourses
+        public DataTable FetchCourseInstructorJoinData()
+        {
+            DataTable dt = new DataTable();
+            try
+            {
+                // Joins Teacher table to show Names instead of IDs in the grid
+                string query = @"SELECT c.course_id AS 'ID', 
+                                        c.course_name AS 'Course Name', 
+                                        CONCAT(t.first_name, ' ', t.last_name) AS 'Instructor'
+                                 FROM Course c
+                                 LEFT JOIN Teacher t ON c.teacher_id = t.teacher_id
+                                 ORDER BY c.course_name ASC";
+
+                MySqlDataAdapter adapter = new MySqlDataAdapter(new MySqlCommand(query, dbConn.getconnection));
+                adapter.Fill(dt);
+            }
+            catch (Exception ex) { MessageBox.Show("Grid Load Error: " + ex.Message); }
+            return dt;
+        }
+
+        // Unique name to avoid conflict with GetTeachers
+        public DataTable RetrieveTeacherLookupList()
+        {
+            DataTable dt = new DataTable();
+            try
+            {
+                string query = "SELECT teacher_id, CONCAT(first_name, ' ', last_name) AS full_name FROM Teacher";
+                MySqlDataAdapter adapter = new MySqlDataAdapter(new MySqlCommand(query, dbConn.getconnection));
+                adapter.Fill(dt);
+            }
+            catch (Exception ex) { MessageBox.Show("Teacher Lookup Error: " + ex.Message); }
+            return dt;
+        }
+
+
+        // --- CRUD ACTION METHODS ---
+
+        public bool InsertNewCourseRecord(string name, int instructorId)
+        {
+            try
+            {
+                dbConn.openConnect();
+                string query = "INSERT INTO Course (course_name, teacher_id) VALUES (@cName, @tId)";
+                MySqlCommand cmd = new MySqlCommand(query, dbConn.getconnection);
+                cmd.Parameters.AddWithValue("@cName", name);
+                cmd.Parameters.AddWithValue("@tId", instructorId);
+
+                if (cmd.ExecuteNonQuery() == 1)
+                {
+                    MessageBox.Show("New Course successfully registered.", "Success");
+                    return true;
+                }
+            }
+            catch (Exception ex) { MessageBox.Show("Insert Error: " + ex.Message); }
+            finally { dbConn.closeConnect(); }
+            return false;
+        }
+
+        public bool ModifyExistingCourseRecord(int courseId, string newName, int newInstructorId)
+        {
+            try
+            {
+                dbConn.openConnect();
+                string query = "UPDATE Course SET course_name = @newName, teacher_id = @newTId WHERE course_id = @cId";
+                MySqlCommand cmd = new MySqlCommand(query, dbConn.getconnection);
+                cmd.Parameters.AddWithValue("@newName", newName);
+                cmd.Parameters.AddWithValue("@newTId", newInstructorId);
+                cmd.Parameters.AddWithValue("@cId", courseId);
+
+                if (cmd.ExecuteNonQuery() == 1)
+                {
+                    MessageBox.Show("Course record updated successfully.", "Updated");
+                    return true;
+                }
+            }
+            catch (Exception ex) { MessageBox.Show("Update Error: " + ex.Message); }
+            finally { dbConn.closeConnect(); }
+            return false;
+        }
+
+        public bool PermanentlyRemoveCourse(int targetId)
+        {
+            try
+            {
+                dbConn.openConnect();
+                string query = "DELETE FROM Course WHERE course_id = @id";
+                MySqlCommand cmd = new MySqlCommand(query, dbConn.getconnection);
+                cmd.Parameters.AddWithValue("@id", targetId);
+
+                if (cmd.ExecuteNonQuery() == 1)
+                {
+                    MessageBox.Show("Course has been removed from the system.", "Deleted");
+                    return true;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Delete Error: Check if students are still enrolled in this course.\n" + ex.Message);
+            }
+            finally { dbConn.closeConnect(); }
+            return false;
+        }
     }
 }

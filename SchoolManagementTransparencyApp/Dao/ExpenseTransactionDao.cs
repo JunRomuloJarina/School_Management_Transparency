@@ -3,6 +3,7 @@ using School_Management_Transparency.SchoolManagementTransparencyApp.Model;
 using School_Management_Transparency.SchoolManagementTransparencyApp.Util;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -208,6 +209,166 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.Dao
             return total;
         }
 
+
+        // 1. Load Funds for the ComboBox
+        public DataTable GetFundCategories()
+        {
+            DataTable dt = new DataTable();
+            try
+            {
+                // Matches your 'fund_category' table
+                string query = "SELECT fund_id, fund_name FROM fund_category ORDER BY fund_name ASC";
+                MySqlDataAdapter adapter = new MySqlDataAdapter(new MySqlCommand(query, dbConn.getconnection));
+                adapter.Fill(dt);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error fetching funds: " + ex.Message);
+            }
+            return dt;
+        }
+
+        // 2. Record Expense Transaction
+        public bool AddExpenseTransaction(int fundId, decimal amount, string remarks, DateTime date)
+        {
+            try
+            {
+                dbConn.openConnect();
+                // Matches 'expense_transaction' columns
+                // Note: transaction_type_id should correspond to 'Expense' in your transaction_type table
+                string query = "INSERT INTO expense_transaction (fund_id, transaction_type_id, amount, transaction_date, remarks) " +
+                               "VALUES (@fundId, @typeId, @amt, @date, @rem)";
+
+                MySqlCommand cmd = new MySqlCommand(query, dbConn.getconnection);
+                cmd.Parameters.AddWithValue("@fundId", fundId);
+                cmd.Parameters.AddWithValue("@typeId", 2); // Assuming 2 is the ID for 'Expense'
+                cmd.Parameters.AddWithValue("@amt", amount);
+                cmd.Parameters.AddWithValue("@date", date);
+                cmd.Parameters.AddWithValue("@rem", remarks);
+
+                if (cmd.ExecuteNonQuery() == 1)
+                {
+                    return true;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Database Error: " + ex.Message);
+            }
+            finally
+            {
+                dbConn.closeConnect();
+            }
+            return false;
+        }
+
+        public DataTable GetFundBalancesTables()
+        {
+            DataTable dt = new DataTable();
+            try
+            {
+                // Aliasing columns for professional look in the Grid
+                string query = "SELECT fund_id AS 'ID', fund_name AS 'Fund Category', " +
+                               "available_balance AS 'Available Money' FROM fund_category " +
+                               "ORDER BY fund_name ASC";
+
+                MySqlDataAdapter adapter = new MySqlDataAdapter(new MySqlCommand(query, dbConn.getconnection));
+                adapter.Fill(dt);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error loading balance table: " + ex.Message);
+            }
+            return dt;
+        }
+
+        // 1. Calculate Real-time Balance for each Fund
+        // This joins income and expense tables to find the 'Available Money'
+        public DataTable GetFundBalancesTable()
+        {
+            DataTable dt = new DataTable();
+            try
+            {
+                string query = @"
+                    SELECT 
+                        f.fund_id AS 'ID', 
+                        f.fund_name AS 'Fund Category',
+                        (IFNULL((SELECT SUM(amount) FROM income_transaction WHERE fund_id = f.fund_id), 0) - 
+                         IFNULL((SELECT SUM(amount) FROM expense_transaction WHERE fund_id = f.fund_id), 0)) AS 'Available Money'
+                    FROM fund_category f";
+
+                MySqlDataAdapter adapter = new MySqlDataAdapter(new MySqlCommand(query, dbConn.getconnection));
+                adapter.Fill(dt);
+            }
+            catch (Exception ex) { MessageBox.Show("Error calculating balances: " + ex.Message); }
+            return dt;
+        }
+
+        // 2. Fetch Funds for the ComboBox
+        public DataTable GetFundCategoriess()
+        {
+            DataTable dt = new DataTable();
+            try
+            {
+                string query = "SELECT fund_id, fund_name FROM fund_category ORDER BY fund_name ASC";
+                MySqlDataAdapter adapter = new MySqlDataAdapter(new MySqlCommand(query, dbConn.getconnection));
+                adapter.Fill(dt);
+            }
+            catch (Exception ex) { MessageBox.Show(ex.Message); }
+            return dt;
+        }
+
+        // 3. Record the Spending
+        public bool AddExpenseTransactions(int fundId, decimal amount, string remarks, DateTime date)
+        {
+            try
+            {
+                dbConn.openConnect();
+                // transaction_type_id 2 is 'EXPENSE' based on your school_db_transaction_type.sql
+                string query = "INSERT INTO expense_transaction (fund_id, transaction_type_id, amount, transaction_date, remarks, student_id) " +
+                               "VALUES (@fid, 2, @amt, @date, @rem, NULL)";
+
+                MySqlCommand cmd = new MySqlCommand(query, dbConn.getconnection);
+                cmd.Parameters.AddWithValue("@fid", fundId);
+                cmd.Parameters.AddWithValue("@amt", amount);
+                cmd.Parameters.AddWithValue("@date", date);
+                cmd.Parameters.AddWithValue("@rem", remarks);
+
+                return cmd.ExecuteNonQuery() == 1;
+            }
+            catch (Exception ex) { MessageBox.Show("Database Error: " + ex.Message); return false; }
+            finally { dbConn.closeConnect(); }
+        }
+
+        // 4. Get Detailed Expense History for the second DataGridView
+        public DataTable GetExpenseHistoryTable()
+        {
+            DataTable dt = new DataTable();
+            try
+            {
+                // Joining tables to get Fund Name and Student Name
+                string query = @"
+            SELECT 
+                e.expense_transaction_id AS 'ID',
+                f.fund_name AS 'Fund Category',
+                e.amount AS 'Amount Spent',
+                e.transaction_date AS 'Date',
+                e.remarks AS 'Description',
+                IF(e.student_id IS NULL, 'General/School', CONCAT(s.last_name, ', ', s.first_name)) AS 'Recipient'
+            FROM expense_transaction e
+            INNER JOIN fund_category f ON e.fund_id = f.fund_id
+            LEFT JOIN student s ON e.student_id = s.student_id
+            ORDER BY e.transaction_date DESC";
+
+                MySqlDataAdapter adapter = new MySqlDataAdapter(new MySqlCommand(query, dbConn.getconnection));
+                adapter.Fill(dt);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error loading history: " + ex.Message);
+            }
+            return dt;
+        }
 
     }
 }

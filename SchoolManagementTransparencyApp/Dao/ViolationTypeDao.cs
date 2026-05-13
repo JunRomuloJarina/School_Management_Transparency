@@ -151,7 +151,6 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.Dao
         }
 
         // 5. Get Violation Type By ID
-        [Obsolete("Use GetViolationTypesDataTable for DataGridView binding.")]
         public ViolationType GetViolationTypeById(int violationTypeId)
         {
             try
