@@ -35,7 +35,7 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.Dao
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                Console.WriteLine(ex.Message);
             }
             finally
             {
@@ -61,7 +61,7 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.Dao
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                Console.WriteLine(ex.Message);
             }
             finally
             {
@@ -93,7 +93,7 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.Dao
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                Console.WriteLine(ex.Message);
             }
             finally
             {
@@ -120,7 +120,7 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.Dao
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                Console.WriteLine(ex.Message);
             }
             finally
             {
@@ -152,7 +152,7 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.Dao
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                Console.WriteLine(ex.Message);
             }
             finally
             {
@@ -179,7 +179,7 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.Dao
                 MySqlDataAdapter adapter = new MySqlDataAdapter(new MySqlCommand(query, dbConn.getconnection));
                 adapter.Fill(dt);
             }
-            catch (Exception ex) { MessageBox.Show("Grid Load Error: " + ex.Message); }
+            catch (Exception ex) { Console.WriteLine(ex.Message); }
             return dt;
         }
 
@@ -193,7 +193,7 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.Dao
                 MySqlDataAdapter adapter = new MySqlDataAdapter(new MySqlCommand(query, dbConn.getconnection));
                 adapter.Fill(dt);
             }
-            catch (Exception ex) { MessageBox.Show("Teacher Lookup Error: " + ex.Message); }
+            catch (Exception ex) { Console.WriteLine(ex.Message); }
             return dt;
         }
 
@@ -216,7 +216,7 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.Dao
                     return true;
                 }
             }
-            catch (Exception ex) { MessageBox.Show("Insert Error: " + ex.Message); }
+            catch (Exception ex) { Console.WriteLine(ex.Message); }
             finally { dbConn.closeConnect(); }
             return false;
         }
@@ -238,7 +238,7 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.Dao
                     return true;
                 }
             }
-            catch (Exception ex) { MessageBox.Show("Update Error: " + ex.Message); }
+            catch (Exception ex) { Console.WriteLine(ex.Message ); }
             finally { dbConn.closeConnect(); }
             return false;
         }
@@ -260,7 +260,8 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.Dao
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Delete Error: Check if students are still enrolled in this course.\n" + ex.Message);
+                MessageBox.Show("Delete Error: Check if students are still enrolled in this course.\n");
+                Console.WriteLine(ex.Message    );
             }
             finally { dbConn.closeConnect(); }
             return false;

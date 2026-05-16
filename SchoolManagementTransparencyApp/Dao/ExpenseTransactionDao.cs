@@ -40,7 +40,7 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.Dao
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                Console.WriteLine(ex.Message);
             }
             finally
             {
@@ -73,7 +73,7 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.Dao
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                Console.WriteLine(ex.Message    );
             }
             finally
             {
@@ -98,7 +98,7 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.Dao
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                Console.WriteLine(ex.Message);
             }
             finally
             {
@@ -138,7 +138,7 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.Dao
             } 
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                Console.WriteLine(ex.Message);
             }
             finally
             {
@@ -175,7 +175,7 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.Dao
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                Console.WriteLine(ex.Message);
             }
             finally
             {
@@ -204,7 +204,7 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.Dao
                     total = Convert.ToDecimal(result);
                 }
             }
-            catch (Exception ex) { MessageBox.Show("Error calculating expenses: " + ex.Message); }
+            catch (Exception ex) { Console.WriteLine(ex.Message); }
             finally { dbConn.closeConnect(); }
             return total;
         }
@@ -223,44 +223,44 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.Dao
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error fetching funds: " + ex.Message);
+                Console.WriteLine(ex.Message    );
             }
             return dt;
         }
 
-        // 2. Record Expense Transaction
-        public bool AddExpenseTransaction(int fundId, decimal amount, string remarks, DateTime date)
-        {
-            try
-            {
-                dbConn.openConnect();
-                // Matches 'expense_transaction' columns
-                // Note: transaction_type_id should correspond to 'Expense' in your transaction_type table
-                string query = "INSERT INTO expense_transaction (fund_id, transaction_type_id, amount, transaction_date, remarks) " +
-                               "VALUES (@fundId, @typeId, @amt, @date, @rem)";
+        //// 2. Record Expense Transaction
+        //public bool AddExpenseTransaction(int fundId, decimal amount, string remarks, DateTime date)
+        //{
+        //    try
+        //    {
+        //        dbConn.openConnect();
+        //        // Matches 'expense_transaction' columns
+        //        // Note: transaction_type_id should correspond to 'Expense' in your transaction_type table
+        //        string query = "INSERT INTO expense_transaction (fund_id, transaction_type_id, amount, transaction_date, remarks) " +
+        //                       "VALUES (@fundId, @typeId, @amt, @date, @rem)";
 
-                MySqlCommand cmd = new MySqlCommand(query, dbConn.getconnection);
-                cmd.Parameters.AddWithValue("@fundId", fundId);
-                cmd.Parameters.AddWithValue("@typeId", 2); // Assuming 2 is the ID for 'Expense'
-                cmd.Parameters.AddWithValue("@amt", amount);
-                cmd.Parameters.AddWithValue("@date", date);
-                cmd.Parameters.AddWithValue("@rem", remarks);
+        //        MySqlCommand cmd = new MySqlCommand(query, dbConn.getconnection);
+        //        cmd.Parameters.AddWithValue("@fundId", fundId);
+        //        cmd.Parameters.AddWithValue("@typeId", 2); // Assuming 2 is the ID for 'Expense'
+        //        cmd.Parameters.AddWithValue("@amt", amount);
+        //        cmd.Parameters.AddWithValue("@date", date);
+        //        cmd.Parameters.AddWithValue("@rem", remarks);
 
-                if (cmd.ExecuteNonQuery() == 1)
-                {
-                    return true;
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Database Error: " + ex.Message);
-            }
-            finally
-            {
-                dbConn.closeConnect();
-            }
-            return false;
-        }
+        //        if (cmd.ExecuteNonQuery() == 1)
+        //        {
+        //            return true;
+        //        }
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        MessageBox.Show("Database Error: " + ex.Message);
+        //    }
+        //    finally
+        //    {
+        //        dbConn.closeConnect();
+        //    }
+        //    return false;
+        //}
 
         public DataTable GetFundBalancesTables()
         {
@@ -277,7 +277,7 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.Dao
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error loading balance table: " + ex.Message);
+                Console.WriteLine(ex.Message);
             }
             return dt;
         }
@@ -300,7 +300,7 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.Dao
                 MySqlDataAdapter adapter = new MySqlDataAdapter(new MySqlCommand(query, dbConn.getconnection));
                 adapter.Fill(dt);
             }
-            catch (Exception ex) { MessageBox.Show("Error calculating balances: " + ex.Message); }
+            catch (Exception ex) { Console.WriteLine(ex.Message); }
             return dt;
         }
 
@@ -314,7 +314,7 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.Dao
                 MySqlDataAdapter adapter = new MySqlDataAdapter(new MySqlCommand(query, dbConn.getconnection));
                 adapter.Fill(dt);
             }
-            catch (Exception ex) { MessageBox.Show(ex.Message); }
+            catch (Exception ex) { Console.WriteLine(ex.Message ); }
             return dt;
         }
 
@@ -336,7 +336,7 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.Dao
 
                 return cmd.ExecuteNonQuery() == 1;
             }
-            catch (Exception ex) { MessageBox.Show("Database Error: " + ex.Message); return false; }
+            catch (Exception ex) { Console.WriteLine(ex.Message); return false; }
             finally { dbConn.closeConnect(); }
         }
 
@@ -365,9 +365,47 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.Dao
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error loading history: " + ex.Message);
+                Console.WriteLine(ex.Message);
             }
             return dt;
+        }
+
+        // Get the exact real-time balance for a specific fund ID
+        public decimal GetSingleFundBalance(int fundId)
+        {
+            decimal balance = 0;
+            try
+            {
+                dbConn.openConnect();
+
+                // FIX: Added 'FROM fund_category f' so @fid is only bound ONCE. 
+                // This stops the MySQL driver bug from wiping out the expense calculation!
+                string query = @"
+            SELECT 
+                (IFNULL((SELECT SUM(amount) FROM income_transaction WHERE fund_id = f.fund_id), 0) - 
+                 IFNULL((SELECT SUM(amount) FROM expense_transaction WHERE fund_id = f.fund_id), 0)) AS Balance
+            FROM fund_category f
+            WHERE f.fund_id = @fid";
+
+                using (MySqlCommand cmd = new MySqlCommand(query, dbConn.getconnection))
+                {
+                    cmd.Parameters.AddWithValue("@fid", fundId);
+                    object result = cmd.ExecuteScalar();
+                    if (result != null && result != DBNull.Value)
+                    {
+                        balance = Convert.ToDecimal(result);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            finally
+            {
+                dbConn.closeConnect();
+            }
+            return balance;
         }
 
     }

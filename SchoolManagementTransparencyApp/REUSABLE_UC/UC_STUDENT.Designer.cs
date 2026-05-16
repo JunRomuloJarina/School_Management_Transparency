@@ -109,6 +109,7 @@
             this.studentDGV.RowTemplate.Height = 24;
             this.studentDGV.Size = new System.Drawing.Size(1252, 552);
             this.studentDGV.TabIndex = 0;
+            this.studentDGV.TabStop = false;
             this.studentDGV.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Red;
             this.studentDGV.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(199)))), ((int)(((byte)(195)))));
             this.studentDGV.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -155,6 +156,7 @@
             this.addBtn.Name = "addBtn";
             this.addBtn.Size = new System.Drawing.Size(226, 45);
             this.addBtn.TabIndex = 1;
+            this.addBtn.TabStop = false;
             this.addBtn.Text = "Add Student";
             this.addBtn.Click += new System.EventHandler(this.addBtn_Click);
             // 
@@ -180,6 +182,7 @@
             this.updateBtn.Name = "updateBtn";
             this.updateBtn.Size = new System.Drawing.Size(226, 45);
             this.updateBtn.TabIndex = 1;
+            this.updateBtn.TabStop = false;
             this.updateBtn.Text = "Update Student";
             this.updateBtn.Click += new System.EventHandler(this.updateBtn_Click);
             // 
@@ -205,6 +208,7 @@
             this.deleteBtn.Name = "deleteBtn";
             this.deleteBtn.Size = new System.Drawing.Size(226, 45);
             this.deleteBtn.TabIndex = 1;
+            this.deleteBtn.TabStop = false;
             this.deleteBtn.Text = "Remove Student";
             this.deleteBtn.Click += new System.EventHandler(this.deleteBtn_Click);
             // 
@@ -229,7 +233,7 @@
             this.firstNameTxt.PlaceholderText = "";
             this.firstNameTxt.SelectedText = "";
             this.firstNameTxt.Size = new System.Drawing.Size(206, 43);
-            this.firstNameTxt.TabIndex = 2;
+            this.firstNameTxt.TabIndex = 0;
             this.firstNameTxt.TextChanged += new System.EventHandler(this.firstNameTxt_TextChanged);
             // 
             // lastNameTxt
@@ -277,7 +281,7 @@
             this.passwordTxt.PlaceholderText = "";
             this.passwordTxt.SelectedText = "";
             this.passwordTxt.Size = new System.Drawing.Size(177, 43);
-            this.passwordTxt.TabIndex = 2;
+            this.passwordTxt.TabIndex = 10;
             this.passwordTxt.TextChanged += new System.EventHandler(this.passwordTxt_TextChanged);
             // 
             // usernameTxt
@@ -301,7 +305,7 @@
             this.usernameTxt.PlaceholderText = "";
             this.usernameTxt.SelectedText = "";
             this.usernameTxt.Size = new System.Drawing.Size(198, 43);
-            this.usernameTxt.TabIndex = 2;
+            this.usernameTxt.TabIndex = 9;
             this.usernameTxt.TextChanged += new System.EventHandler(this.usernameTxt_TextChanged);
             // 
             // genderCombo
@@ -325,7 +329,7 @@
             this.genderCombo.PlaceholderText = "";
             this.genderCombo.SelectedText = "";
             this.genderCombo.Size = new System.Drawing.Size(146, 43);
-            this.genderCombo.TabIndex = 2;
+            this.genderCombo.TabIndex = 4;
             this.genderCombo.TextChanged += new System.EventHandler(this.genderCombo_TextChanged);
             // 
             // roleTxt
@@ -349,7 +353,7 @@
             this.roleTxt.PlaceholderText = "";
             this.roleTxt.SelectedText = "";
             this.roleTxt.Size = new System.Drawing.Size(144, 43);
-            this.roleTxt.TabIndex = 2;
+            this.roleTxt.TabIndex = 11;
             this.roleTxt.TextChanged += new System.EventHandler(this.roleTxt_TextChanged);
             // 
             // ageTxt
@@ -373,7 +377,7 @@
             this.ageTxt.PlaceholderText = "";
             this.ageTxt.SelectedText = "";
             this.ageTxt.Size = new System.Drawing.Size(164, 43);
-            this.ageTxt.TabIndex = 2;
+            this.ageTxt.TabIndex = 3;
             this.ageTxt.TextChanged += new System.EventHandler(this.ageTxt_TextChanged);
             // 
             // dobPicker
@@ -388,7 +392,7 @@
             this.dobPicker.MinDate = new System.DateTime(1900, 2, 5, 0, 0, 0, 0);
             this.dobPicker.Name = "dobPicker";
             this.dobPicker.Size = new System.Drawing.Size(143, 43);
-            this.dobPicker.TabIndex = 3;
+            this.dobPicker.TabIndex = 5;
             this.dobPicker.Value = new System.DateTime(2026, 5, 4, 19, 36, 2, 989);
             // 
             // lblSelectedStudentId
@@ -411,6 +415,7 @@
             this.lblSelectedStudentId.SelectedText = "";
             this.lblSelectedStudentId.Size = new System.Drawing.Size(206, 43);
             this.lblSelectedStudentId.TabIndex = 2;
+            this.lblSelectedStudentId.TabStop = false;
             this.lblSelectedStudentId.Visible = false;
             this.lblSelectedStudentId.TextChanged += new System.EventHandler(this.lblSelectedStudentId_TextChanged);
             // 
@@ -434,6 +439,7 @@
             this.lblSelectedUserId.SelectedText = "";
             this.lblSelectedUserId.Size = new System.Drawing.Size(206, 43);
             this.lblSelectedUserId.TabIndex = 2;
+            this.lblSelectedUserId.TabStop = false;
             this.lblSelectedUserId.Visible = false;
             // 
             // middleNameTxt
@@ -457,7 +463,7 @@
             this.middleNameTxt.PlaceholderText = "";
             this.middleNameTxt.SelectedText = "";
             this.middleNameTxt.Size = new System.Drawing.Size(206, 43);
-            this.middleNameTxt.TabIndex = 2;
+            this.middleNameTxt.TabIndex = 1;
             this.middleNameTxt.TextChanged += new System.EventHandler(this.middleNameTxt_TextChanged);
             // 
             // addressTxt
@@ -481,7 +487,7 @@
             this.addressTxt.PlaceholderText = "";
             this.addressTxt.SelectedText = "";
             this.addressTxt.Size = new System.Drawing.Size(206, 43);
-            this.addressTxt.TabIndex = 2;
+            this.addressTxt.TabIndex = 6;
             this.addressTxt.TextChanged += new System.EventHandler(this.addressTxt_TextChanged);
             // 
             // contactTxt
@@ -505,7 +511,7 @@
             this.contactTxt.PlaceholderText = "";
             this.contactTxt.SelectedText = "";
             this.contactTxt.Size = new System.Drawing.Size(206, 43);
-            this.contactTxt.TabIndex = 2;
+            this.contactTxt.TabIndex = 7;
             this.contactTxt.TextChanged += new System.EventHandler(this.contactTxt_TextChanged);
             // 
             // searchTxtbox
@@ -531,6 +537,7 @@
             this.searchTxtbox.SelectedText = "";
             this.searchTxtbox.Size = new System.Drawing.Size(385, 44);
             this.searchTxtbox.TabIndex = 4;
+            this.searchTxtbox.TabStop = false;
             this.searchTxtbox.TextChanged += new System.EventHandler(this.searchTxtbox_TextChanged);
             // 
             // clearBtn
@@ -553,6 +560,7 @@
             this.clearBtn.Name = "clearBtn";
             this.clearBtn.Size = new System.Drawing.Size(148, 44);
             this.clearBtn.TabIndex = 5;
+            this.clearBtn.TabStop = false;
             this.clearBtn.Text = "CLEAR";
             this.clearBtn.Click += new System.EventHandler(this.searchBtn_Click);
             // 
@@ -732,6 +740,7 @@
             this.clearAllBtn.Name = "clearAllBtn";
             this.clearAllBtn.Size = new System.Drawing.Size(180, 46);
             this.clearAllBtn.TabIndex = 10;
+            this.clearAllBtn.TabStop = false;
             this.clearAllBtn.Text = "Clear Fields";
             this.clearAllBtn.Click += new System.EventHandler(this.clearAllBtn_Click);
             // 
@@ -768,7 +777,7 @@
             this.courseCombo.Location = new System.Drawing.Point(467, 778);
             this.courseCombo.Name = "courseCombo";
             this.courseCombo.Size = new System.Drawing.Size(238, 36);
-            this.courseCombo.TabIndex = 11;
+            this.courseCombo.TabIndex = 8;
             this.courseCombo.SelectedIndexChanged += new System.EventHandler(this.courseCombo_SelectedIndexChanged);
             // 
             // label12

@@ -32,7 +32,7 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.Dao
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                Console.WriteLine(ex.Message    );
             }
             return false;
         }
@@ -53,7 +53,7 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.Dao
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                Console.WriteLine(ex.Message);
             }
             return false;
         }
@@ -75,7 +75,7 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.Dao
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                Console.WriteLine(ex.Message);
             }
             return false;
 
@@ -102,7 +102,7 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.Dao
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                Console.WriteLine(ex.Message);
             }
             return fundCategories;
         }
@@ -128,7 +128,7 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.Dao
                 MySqlDataAdapter adapter = new MySqlDataAdapter(new MySqlCommand(query, dbConn.getconnection));
                 adapter.Fill(dt);
             }
-            catch (Exception ex) { MessageBox.Show("Error loading fund summary: " + ex.Message); }
+            catch (Exception ex) { Console.WriteLine(ex.Message); }
             return dt;
         }
 
@@ -143,7 +143,7 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.Dao
                 cmd.Parameters.AddWithValue("@name", fundName.ToUpper());
                 return cmd.ExecuteNonQuery() == 1;
             }
-            catch (Exception ex) { MessageBox.Show("Error adding fund: " + ex.Message); return false; }
+            catch (Exception ex) { Console.WriteLine(ex.Message); return false; }
             finally { dbConn.closeConnect(); }
         }
 
@@ -180,7 +180,7 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.Dao
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Update Error: " + ex.Message);
+                Console.WriteLine(ex.Message);
                 return false;
             }
             finally { dbConn.closeConnect(); }

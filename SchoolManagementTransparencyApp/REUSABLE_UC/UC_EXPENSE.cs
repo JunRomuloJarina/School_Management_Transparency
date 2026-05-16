@@ -98,41 +98,88 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.AdminDa
 
         private void btnSpendMoney_Click(object sender, EventArgs e)
         {
-            // 1. UI Validation
-            if (expenseFundComboBox.SelectedIndex == -1) { MessageBox.Show("Select a fund."); return; }
-            if (!decimal.TryParse(expenseAmountTxt.Text, out decimal amountToSpend) || amountToSpend <= 0)
-            {
-                MessageBox.Show("Enter a valid amount."); return;
-            }
+            //// 1. UI Validation
+            //if (expenseFundComboBox.SelectedIndex == -1) { MessageBox.Show("Select a fund."); return; }
+            //if (!decimal.TryParse(expenseAmountTxt.Text, out decimal amountToSpend) || amountToSpend <= 0)
+            //{
+            //    MessageBox.Show("Enter a valid amount."); return;
+            //}
 
-            // 2. Transparency Check: Verify if the fund has enough money
-            int fundId = (int)expenseFundComboBox.SelectedValue;
-            decimal currentBalance = 0;
+            //// 2. Transparency Check: Verify if the fund has enough money
+            //int fundId = (int)expenseFundComboBox.SelectedValue;
+            //decimal currentBalance = 0;
 
-            foreach (DataGridViewRow row in fundBalanceDGV.Rows)
-            {
-                if (Convert.ToInt32(row.Cells["ID"].Value) == fundId)
-                {
-                    currentBalance = Convert.ToDecimal(row.Cells["Available Money"].Value);
-                    break;
-                }
-            }
+            //foreach (DataGridViewRow row in fundBalanceDGV.Rows)
+            //{
+            //    if (Convert.ToInt32(row.Cells["ID"].Value) == fundId)
+            //    {
+            //        currentBalance = Convert.ToDecimal(row.Cells["Available Money"].Value);
+            //        break;
+            //    }
+            //}
 
-            if (amountToSpend > currentBalance)
+            //if (amountToSpend > currentBalance)
+            //{
+            //    MessageBox.Show($"Insufficient Funds!\nAvailable in {expenseFundComboBox.Text}: ₱{currentBalance:N2}",
+            //                    "Transparency Alert", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            //    return;
+            //}
+
+            //// 3. Process Transaction
+            //if (MessageBox.Show($"Spend ₱{amountToSpend:N2}?", "Confirm", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            //{
+            //    if (_expenseDao.AddExpenseTransactions(fundId, amountToSpend, expenseRemarksTxt.Text, expenseDatePicker.Value))
+            //    {
+            //        MessageBox.Show("Expense recorded successfully!");
+            //        ClearForm();
+            //        RefreshDashboard(); // This will recalculate the balance in the DGV immediately
+            //    }
+            //}
+
+            // 1. Basic UI Check
+            if (expenseFundComboBox.SelectedIndex == -1 || expenseFundComboBox.SelectedValue == null)
             {
-                MessageBox.Show($"Insufficient Funds!\nAvailable in {expenseFundComboBox.Text}: ₱{currentBalance:N2}",
-                                "Transparency Alert", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Please select a fund source.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
-            // 3. Process Transaction
-            if (MessageBox.Show($"Spend ₱{amountToSpend:N2}?", "Confirm", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            if (!decimal.TryParse(expenseAmountTxt.Text, out decimal amountToSpend) || amountToSpend <= 0)
+            {
+                MessageBox.Show("Please enter a valid amount greater than zero.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            // Get selected key details
+            int fundId = Convert.ToInt32(expenseFundComboBox.SelectedValue);
+            string fundName = expenseFundComboBox.Text;
+
+            // 2. FORCE STRICT GROUND-TRUTH DATABASE CHECK
+            decimal realTimeBalance = _expenseDao.GetSingleFundBalance(fundId);
+
+            // STOP TRANSACTION INSTANTLY IF FUND IS EMPTY OR OUT OF BOUNDS
+            if (realTimeBalance <= 0)
+            {
+                MessageBox.Show($"Transaction Aborted!\n\nThe '{fundName}' has an active balance of ₱0.00.\nYou are blocked from drawing money out of an empty fund category.",
+                                "Overdraft Protection Control", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                return;
+            }
+
+            if (amountToSpend > realTimeBalance)
+            {
+                MessageBox.Show($"Insufficient Account Balance!\n\nRequested: ₱{amountToSpend:N2}\nAvailable Remaining: ₱{realTimeBalance:N2}\n\nOperation Denied.",
+                                "Overdraft Protection Control", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            // 3. Run execution only when checked passes
+            if (MessageBox.Show($"Are you sure you want to record this expense of ₱{amountToSpend:N2} charged to {fundName}?",
+                                "Confirm Transaction", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 if (_expenseDao.AddExpenseTransactions(fundId, amountToSpend, expenseRemarksTxt.Text, expenseDatePicker.Value))
                 {
-                    MessageBox.Show("Expense recorded successfully!");
+                    MessageBox.Show("Expense recorded successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     ClearForm();
-                    RefreshDashboard(); // This will recalculate the balance in the DGV immediately
+                    RefreshDashboard();
                 }
             }
         }

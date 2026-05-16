@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
 
 namespace School_Management_Transparency.SchoolManagementTransparencyApp.Dao
 {
@@ -39,7 +40,7 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.Dao
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                Console.WriteLine(ex.Message);
             }
             finally
             {
@@ -73,7 +74,7 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.Dao
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                Console.WriteLine(ex.Message);
             }
             finally
             {
@@ -100,7 +101,7 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.Dao
             }
             catch(Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                Console.WriteLine(ex.Message);
             }
             finally
             {
@@ -143,7 +144,7 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.Dao
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                Console.WriteLine(ex.Message);
             }
             finally
             {
@@ -184,7 +185,7 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.Dao
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error loading students: " + ex.Message);
+                Console.WriteLine(ex.Message);
             }
             finally
             {
@@ -221,7 +222,7 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.Dao
                     }
                 }
             }
-            catch (Exception ex) { MessageBox.Show("Database Error: " + ex.Message); }
+            catch (Exception ex) { Console.WriteLine(ex.Message); }
             finally { dbConn.closeConnect(); }
             return list;
         }
@@ -249,7 +250,7 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.Dao
                 MySqlDataAdapter adapter = new MySqlDataAdapter(command);
                 adapter.Fill(dt);
             }
-            catch (Exception ex) { MessageBox.Show("Database Error: " + ex.Message); }
+            catch (Exception ex) { Console.WriteLine(ex.Message); }
             finally { dbConn.closeConnect(); }
             return dt;
         }

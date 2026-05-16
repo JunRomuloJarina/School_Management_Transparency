@@ -84,8 +84,7 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.Dao
             }
             catch (Exception ex)
             {
-                // Manual error feedback as per your coding style
-                MessageBox.Show("Error calculating grand total: " + ex.Message);
+                Console.WriteLine(ex.Message    );
             }
             finally
             {
@@ -110,7 +109,7 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.Dao
             catch (Exception ex)
             {
                 // Consistent with your manual error feedback style
-                MessageBox.Show("Error counting total violations: " + ex.Message);
+                Console.WriteLine(ex.Message);
             }
             finally
             {
@@ -142,7 +141,8 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.Dao
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error calculating total penalty: " + ex.Message);
+                //MessageBox.Show("Error calculating total penalty: " + ex.Message);
+                Console.WriteLine(ex.Message);
             }
             finally
             {
@@ -165,7 +165,7 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.Dao
                 MySqlCommand cmd = new MySqlCommand(query, dbConn.getconnection);
                 studentCount = Convert.ToInt32(cmd.ExecuteScalar());
             }
-            catch (Exception ex) { MessageBox.Show("Error counting debtors: " + ex.Message); }
+            catch (Exception ex) { Console.WriteLine(ex.Message); }
             finally { dbConn.closeConnect(); }
             return studentCount;
         }
@@ -190,7 +190,7 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.Dao
                     totalValue = Convert.ToDecimal(result);
                 }
             }
-            catch (Exception ex) { MessageBox.Show("Error calculating total value: " + ex.Message); }
+            catch (Exception ex) { Console.WriteLine(ex.Message); }
             finally { dbConn.closeConnect(); }
             return totalValue;
         }
@@ -218,7 +218,7 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.Dao
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error calculating outstanding balance: " + ex.Message);
+                Console.WriteLine(ex.Message);
             }
             finally
             {
@@ -251,7 +251,7 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.Dao
             }
             catch (Exception ex)
             {
-                MessageBox.Show("DAO Error: " + ex.Message);
+                Console.WriteLine(ex.Message);
             }
             finally
             {

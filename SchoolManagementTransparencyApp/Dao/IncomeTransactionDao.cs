@@ -38,7 +38,7 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.Dao
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                Console.WriteLine(ex.Message    );
             }
             return false;
         }
@@ -60,7 +60,7 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.Dao
             }
             catch(Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                Console.WriteLine(ex.Message);
             }
             return false;
         }
@@ -92,7 +92,7 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.Dao
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                Console.WriteLine(ex.Message);
             }
             return incomeTransactions;
         }
@@ -110,7 +110,7 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.Dao
                 object result = command.ExecuteScalar();
                 if (result != null && result != DBNull.Value) total = Convert.ToDecimal(result);
             }
-            catch (Exception ex) { MessageBox.Show(ex.Message); }
+            catch (Exception ex) { Console.WriteLine(ex.Message); }
             finally { dbConn.closeConnect(); }
             return total;
         }

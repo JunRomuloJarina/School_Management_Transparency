@@ -34,7 +34,7 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.Dao
                 MySqlDataAdapter adapter = new MySqlDataAdapter(new MySqlCommand(query, dbConn.getconnection));
                 adapter.Fill(dt);
             }
-            catch (Exception ex) { MessageBox.Show("Read Error: " + ex.Message); }
+            catch (Exception ex) { Console.WriteLine(ex.Message); }
             return dt;
         }
 
@@ -48,7 +48,7 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.Dao
                 MySqlDataAdapter adapter = new MySqlDataAdapter(new MySqlCommand(query, dbConn.getconnection));
                 adapter.Fill(dt);
             }
-            catch (Exception ex) { MessageBox.Show("Error loading courses: " + ex.Message); }
+            catch (Exception ex) { Console.WriteLine(ex.Message); }
             return dt;
         }
 
@@ -92,7 +92,7 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.Dao
                         trans.Commit();
                         return true;
                     }
-                    catch (Exception ex) { trans.Rollback(); MessageBox.Show(ex.Message); return false; }
+                    catch (Exception ex) { trans.Rollback(); Console.WriteLine(ex.Message); return false; }
                 }
             }
             finally { dbConn.closeConnect(); }
@@ -132,7 +132,7 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.Dao
                         trans.Commit();
                         return true;
                     }
-                    catch (Exception ex) { trans.Rollback(); MessageBox.Show(ex.Message); return false; }
+                    catch (Exception ex) { trans.Rollback(); Console.WriteLine(ex.Message); return false; }
                 }
             }
             finally { dbConn.closeConnect(); }
@@ -169,7 +169,7 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.Dao
                 MySqlDataAdapter adapter = new MySqlDataAdapter(cmd);
                 adapter.Fill(dt);
             }
-            catch (Exception ex) { MessageBox.Show("Search Error: " + ex.Message); }
+            catch (Exception ex) { Console.WriteLine(ex.Message); }
             return dt;
         }
 
@@ -210,7 +210,7 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.Dao
                     catch (Exception ex)
                     {
                         trans.Rollback();
-                        MessageBox.Show("Delete Failed: " + ex.Message);
+                        Console.WriteLine(ex.Message);
                         return false;
                     }
                 }

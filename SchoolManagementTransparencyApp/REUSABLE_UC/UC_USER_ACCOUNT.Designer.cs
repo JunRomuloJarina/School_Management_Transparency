@@ -212,6 +212,7 @@
             this.user_accountDGV.RowTemplate.Height = 24;
             this.user_accountDGV.Size = new System.Drawing.Size(849, 367);
             this.user_accountDGV.TabIndex = 1;
+            this.user_accountDGV.TabStop = false;
             this.user_accountDGV.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Red;
             this.user_accountDGV.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(199)))), ((int)(((byte)(195)))));
             this.user_accountDGV.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -257,6 +258,7 @@
             this.searchTextbox.SelectedText = "";
             this.searchTextbox.Size = new System.Drawing.Size(229, 36);
             this.searchTextbox.TabIndex = 2;
+            this.searchTextbox.TabStop = false;
             this.searchTextbox.TextChanged += new System.EventHandler(this.searchTextbox_TextChanged);
             // 
             // clearBtn
@@ -280,6 +282,7 @@
             this.clearBtn.Name = "clearBtn";
             this.clearBtn.Size = new System.Drawing.Size(125, 36);
             this.clearBtn.TabIndex = 3;
+            this.clearBtn.TabStop = false;
             this.clearBtn.Text = "CLEAR";
             this.clearBtn.Click += new System.EventHandler(this.guna2GradientButton1_Click);
             // 
@@ -306,7 +309,7 @@
             this.idTxtbox.ReadOnly = true;
             this.idTxtbox.SelectedText = "";
             this.idTxtbox.Size = new System.Drawing.Size(229, 36);
-            this.idTxtbox.TabIndex = 2;
+            this.idTxtbox.TabIndex = 0;
             this.idTxtbox.TextChanged += new System.EventHandler(this.idTxtbox_TextChanged);
             // 
             // usernameTxtbox
@@ -331,7 +334,7 @@
             this.usernameTxtbox.PlaceholderText = "USERNAME";
             this.usernameTxtbox.SelectedText = "";
             this.usernameTxtbox.Size = new System.Drawing.Size(229, 36);
-            this.usernameTxtbox.TabIndex = 2;
+            this.usernameTxtbox.TabIndex = 1;
             this.usernameTxtbox.TextChanged += new System.EventHandler(this.usernameTxtbox_TextChanged);
             // 
             // passwordTxtbox
@@ -381,7 +384,7 @@
             this.roleTxtbox.PlaceholderText = "ROLE";
             this.roleTxtbox.SelectedText = "";
             this.roleTxtbox.Size = new System.Drawing.Size(229, 36);
-            this.roleTxtbox.TabIndex = 2;
+            this.roleTxtbox.TabIndex = 3;
             this.roleTxtbox.TextChanged += new System.EventHandler(this.roleTxtbox_TextChanged);
             // 
             // addBtn
@@ -404,6 +407,7 @@
             this.addBtn.Name = "addBtn";
             this.addBtn.Size = new System.Drawing.Size(202, 45);
             this.addBtn.TabIndex = 4;
+            this.addBtn.TabStop = false;
             this.addBtn.Text = "ADD";
             this.addBtn.Click += new System.EventHandler(this.addBtn_Click);
             // 
@@ -427,6 +431,7 @@
             this.updateBtn.Name = "updateBtn";
             this.updateBtn.Size = new System.Drawing.Size(202, 45);
             this.updateBtn.TabIndex = 4;
+            this.updateBtn.TabStop = false;
             this.updateBtn.Text = "UPDATE";
             this.updateBtn.Click += new System.EventHandler(this.updateBtn_Click);
             // 
@@ -450,6 +455,7 @@
             this.deleteBtn.Name = "deleteBtn";
             this.deleteBtn.Size = new System.Drawing.Size(202, 45);
             this.deleteBtn.TabIndex = 4;
+            this.deleteBtn.TabStop = false;
             this.deleteBtn.Text = "DELETE";
             this.deleteBtn.Click += new System.EventHandler(this.deleteBtn_Click);
             // 
@@ -509,6 +515,7 @@
             this.clearAllBtn.Name = "clearAllBtn";
             this.clearAllBtn.Size = new System.Drawing.Size(202, 45);
             this.clearAllBtn.TabIndex = 1;
+            this.clearAllBtn.TabStop = false;
             this.clearAllBtn.Text = "CLEAR";
             this.clearAllBtn.Click += new System.EventHandler(this.clearAllBtn_Click);
             // 

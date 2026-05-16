@@ -62,7 +62,6 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.UserCon
             // Update your specific label
             totalUnpaidMoneyLabel.Text = "₱" + amountOwed.ToString("N2");
 
-            // Optional: Make the text red to indicate it is a "debt" or "uncollected" amount
             totalUnpaidMoneyLabel.ForeColor = System.Drawing.Color.DarkGoldenrod;
         }
 

@@ -117,4 +117,373 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <metadata name="guna2DragControl1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>8, 16</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>1555, 871</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="contentContainerPanel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="contentContainerPanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>347, 0</value>
+  </data>
+  <data name="contentContainerPanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1208, 871</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="contentContainerPanel.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;contentContainerPanel.Name" xml:space="preserve">
+    <value>contentContainerPanel</value>
+  </data>
+  <data name="&gt;&gt;contentContainerPanel.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2ShadowPanel, Guna.UI2, Version=2.0.4.7, Culture=neutral, PublicKeyToken=8b9d14aa5142e261</value>
+  </data>
+  <data name="&gt;&gt;contentContainerPanel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;contentContainerPanel.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="logoutBtn.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 10.2pt, style=Bold</value>
+  </data>
+  <data name="logoutBtn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>50, 768</value>
+  </data>
+  <data name="logoutBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>246, 45</value>
+  </data>
+  <data name="logoutBtn.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="logoutBtn.Text" xml:space="preserve">
+    <value>LOGOUT</value>
+  </data>
+  <data name="&gt;&gt;logoutBtn.Name" xml:space="preserve">
+    <value>logoutBtn</value>
+  </data>
+  <data name="&gt;&gt;logoutBtn.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2GradientButton, Guna.UI2, Version=2.0.4.7, Culture=neutral, PublicKeyToken=8b9d14aa5142e261</value>
+  </data>
+  <data name="&gt;&gt;logoutBtn.Parent" xml:space="preserve">
+    <value>leftNavContainerPanel</value>
+  </data>
+  <data name="&gt;&gt;logoutBtn.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="historyBtn.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 10.2pt, style=Bold</value>
+  </data>
+  <data name="historyBtn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>50, 588</value>
+  </data>
+  <data name="historyBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>246, 45</value>
+  </data>
+  <data name="historyBtn.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="historyBtn.Text" xml:space="preserve">
+    <value>HISTORY</value>
+  </data>
+  <data name="&gt;&gt;historyBtn.Name" xml:space="preserve">
+    <value>historyBtn</value>
+  </data>
+  <data name="&gt;&gt;historyBtn.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2GradientButton, Guna.UI2, Version=2.0.4.7, Culture=neutral, PublicKeyToken=8b9d14aa5142e261</value>
+  </data>
+  <data name="&gt;&gt;historyBtn.Parent" xml:space="preserve">
+    <value>leftNavContainerPanel</value>
+  </data>
+  <data name="&gt;&gt;historyBtn.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="mydebtBtn.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 10.2pt, style=Bold</value>
+  </data>
+  <data name="mydebtBtn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>50, 529</value>
+  </data>
+  <data name="mydebtBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>246, 45</value>
+  </data>
+  <data name="mydebtBtn.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="mydebtBtn.Text" xml:space="preserve">
+    <value>MY DEBT</value>
+  </data>
+  <data name="&gt;&gt;mydebtBtn.Name" xml:space="preserve">
+    <value>mydebtBtn</value>
+  </data>
+  <data name="&gt;&gt;mydebtBtn.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2GradientButton, Guna.UI2, Version=2.0.4.7, Culture=neutral, PublicKeyToken=8b9d14aa5142e261</value>
+  </data>
+  <data name="&gt;&gt;mydebtBtn.Parent" xml:space="preserve">
+    <value>leftNavContainerPanel</value>
+  </data>
+  <data name="&gt;&gt;mydebtBtn.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="homeBtn.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 10.2pt, style=Bold</value>
+  </data>
+  <data name="homeBtn.Location" type="System.Drawing.Point, System.Drawing">
+    <value>50, 470</value>
+  </data>
+  <data name="homeBtn.Size" type="System.Drawing.Size, System.Drawing">
+    <value>246, 45</value>
+  </data>
+  <data name="homeBtn.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="homeBtn.Text" xml:space="preserve">
+    <value>HOME</value>
+  </data>
+  <data name="&gt;&gt;homeBtn.Name" xml:space="preserve">
+    <value>homeBtn</value>
+  </data>
+  <data name="&gt;&gt;homeBtn.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2GradientButton, Guna.UI2, Version=2.0.4.7, Culture=neutral, PublicKeyToken=8b9d14aa5142e261</value>
+  </data>
+  <data name="&gt;&gt;homeBtn.Parent" xml:space="preserve">
+    <value>leftNavContainerPanel</value>
+  </data>
+  <data name="&gt;&gt;homeBtn.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="guna2CirclePictureBox1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="guna2CirclePictureBox1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>35, 78</value>
+  </data>
+  <data name="guna2CirclePictureBox1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>277, 248</value>
+  </data>
+  <data name="guna2CirclePictureBox1.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>Zoom</value>
+  </data>
+  <data name="guna2CirclePictureBox1.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;guna2CirclePictureBox1.Name" xml:space="preserve">
+    <value>guna2CirclePictureBox1</value>
+  </data>
+  <data name="&gt;&gt;guna2CirclePictureBox1.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2CirclePictureBox, Guna.UI2, Version=2.0.4.7, Culture=neutral, PublicKeyToken=8b9d14aa5142e261</value>
+  </data>
+  <data name="&gt;&gt;guna2CirclePictureBox1.Parent" xml:space="preserve">
+    <value>leftNavContainerPanel</value>
+  </data>
+  <data name="&gt;&gt;guna2CirclePictureBox1.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="label2.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label2.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Cooper Black, 18pt</value>
+  </data>
+  <data name="label2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>15, 23</value>
+  </data>
+  <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>311, 35</value>
+  </data>
+  <data name="label2.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="label2.Text" xml:space="preserve">
+    <value>Student Dashboard</value>
+  </data>
+  <data name="&gt;&gt;label2.Name" xml:space="preserve">
+    <value>label2</value>
+  </data>
+  <data name="&gt;&gt;label2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label2.Parent" xml:space="preserve">
+    <value>leftNavContainerPanel</value>
+  </data>
+  <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="studentFullnameLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="studentFullnameLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Cooper Black, 13.8pt</value>
+  </data>
+  <data name="studentFullnameLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="studentFullnameLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 350</value>
+  </data>
+  <data name="studentFullnameLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>214, 26</value>
+  </data>
+  <data name="studentFullnameLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="studentFullnameLabel.Text" xml:space="preserve">
+    <value>student-fullname</value>
+  </data>
+  <data name="&gt;&gt;studentFullnameLabel.Name" xml:space="preserve">
+    <value>studentFullnameLabel</value>
+  </data>
+  <data name="&gt;&gt;studentFullnameLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;studentFullnameLabel.Parent" xml:space="preserve">
+    <value>leftNavContainerPanel</value>
+  </data>
+  <data name="&gt;&gt;studentFullnameLabel.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="guna2Separator2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 838</value>
+  </data>
+  <data name="guna2Separator2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>322, 11</value>
+  </data>
+  <data name="guna2Separator2.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;guna2Separator2.Name" xml:space="preserve">
+    <value>guna2Separator2</value>
+  </data>
+  <data name="&gt;&gt;guna2Separator2.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2Separator, Guna.UI2, Version=2.0.4.7, Culture=neutral, PublicKeyToken=8b9d14aa5142e261</value>
+  </data>
+  <data name="&gt;&gt;guna2Separator2.Parent" xml:space="preserve">
+    <value>leftNavContainerPanel</value>
+  </data>
+  <data name="&gt;&gt;guna2Separator2.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="guna2Separator4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 386</value>
+  </data>
+  <data name="guna2Separator4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>322, 11</value>
+  </data>
+  <data name="guna2Separator4.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;guna2Separator4.Name" xml:space="preserve">
+    <value>guna2Separator4</value>
+  </data>
+  <data name="&gt;&gt;guna2Separator4.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2Separator, Guna.UI2, Version=2.0.4.7, Culture=neutral, PublicKeyToken=8b9d14aa5142e261</value>
+  </data>
+  <data name="&gt;&gt;guna2Separator4.Parent" xml:space="preserve">
+    <value>leftNavContainerPanel</value>
+  </data>
+  <data name="&gt;&gt;guna2Separator4.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="guna2Separator3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 332</value>
+  </data>
+  <data name="guna2Separator3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>322, 11</value>
+  </data>
+  <data name="guna2Separator3.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;guna2Separator3.Name" xml:space="preserve">
+    <value>guna2Separator3</value>
+  </data>
+  <data name="&gt;&gt;guna2Separator3.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2Separator, Guna.UI2, Version=2.0.4.7, Culture=neutral, PublicKeyToken=8b9d14aa5142e261</value>
+  </data>
+  <data name="&gt;&gt;guna2Separator3.Parent" xml:space="preserve">
+    <value>leftNavContainerPanel</value>
+  </data>
+  <data name="&gt;&gt;guna2Separator3.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="guna2Separator1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 61</value>
+  </data>
+  <data name="guna2Separator1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>322, 11</value>
+  </data>
+  <data name="guna2Separator1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;guna2Separator1.Name" xml:space="preserve">
+    <value>guna2Separator1</value>
+  </data>
+  <data name="&gt;&gt;guna2Separator1.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2Separator, Guna.UI2, Version=2.0.4.7, Culture=neutral, PublicKeyToken=8b9d14aa5142e261</value>
+  </data>
+  <data name="&gt;&gt;guna2Separator1.Parent" xml:space="preserve">
+    <value>leftNavContainerPanel</value>
+  </data>
+  <data name="&gt;&gt;guna2Separator1.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="leftNavContainerPanel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="leftNavContainerPanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="leftNavContainerPanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>347, 871</value>
+  </data>
+  <data name="leftNavContainerPanel.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;leftNavContainerPanel.Name" xml:space="preserve">
+    <value>leftNavContainerPanel</value>
+  </data>
+  <data name="&gt;&gt;leftNavContainerPanel.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2GradientPanel, Guna.UI2, Version=2.0.4.7, Culture=neutral, PublicKeyToken=8b9d14aa5142e261</value>
+  </data>
+  <data name="&gt;&gt;leftNavContainerPanel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;leftNavContainerPanel.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>CenterScreen</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Student_Form</value>
+  </data>
+  <data name="&gt;&gt;guna2DragControl1.Name" xml:space="preserve">
+    <value>guna2DragControl1</value>
+  </data>
+  <data name="&gt;&gt;guna2DragControl1.Type" xml:space="preserve">
+    <value>Guna.UI2.WinForms.Guna2DragControl, Guna.UI2, Version=2.0.4.7, Culture=neutral, PublicKeyToken=8b9d14aa5142e261</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>StudentForm</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
 </root>

@@ -151,6 +151,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="SchoolManagementTransparencyApp\REUSABLE_UC\UC_EXPENSE.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SchoolManagementTransparencyApp\REUSABLE_UC\UC_EXPENSE.Designer.cs">
+      <DependentUpon>UC_EXPENSE.cs</DependentUpon>
+    </Compile>
     <Compile Include="SchoolManagementTransparencyApp\Controller\AdminDashboardController.cs" />
     <Compile Include="SchoolManagementTransparencyApp\Controller\CourseController.cs" />
     <Compile Include="SchoolManagementTransparencyApp\Controller\EnrollmentController.cs" />
@@ -202,47 +208,59 @@
     <Compile Include="SchoolManagementTransparencyApp\Service\TransactionTypeService.cs" />
     <Compile Include="SchoolManagementTransparencyApp\Service\UserAccountService.cs" />
     <Compile Include="SchoolManagementTransparencyApp\Service\ViolationTypeService.cs" />
-    <Compile Include="SchoolManagementTransparencyApp\AdminDashboardUserControls\UC_EXPENSE.cs">
+    <Compile Include="SchoolManagementTransparencyApp\REUSABLE_UC\UC_FUND.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="SchoolManagementTransparencyApp\AdminDashboardUserControls\UC_EXPENSE.Designer.cs">
-      <DependentUpon>UC_EXPENSE.cs</DependentUpon>
-    </Compile>
-    <Compile Include="SchoolManagementTransparencyApp\AdminDashboardUserControls\UC_FUND.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="SchoolManagementTransparencyApp\AdminDashboardUserControls\UC_FUND.Designer.cs">
+    <Compile Include="SchoolManagementTransparencyApp\REUSABLE_UC\UC_FUND.Designer.cs">
       <DependentUpon>UC_FUND.cs</DependentUpon>
     </Compile>
-    <Compile Include="SchoolManagementTransparencyApp\AdminDashboardUserControls\UC_HOME.cs">
+    <Compile Include="SchoolManagementTransparencyApp\REUSABLE_UC\UC_HOME.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="SchoolManagementTransparencyApp\AdminDashboardUserControls\UC_HOME.Designer.cs">
+    <Compile Include="SchoolManagementTransparencyApp\REUSABLE_UC\UC_HOME.Designer.cs">
       <DependentUpon>UC_HOME.cs</DependentUpon>
     </Compile>
-    <Compile Include="SchoolManagementTransparencyApp\AdminDashboardUserControls\UC_INCOME.cs">
+    <Compile Include="SchoolManagementTransparencyApp\REUSABLE_UC\UC_INCOME.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="SchoolManagementTransparencyApp\AdminDashboardUserControls\UC_INCOME.Designer.cs">
+    <Compile Include="SchoolManagementTransparencyApp\REUSABLE_UC\UC_INCOME.Designer.cs">
       <DependentUpon>UC_INCOME.cs</DependentUpon>
     </Compile>
-    <Compile Include="SchoolManagementTransparencyApp\AdminDashboardUserControls\UC_STUDENT.cs">
+    <Compile Include="SchoolManagementTransparencyApp\REUSABLE_UC\UC_STUDENT.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="SchoolManagementTransparencyApp\AdminDashboardUserControls\UC_STUDENT.Designer.cs">
+    <Compile Include="SchoolManagementTransparencyApp\REUSABLE_UC\UC_STUDENT.Designer.cs">
       <DependentUpon>UC_STUDENT.cs</DependentUpon>
     </Compile>
-    <Compile Include="SchoolManagementTransparencyApp\AdminDashboardUserControls\UC_STUDENT_VIOLATION.cs">
+    <Compile Include="SchoolManagementTransparencyApp\REUSABLE_UC\UC_STUDENT_VIOLATION.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="SchoolManagementTransparencyApp\AdminDashboardUserControls\UC_STUDENT_VIOLATION.Designer.cs">
+    <Compile Include="SchoolManagementTransparencyApp\REUSABLE_UC\UC_STUDENT_VIOLATION.Designer.cs">
       <DependentUpon>UC_STUDENT_VIOLATION.cs</DependentUpon>
     </Compile>
-    <Compile Include="SchoolManagementTransparencyApp\AdminDashboardUserControls\UC_USER_ACCOUNT.cs">
+    <Compile Include="SchoolManagementTransparencyApp\REUSABLE_UC\UC_USER_ACCOUNT.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="SchoolManagementTransparencyApp\AdminDashboardUserControls\UC_USER_ACCOUNT.Designer.cs">
+    <Compile Include="SchoolManagementTransparencyApp\REUSABLE_UC\UC_USER_ACCOUNT.Designer.cs">
       <DependentUpon>UC_USER_ACCOUNT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SchoolManagementTransparencyApp\STUDENT_UC\STUDENT_UC_DEBT.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SchoolManagementTransparencyApp\STUDENT_UC\STUDENT_UC_DEBT.Designer.cs">
+      <DependentUpon>STUDENT_UC_DEBT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SchoolManagementTransparencyApp\STUDENT_UC\STUDENT_UC_HISTORY.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SchoolManagementTransparencyApp\STUDENT_UC\STUDENT_UC_HISTORY.Designer.cs">
+      <DependentUpon>STUDENT_UC_HISTORY.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SchoolManagementTransparencyApp\STUDENT_UC\STUDENT_UC_HOME.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SchoolManagementTransparencyApp\STUDENT_UC\STUDENT_UC_HOME.Designer.cs">
+      <DependentUpon>STUDENT_UC_HOME.cs</DependentUpon>
     </Compile>
     <Compile Include="SchoolManagementTransparencyApp\Util\DatabaseConnection.cs" />
     <Compile Include="SchoolManagementTransparencyApp\Util\LoginInputValidator.cs" />
@@ -277,26 +295,35 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="SchoolManagementTransparencyApp\AdminDashboardUserControls\UC_EXPENSE.resx">
+    <EmbeddedResource Include="SchoolManagementTransparencyApp\REUSABLE_UC\UC_EXPENSE.resx">
       <DependentUpon>UC_EXPENSE.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SchoolManagementTransparencyApp\AdminDashboardUserControls\UC_FUND.resx">
+    <EmbeddedResource Include="SchoolManagementTransparencyApp\REUSABLE_UC\UC_FUND.resx">
       <DependentUpon>UC_FUND.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SchoolManagementTransparencyApp\AdminDashboardUserControls\UC_HOME.resx">
+    <EmbeddedResource Include="SchoolManagementTransparencyApp\REUSABLE_UC\UC_HOME.resx">
       <DependentUpon>UC_HOME.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SchoolManagementTransparencyApp\AdminDashboardUserControls\UC_INCOME.resx">
+    <EmbeddedResource Include="SchoolManagementTransparencyApp\REUSABLE_UC\UC_INCOME.resx">
       <DependentUpon>UC_INCOME.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SchoolManagementTransparencyApp\AdminDashboardUserControls\UC_STUDENT.resx">
+    <EmbeddedResource Include="SchoolManagementTransparencyApp\REUSABLE_UC\UC_STUDENT.resx">
       <DependentUpon>UC_STUDENT.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SchoolManagementTransparencyApp\AdminDashboardUserControls\UC_STUDENT_VIOLATION.resx">
+    <EmbeddedResource Include="SchoolManagementTransparencyApp\REUSABLE_UC\UC_STUDENT_VIOLATION.resx">
       <DependentUpon>UC_STUDENT_VIOLATION.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SchoolManagementTransparencyApp\AdminDashboardUserControls\UC_USER_ACCOUNT.resx">
+    <EmbeddedResource Include="SchoolManagementTransparencyApp\REUSABLE_UC\UC_USER_ACCOUNT.resx">
       <DependentUpon>UC_USER_ACCOUNT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SchoolManagementTransparencyApp\STUDENT_UC\STUDENT_UC_DEBT.resx">
+      <DependentUpon>STUDENT_UC_DEBT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SchoolManagementTransparencyApp\STUDENT_UC\STUDENT_UC_HISTORY.resx">
+      <DependentUpon>STUDENT_UC_HISTORY.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SchoolManagementTransparencyApp\STUDENT_UC\STUDENT_UC_HOME.resx">
+      <DependentUpon>STUDENT_UC_HOME.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SchoolManagementTransparencyApp\Winforms\AdminForm.resx">
       <DependentUpon>AdminForm.cs</DependentUpon>

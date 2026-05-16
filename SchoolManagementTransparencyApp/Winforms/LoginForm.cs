@@ -24,9 +24,7 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.Winfrom
         private StudentController studentController = new StudentController();
         private UserAccountController userAccountController = new UserAccountController();
         StudentAccountDao _dao = new StudentAccountDao();
-
-
-
+        private IButtonControl signInBtn;
 
         private void Login_Form_Load(object sender, EventArgs e)
         {

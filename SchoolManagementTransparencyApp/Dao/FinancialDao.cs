@@ -52,7 +52,7 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.Dao
                     }
                 }
             }
-            catch (Exception ex) { MessageBox.Show(ex.Message); }
+            catch (Exception ex) { Console.WriteLine(ex.Message); }
             finally { dbConn.closeConnect(); }
 
             return reports;
@@ -88,7 +88,7 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.Dao
                     }
                 }
             }
-            catch (Exception ex) { MessageBox.Show("DAO Error: " + ex.Message); }
+            catch (Exception ex) { Console.WriteLine(ex.Message); }
             finally { dbConn.closeConnect(); }
             return list;
         }

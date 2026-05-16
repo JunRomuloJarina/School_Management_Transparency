@@ -40,7 +40,7 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.Dao
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                Console.WriteLine(ex.Message);
             }
             finally
             {
@@ -70,7 +70,7 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.Dao
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                Console.WriteLine(ex.Message    );
             }
             finally
             {
@@ -106,7 +106,7 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.Dao
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                Console.WriteLine(ex.Message);
             }
             finally
             {
@@ -141,7 +141,7 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.Dao
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                Console.WriteLine(ex.Message);
             }
             finally
             {
@@ -179,7 +179,7 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.Dao
                 MySqlDataAdapter adapter = new MySqlDataAdapter(new MySqlCommand(query, dbConn.getconnection));
                 adapter.Fill(dt);
             }
-            catch (Exception ex) { MessageBox.Show("Error loading records: " + ex.Message); }
+            catch (Exception ex) { Console.WriteLine(ex.Message); }
             return dt;
         }
 
@@ -210,7 +210,7 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.Dao
                 cmd.Parameters.AddWithValue("@s", "%" + searchTerm + "%");
                 new MySqlDataAdapter(cmd).Fill(dt);
             }
-            catch (Exception ex) { MessageBox.Show("Search Error: " + ex.Message); }
+            catch (Exception ex) { Console.WriteLine(ex.Message); }
             return dt;
         }
 
@@ -238,7 +238,7 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.Dao
                 cmd.Parameters.AddWithValue("@cId", courseId);
                 new MySqlDataAdapter(cmd).Fill(dt);
             }
-            catch (Exception ex) { MessageBox.Show("Filter Error: " + ex.Message); }
+            catch (Exception ex) { Console.WriteLine(ex.Message); }
             return dt;
         }
 
@@ -251,7 +251,7 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.Dao
                 string query = "SELECT course_id, course_name FROM course ORDER BY course_name ASC";
                 new MySqlDataAdapter(new MySqlCommand(query, dbConn.getconnection)).Fill(dt);
             }
-            catch (Exception ex) { MessageBox.Show("Course Load Error: " + ex.Message); }
+            catch (Exception ex) { Console.WriteLine(ex.Message); }
             return dt;
         }
 
@@ -283,7 +283,7 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.Dao
                 cmd.Parameters.AddWithValue("@status", status);
                 new MySqlDataAdapter(cmd).Fill(dt);
             }
-            catch (Exception ex) { MessageBox.Show("Filter Error: " + ex.Message); }
+            catch (Exception ex) { Console.WriteLine(ex.Message); }
             return dt;
         }
 
@@ -305,7 +305,7 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.Dao
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Database Error: " + ex.Message);
+                Console.WriteLine(ex.Message);
                 return false;
             }
             finally { dbConn.closeConnect(); }
@@ -321,7 +321,7 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.Dao
                 MySqlDataAdapter adapter = new MySqlDataAdapter(new MySqlCommand(query, dbConn.getconnection));
                 adapter.Fill(dt);
             }
-            catch (Exception ex) { MessageBox.Show(ex.Message); }
+            catch (Exception ex) { Console.WriteLine(ex.Message); }
             return dt;
         }
         public bool SettleStudentDebtWithTransaction(int vId, int sId, decimal amt, string name, string desc, int fundId)
@@ -357,7 +357,7 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.Dao
             catch (Exception ex)
             {
                 if (tr != null) tr.Rollback();
-                MessageBox.Show("Transaction Failed: " + ex.Message);
+                Console.WriteLine(ex.Message);
                 return false;
             }
             finally { dbConn.closeConnect(); }
@@ -382,7 +382,7 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.Dao
                 MySqlDataAdapter adapter = new MySqlDataAdapter(new MySqlCommand(query, dbConn.getconnection));
                 adapter.Fill(dt);
             }
-            catch (Exception ex) { MessageBox.Show("Lookup Error: " + ex.Message); }
+            catch (Exception ex) { Console.WriteLine(ex.Message); }
             return dt;
         }
 
@@ -417,7 +417,7 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.Dao
 
                 new MySqlDataAdapter(cmd).Fill(dt);
             }
-            catch (Exception ex) { MessageBox.Show("Search Error: " + ex.Message); }
+            catch (Exception ex) { Console.WriteLine(ex.Message); }
             return dt;
         }
 
@@ -435,7 +435,7 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.Dao
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Payment Error: " + ex.Message);
+                Console.WriteLine(ex.Message);
                 return false;
             }
             finally { dbConn.closeConnect(); }
@@ -451,7 +451,7 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.Dao
                 MySqlDataAdapter da = new MySqlDataAdapter(query, dbConn.getconnection);
                 da.Fill(dt);
             }
-            catch (Exception ex) { MessageBox.Show("Error loading funds: " + ex.Message); }
+            catch (Exception ex) { Console.WriteLine(ex.Message);   }
             finally { dbConn.closeConnect(); }
             return dt;
         }
@@ -491,7 +491,7 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.Dao
             catch (Exception ex)
             {
                 if (tr != null) tr.Rollback();
-                MessageBox.Show("Transaction Failed: " + ex.Message);
+                Console.WriteLine(ex.Message);
                 return false;
             }
             finally { dbConn.closeConnect(); }
@@ -527,7 +527,7 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.Dao
                 cmd.Parameters.AddWithValue("@s", "%" + searchTerm + "%");
                 new MySqlDataAdapter(cmd).Fill(dt);
             }
-            catch (Exception ex) { MessageBox.Show("Search Error: " + ex.Message); }
+            catch (Exception ex) { Console.WriteLine(ex.Message); }
             return dt;
         }
 
@@ -558,7 +558,7 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.Dao
                 cmd.Parameters.AddWithValue("@cId", courseId);
                 new MySqlDataAdapter(cmd).Fill(dt);
             }
-            catch (Exception ex) { MessageBox.Show("Filter Error: " + ex.Message); }
+            catch (Exception ex) { Console.WriteLine(ex.Message); }
             return dt;
         }
 
@@ -590,7 +590,7 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.Dao
                 cmd.Parameters.AddWithValue("@status", status);
                 new MySqlDataAdapter(cmd).Fill(dt);
             }
-            catch (Exception ex) { MessageBox.Show("Filter Error: " + ex.Message); }
+            catch (Exception ex) { Console.WriteLine(ex.Message); }
             return dt;
         }
 
