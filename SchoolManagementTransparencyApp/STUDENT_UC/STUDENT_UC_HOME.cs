@@ -17,6 +17,14 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.STUDENT
         public STUDENT_UC_HOME()
         {
             InitializeComponent();
+
+            // Wire up the load handler explicitly to ensure it runs automatically
+            this.Load += new System.EventHandler(this.STUDENT_UC_HOME_Load);
+            // 1. Tell the grid to allow custom height adjustments (Disable auto-sizing based on content)
+            homeExpenseDGV.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+
+            // 2. Assign the explicit pixel height value
+            homeExpenseDGV.ColumnHeadersHeight = 50;
         }
         AdminDashboardController _dashboardController = new AdminDashboardController();
         StudentController _studentController = new StudentController();
@@ -41,6 +49,20 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.STUDENT
             frmAdminDashboard_Load();
         }
 
+        private void LoadTransparencyReport()
+        {
+            try
+            {
+                if (homeExpenseDGV != null)
+                {
+                    _studentController.LoadExpenseTransparencyGrid(homeExpenseDGV);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("UI Data Population Error: " + ex.Message, "Form Exception Handled", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
         private void RefreshMostViolatedGrid()
         {
             // We bypass the old logic and call the new Unpaid Leaderboard
@@ -60,6 +82,7 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.STUDENT
             RefreshMostViolatedGrid();
             _dashboardController.LoadFundTransparencyGrid(fundTransparency_dgv);
             RefreshOutstandingBalanceKPI();
+            LoadTransparencyReport();
         }
 
         private void RefreshOutstandingBalanceKPI()

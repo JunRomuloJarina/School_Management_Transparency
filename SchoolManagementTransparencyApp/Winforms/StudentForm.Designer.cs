@@ -40,10 +40,10 @@
             this.label2 = new System.Windows.Forms.Label();
             this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.leftNavContainerPanel = new Guna.UI2.WinForms.Guna2GradientPanel();
-            this.homeBtn = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.mydebtBtn = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.historyBtn = new Guna.UI2.WinForms.Guna2GradientButton();
             this.logoutBtn = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.historyBtn = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.mydebtBtn = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.homeBtn = new Guna.UI2.WinForms.Guna2GradientButton();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
             this.leftNavContainerPanel.SuspendLayout();
             this.SuspendLayout();
@@ -102,6 +102,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Name = "label2";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // guna2CirclePictureBox1
             // 
@@ -131,49 +132,27 @@
             this.leftNavContainerPanel.Name = "leftNavContainerPanel";
             this.leftNavContainerPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.leftNavContainerPanel_Paint);
             // 
-            // homeBtn
+            // logoutBtn
             // 
-            this.homeBtn.Animated = true;
-            this.homeBtn.AnimatedGIF = true;
-            this.homeBtn.AutoRoundedCorners = true;
-            this.homeBtn.BackColor = System.Drawing.Color.Transparent;
-            this.homeBtn.BorderThickness = 1;
-            this.homeBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.homeBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.homeBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.homeBtn.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.homeBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.homeBtn.FillColor = System.Drawing.Color.Red;
-            this.homeBtn.FillColor2 = System.Drawing.Color.Black;
-            resources.ApplyResources(this.homeBtn, "homeBtn");
-            this.homeBtn.ForeColor = System.Drawing.Color.White;
-            this.homeBtn.HoverState.FillColor = System.Drawing.Color.Black;
-            this.homeBtn.HoverState.FillColor2 = System.Drawing.Color.Red;
-            this.homeBtn.HoverState.ForeColor = System.Drawing.Color.White;
-            this.homeBtn.Name = "homeBtn";
-            this.homeBtn.Click += new System.EventHandler(this.homeBtn_Click);
-            // 
-            // mydebtBtn
-            // 
-            this.mydebtBtn.Animated = true;
-            this.mydebtBtn.AnimatedGIF = true;
-            this.mydebtBtn.AutoRoundedCorners = true;
-            this.mydebtBtn.BackColor = System.Drawing.Color.Transparent;
-            this.mydebtBtn.BorderThickness = 1;
-            this.mydebtBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.mydebtBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.mydebtBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.mydebtBtn.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.mydebtBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.mydebtBtn.FillColor = System.Drawing.Color.Red;
-            this.mydebtBtn.FillColor2 = System.Drawing.Color.Black;
-            resources.ApplyResources(this.mydebtBtn, "mydebtBtn");
-            this.mydebtBtn.ForeColor = System.Drawing.Color.White;
-            this.mydebtBtn.HoverState.FillColor = System.Drawing.Color.Black;
-            this.mydebtBtn.HoverState.FillColor2 = System.Drawing.Color.Red;
-            this.mydebtBtn.HoverState.ForeColor = System.Drawing.Color.White;
-            this.mydebtBtn.Name = "mydebtBtn";
-            this.mydebtBtn.Click += new System.EventHandler(this.mydebtBtn_Click);
+            this.logoutBtn.Animated = true;
+            this.logoutBtn.AnimatedGIF = true;
+            this.logoutBtn.AutoRoundedCorners = true;
+            this.logoutBtn.BackColor = System.Drawing.Color.Transparent;
+            this.logoutBtn.BorderThickness = 1;
+            this.logoutBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.logoutBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.logoutBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.logoutBtn.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.logoutBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.logoutBtn.FillColor = System.Drawing.Color.Red;
+            this.logoutBtn.FillColor2 = System.Drawing.Color.RosyBrown;
+            resources.ApplyResources(this.logoutBtn, "logoutBtn");
+            this.logoutBtn.ForeColor = System.Drawing.Color.White;
+            this.logoutBtn.HoverState.FillColor = System.Drawing.Color.DimGray;
+            this.logoutBtn.HoverState.FillColor2 = System.Drawing.Color.Red;
+            this.logoutBtn.HoverState.ForeColor = System.Drawing.Color.White;
+            this.logoutBtn.Name = "logoutBtn";
+            this.logoutBtn.Click += new System.EventHandler(this.logoutBtn_Click);
             // 
             // historyBtn
             // 
@@ -197,27 +176,49 @@
             this.historyBtn.Name = "historyBtn";
             this.historyBtn.Click += new System.EventHandler(this.historyBtn_Click);
             // 
-            // logoutBtn
+            // mydebtBtn
             // 
-            this.logoutBtn.Animated = true;
-            this.logoutBtn.AnimatedGIF = true;
-            this.logoutBtn.AutoRoundedCorners = true;
-            this.logoutBtn.BackColor = System.Drawing.Color.Transparent;
-            this.logoutBtn.BorderThickness = 1;
-            this.logoutBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.logoutBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.logoutBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.logoutBtn.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.logoutBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.logoutBtn.FillColor = System.Drawing.Color.Red;
-            this.logoutBtn.FillColor2 = System.Drawing.Color.RosyBrown;
-            resources.ApplyResources(this.logoutBtn, "logoutBtn");
-            this.logoutBtn.ForeColor = System.Drawing.Color.White;
-            this.logoutBtn.HoverState.FillColor = System.Drawing.Color.DimGray;
-            this.logoutBtn.HoverState.FillColor2 = System.Drawing.Color.Red;
-            this.logoutBtn.HoverState.ForeColor = System.Drawing.Color.White;
-            this.logoutBtn.Name = "logoutBtn";
-            this.logoutBtn.Click += new System.EventHandler(this.logoutBtn_Click);
+            this.mydebtBtn.Animated = true;
+            this.mydebtBtn.AnimatedGIF = true;
+            this.mydebtBtn.AutoRoundedCorners = true;
+            this.mydebtBtn.BackColor = System.Drawing.Color.Transparent;
+            this.mydebtBtn.BorderThickness = 1;
+            this.mydebtBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.mydebtBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.mydebtBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.mydebtBtn.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.mydebtBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.mydebtBtn.FillColor = System.Drawing.Color.Red;
+            this.mydebtBtn.FillColor2 = System.Drawing.Color.Black;
+            resources.ApplyResources(this.mydebtBtn, "mydebtBtn");
+            this.mydebtBtn.ForeColor = System.Drawing.Color.White;
+            this.mydebtBtn.HoverState.FillColor = System.Drawing.Color.Black;
+            this.mydebtBtn.HoverState.FillColor2 = System.Drawing.Color.Red;
+            this.mydebtBtn.HoverState.ForeColor = System.Drawing.Color.White;
+            this.mydebtBtn.Name = "mydebtBtn";
+            this.mydebtBtn.Click += new System.EventHandler(this.mydebtBtn_Click);
+            // 
+            // homeBtn
+            // 
+            this.homeBtn.Animated = true;
+            this.homeBtn.AnimatedGIF = true;
+            this.homeBtn.AutoRoundedCorners = true;
+            this.homeBtn.BackColor = System.Drawing.Color.Transparent;
+            this.homeBtn.BorderThickness = 1;
+            this.homeBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.homeBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.homeBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.homeBtn.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.homeBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.homeBtn.FillColor = System.Drawing.Color.Red;
+            this.homeBtn.FillColor2 = System.Drawing.Color.Black;
+            resources.ApplyResources(this.homeBtn, "homeBtn");
+            this.homeBtn.ForeColor = System.Drawing.Color.White;
+            this.homeBtn.HoverState.FillColor = System.Drawing.Color.Black;
+            this.homeBtn.HoverState.FillColor2 = System.Drawing.Color.Red;
+            this.homeBtn.HoverState.ForeColor = System.Drawing.Color.White;
+            this.homeBtn.Name = "homeBtn";
+            this.homeBtn.Click += new System.EventHandler(this.homeBtn_Click);
             // 
             // StudentForm
             // 

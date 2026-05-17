@@ -328,16 +328,16 @@
     <value>True</value>
   </data>
   <data name="studentFullnameLabel.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Cooper Black, 13.8pt</value>
+    <value>Cooper Black, 10.2pt</value>
   </data>
   <data name="studentFullnameLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="studentFullnameLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 350</value>
+    <value>54, 354</value>
   </data>
   <data name="studentFullnameLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>214, 26</value>
+    <value>158, 20</value>
   </data>
   <data name="studentFullnameLabel.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -464,9 +464,6 @@
   </data>
   <data name="&gt;&gt;leftNavContainerPanel.ZOrder" xml:space="preserve">
     <value>1</value>
-  </data>
-  <data name="$this.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
   </data>
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterScreen</value>

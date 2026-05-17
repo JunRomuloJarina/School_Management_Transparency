@@ -60,6 +60,7 @@
             this.backBtn = new Guna.UI2.WinForms.Guna2GradientButton();
             this.dateOfBirtchDatePicker = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.label8 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
@@ -79,7 +80,6 @@
             this.guna2Separator4 = new Guna.UI2.WinForms.Guna2Separator();
             this.guna2Separator3 = new Guna.UI2.WinForms.Guna2Separator();
             this.guna2DragControl3 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
-            this.label14 = new System.Windows.Forms.Label();
             this.guna2GradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
             this.LoginContainerPanel.SuspendLayout();
@@ -256,6 +256,7 @@
             this.guna2Separator1.Name = "guna2Separator1";
             this.guna2Separator1.Size = new System.Drawing.Size(475, 10);
             this.guna2Separator1.TabIndex = 7;
+            this.guna2Separator1.TabStop = false;
             this.guna2Separator1.Click += new System.EventHandler(this.guna2Separator1_Click);
             // 
             // cuiLabel2
@@ -423,7 +424,6 @@
             this.passwordLoginTxtbox.ShadowDecoration.Depth = 5;
             this.passwordLoginTxtbox.Size = new System.Drawing.Size(353, 39);
             this.passwordLoginTxtbox.TabIndex = 1;
-            this.passwordLoginTxtbox.TabStop = false;
             this.passwordLoginTxtbox.TextChanged += new System.EventHandler(this.passwordTxtbox_TextChanged);
             // 
             // usernameLoginTxtbox
@@ -452,7 +452,6 @@
             this.usernameLoginTxtbox.ShadowDecoration.Depth = 5;
             this.usernameLoginTxtbox.Size = new System.Drawing.Size(353, 39);
             this.usernameLoginTxtbox.TabIndex = 0;
-            this.usernameLoginTxtbox.TabStop = false;
             this.usernameLoginTxtbox.TextChanged += new System.EventHandler(this.usernameTxtbox_TextChanged);
             // 
             // cuiLabel1
@@ -467,6 +466,7 @@
             this.cuiLabel1.Name = "cuiLabel1";
             this.cuiLabel1.Size = new System.Drawing.Size(512, 202);
             this.cuiLabel1.TabIndex = 1;
+            this.cuiLabel1.TabStop = false;
             this.cuiLabel1.VerticalAlignment = System.Drawing.StringAlignment.Near;
             // 
             // CreateAccountContainerPanel
@@ -647,6 +647,18 @@
             this.label8.TabIndex = 14;
             this.label8.Text = "Middle Name:";
             this.label8.Click += new System.EventHandler(this.label8_Click);
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.label14.Location = new System.Drawing.Point(228, 240);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(60, 17);
+            this.label14.TabIndex = 14;
+            this.label14.Text = "Course:";
+            this.label14.Click += new System.EventHandler(this.label10_Click);
             // 
             // label10
             // 
@@ -962,18 +974,6 @@
             this.guna2DragControl3.DockIndicatorTransparencyValue = 0.6D;
             this.guna2DragControl3.TargetControl = this.LoginContainerPanel;
             this.guna2DragControl3.UseTransparentDrag = true;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label14.Location = new System.Drawing.Point(228, 240);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(60, 17);
-            this.label14.TabIndex = 14;
-            this.label14.Text = "Course:";
-            this.label14.Click += new System.EventHandler(this.label10_Click);
             // 
             // LoginForm
             // 

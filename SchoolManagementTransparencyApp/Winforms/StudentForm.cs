@@ -98,8 +98,33 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.Winfrom
 
         private void logoutBtn_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            new LoginForm().Show();
+            // 1. Create the Pop-up with Yes and No buttons
+            DialogResult result = MessageBox.Show(
+                "Are you sure you want to log out from the Student Dashboard?",
+                "Confirm Logout",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question
+            );
+
+            // 2. Check the user's choice
+            if (result == DialogResult.Yes)
+            {
+                // Close or hide current dashboard
+                this.Hide();
+
+                // Wipe out the static variables safely
+                Util.UserSession.ClearSession();
+
+                // Redirect back to Login
+                LoginForm login = new LoginForm();
+                login.Show();
+
+            }
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

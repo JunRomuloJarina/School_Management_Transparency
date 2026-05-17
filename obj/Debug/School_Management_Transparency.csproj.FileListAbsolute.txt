@@ -104,3 +104,4 @@ C:\Visual_Studio_Repo\SMT\obj\Debug\School_Management_Transparency.SchoolManagem
 C:\Visual_Studio_Repo\SMT\obj\Debug\School_Management_Transparency.SchoolManagementTransparencyApp.STUDENT_UC.STUDENT_UC_HOME.resources
 C:\Visual_Studio_Repo\SMT\obj\Debug\School_Management_Transparency.SchoolManagementTransparencyApp.STUDENT_UC.STUDENT_UC_DEBT.resources
 C:\Visual_Studio_Repo\SMT\obj\Debug\School_Management_Transparency.SchoolManagementTransparencyApp.STUDENT_UC.STUDENT_UC_HISTORY.resources
+C:\Visual_Studio_Repo\SMT\obj\Debug\School_Management_Transparency.SchoolManagementTransparencyApp.Winfroms.SboForm.resources

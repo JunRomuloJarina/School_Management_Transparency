@@ -266,6 +266,7 @@
     <Compile Include="SchoolManagementTransparencyApp\Util\LoginInputValidator.cs" />
     <Compile Include="SchoolManagementTransparencyApp\Util\StudentCreateInputValidator.cs" />
     <Compile Include="SchoolManagementTransparencyApp\Util\UserAccountSession.cs" />
+    <Compile Include="SchoolManagementTransparencyApp\Util\UserSession.cs" />
     <Compile Include="SchoolManagementTransparencyApp\Winforms\AdminForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -331,6 +332,9 @@
     <EmbeddedResource Include="SchoolManagementTransparencyApp\Winforms\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="SchoolManagementTransparencyApp\Winforms\SboForm.resx">
+      <DependentUpon>SboForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SchoolManagementTransparencyApp\Winforms\StudentForm.resx">
       <DependentUpon>StudentForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -366,9 +370,6 @@
   <ItemGroup>
     <None Include="Resources\logout_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="SchoolManagementTransparencyApp\SboDashboardUserControls\" />
-    <Folder Include="SchoolManagementTransparencyApp\StudentDashboardUserControls\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
