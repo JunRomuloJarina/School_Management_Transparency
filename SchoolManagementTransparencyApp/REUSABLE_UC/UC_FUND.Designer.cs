@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             this.fundSummaryDGV = new Guna.UI2.WinForms.Guna2DataGridView();
             this.lblTotalSchoolBalance = new System.Windows.Forms.Label();
             this.btnAddFund = new Guna.UI2.WinForms.Guna2GradientButton();
@@ -42,6 +42,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.btnClear = new Guna.UI2.WinForms.Guna2GradientButton();
             this.guna2DragControl1 = new Guna.UI2.WinForms.Guna2DragControl(this.components);
+            this.printReportBtn = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.printViolatorsBtn = new Guna.UI2.WinForms.Guna2GradientButton();
             ((System.ComponentModel.ISupportInitialize)(this.fundSummaryDGV)).BeginInit();
             this.SuspendLayout();
             // 
@@ -51,27 +53,27 @@
             this.fundSummaryDGV.AllowUserToDeleteRows = false;
             this.fundSummaryDGV.AllowUserToResizeColumns = false;
             this.fundSummaryDGV.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(199)))), ((int)(((byte)(195)))));
-            this.fundSummaryDGV.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(199)))), ((int)(((byte)(195)))));
+            this.fundSummaryDGV.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
             this.fundSummaryDGV.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(67)))), ((int)(((byte)(54)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.fundSummaryDGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(67)))), ((int)(((byte)(54)))));
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.fundSummaryDGV.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.fundSummaryDGV.ColumnHeadersHeight = 30;
             this.fundSummaryDGV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(217)))), ((int)(((byte)(215)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(129)))), ((int)(((byte)(121)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.fundSummaryDGV.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(217)))), ((int)(((byte)(215)))));
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(129)))), ((int)(((byte)(121)))));
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.fundSummaryDGV.DefaultCellStyle = dataGridViewCellStyle9;
             this.fundSummaryDGV.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(189)))), ((int)(((byte)(184)))));
             this.fundSummaryDGV.Location = new System.Drawing.Point(104, 211);
             this.fundSummaryDGV.Name = "fundSummaryDGV";
@@ -268,10 +270,58 @@
             this.guna2DragControl1.TargetControl = this;
             this.guna2DragControl1.UseTransparentDrag = true;
             // 
+            // printReportBtn
+            // 
+            this.printReportBtn.Animated = true;
+            this.printReportBtn.AnimatedGIF = true;
+            this.printReportBtn.AutoRoundedCorners = true;
+            this.printReportBtn.BorderThickness = 1;
+            this.printReportBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.printReportBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.printReportBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.printReportBtn.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.printReportBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.printReportBtn.FillColor = System.Drawing.Color.WhiteSmoke;
+            this.printReportBtn.FillColor2 = System.Drawing.Color.Red;
+            this.printReportBtn.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.printReportBtn.ForeColor = System.Drawing.Color.White;
+            this.printReportBtn.HoverState.FillColor = System.Drawing.Color.Red;
+            this.printReportBtn.HoverState.FillColor2 = System.Drawing.Color.WhiteSmoke;
+            this.printReportBtn.Location = new System.Drawing.Point(763, 146);
+            this.printReportBtn.Name = "printReportBtn";
+            this.printReportBtn.Size = new System.Drawing.Size(180, 45);
+            this.printReportBtn.TabIndex = 7;
+            this.printReportBtn.Text = "PRINT REPORT";
+            this.printReportBtn.Click += new System.EventHandler(this.printReportBtn_Click);
+            // 
+            // printViolatorsBtn
+            // 
+            this.printViolatorsBtn.Animated = true;
+            this.printViolatorsBtn.AnimatedGIF = true;
+            this.printViolatorsBtn.AutoRoundedCorners = true;
+            this.printViolatorsBtn.BorderThickness = 1;
+            this.printViolatorsBtn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.printViolatorsBtn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.printViolatorsBtn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.printViolatorsBtn.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.printViolatorsBtn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.printViolatorsBtn.FillColor = System.Drawing.Color.WhiteSmoke;
+            this.printViolatorsBtn.FillColor2 = System.Drawing.Color.Red;
+            this.printViolatorsBtn.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.printViolatorsBtn.ForeColor = System.Drawing.Color.White;
+            this.printViolatorsBtn.Location = new System.Drawing.Point(966, 146);
+            this.printViolatorsBtn.Name = "printViolatorsBtn";
+            this.printViolatorsBtn.Size = new System.Drawing.Size(180, 45);
+            this.printViolatorsBtn.TabIndex = 8;
+            this.printViolatorsBtn.Text = "PRINT VIOLATORS";
+            this.printViolatorsBtn.Click += new System.EventHandler(this.printViolatorsBtn_Click);
+            // 
             // UC_FUND
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.printViolatorsBtn);
+            this.Controls.Add(this.printReportBtn);
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnDelete);
@@ -302,5 +352,7 @@
         private System.Windows.Forms.Label label2;
         private Guna.UI2.WinForms.Guna2GradientButton btnClear;
         private Guna.UI2.WinForms.Guna2DragControl guna2DragControl1;
+        private Guna.UI2.WinForms.Guna2GradientButton printReportBtn;
+        private Guna.UI2.WinForms.Guna2GradientButton printViolatorsBtn;
     }
 }

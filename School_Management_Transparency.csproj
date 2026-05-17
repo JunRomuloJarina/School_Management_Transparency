@@ -151,6 +151,8 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="SchoolManagementTransparencyApp\Controller\AdminController.cs" />
+    <Compile Include="SchoolManagementTransparencyApp\Dao\AdminDao.cs" />
     <Compile Include="SchoolManagementTransparencyApp\REUSABLE_UC\UC_EXPENSE.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -196,6 +198,7 @@
     <Compile Include="SchoolManagementTransparencyApp\Model\TransactionType.cs" />
     <Compile Include="SchoolManagementTransparencyApp\Model\UserAccount.cs" />
     <Compile Include="SchoolManagementTransparencyApp\Model\ViolationType.cs" />
+    <Compile Include="SchoolManagementTransparencyApp\Service\AdminService.cs" />
     <Compile Include="SchoolManagementTransparencyApp\Service\CourseService.cs" />
     <Compile Include="SchoolManagementTransparencyApp\Service\EnrollmentService.cs" />
     <Compile Include="SchoolManagementTransparencyApp\Service\ExpenseTransactionService.cs" />
