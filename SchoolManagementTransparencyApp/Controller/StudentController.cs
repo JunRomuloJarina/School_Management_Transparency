@@ -196,6 +196,7 @@ using School_Management_Transparency.SchoolManagementTransparencyApp.Service;
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Globalization;
 using System.Windows.Forms;
 
 namespace School_Management_Transparency.SchoolManagementTransparencyApp.Controller
@@ -401,6 +402,8 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.Control
                     if (dgv.Columns["Amount Spent"] != null)
                     {
                         dgv.Columns["Amount Spent"].DefaultCellStyle.Format = "C2";
+                        dgv.Columns["Amount Spent"].DefaultCellStyle.FormatProvider = CultureInfo.GetCultureInfo("en-PH");
+
                     }
                 }
             }

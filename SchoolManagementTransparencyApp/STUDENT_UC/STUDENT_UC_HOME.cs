@@ -97,5 +97,9 @@ namespace School_Management_Transparency.SchoolManagementTransparencyApp.STUDENT
             totalUnpaidMoneyLabel.ForeColor = System.Drawing.Color.DarkGoldenrod;
         }
 
+        private void homeExpenseDGV_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
